@@ -1,4 +1,4 @@
-# message: send
+# Message: Send
 
 
 ### Prerequisites
@@ -6,9 +6,9 @@ The following **scopes** are required to execute this API:
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
-POST /me/messages/<id>/send
-POST /users/<id>/messages/<id>/send
-POST /me/mailFolders/<id>/messages/<id>/send
+POST /me/Messages/<Id>/Send
+POST /Users/<Id>/Messages/<Id>/Send
+POST /me/MailFolders/<Id>/Messages/<Id>/Send
 
 ```
 ### Request headers
@@ -31,7 +31,7 @@ Here is an example of the request.
   "name": "message_send"
 }-->
 ```http
-POST https://graph.microsoft.com/beta/me/messages/<id>/send
+POST https://graph.microsoft.com/beta/me/Messages/<Id>/Send
 ```
 
 ##### Response
@@ -49,7 +49,7 @@ HTTP/1.1 200 OK
 2015-10-25 14:57:30 UTC -->
 <!-- {
   "type": "#page.annotation",
-  "description": "message: send",
+  "description": "Message: Send",
   "keywords": "",
   "section": "documentation",
   "tocPath": ""

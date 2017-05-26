@@ -1,4 +1,4 @@
-# conversation resource type
+# Conversation resource type
 
 
 
@@ -7,26 +7,26 @@
 
 | Method		   | Return Type	|Description|
 |:---------------|:--------|:----------|
-|[Get conversation](../api/conversation_get.md) | [conversation](conversation.md) |Read properties and relationships of conversation object.|
-|[Create thread](../api/conversation_post_threads.md) |[conversationThread](conversationthread.md)| Create a new thread by posting to the threads collection.|
-|[List threads](../api/conversation_list_threads.md) |[conversationThread](conversationthread.md) collection| Get a thread object collection.|
-|[Update](../api/conversation_update.md) | [conversation](conversation.md)	|Update conversation object. |
-|[Delete](../api/conversation_delete.md) | None |Delete conversation object. |
+|[Get Conversation](../api/conversation_get.md) | [Conversation](conversation.md) |Read properties and relationships of conversation object.|
+|[Create Thread](../api/conversation_post_threads.md) |[ConversationThread](conversationthread.md)| Create a new Thread by posting to the Threads collection.|
+|[List Threads](../api/conversation_list_threads.md) |[ConversationThread](conversationthread.md) collection| Get a Thread object collection.|
+|[Update](../api/conversation_update.md) | [Conversation](conversation.md)	|Update Conversation object. |
+|[Delete](../api/conversation_delete.md) | None |Delete Conversation object. |
 
 ### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|hasAttachments|boolean||
-|id|string| Read-only.|
-|lastDeliveredDateTime|[dateTimeOffset](datetimeoffset.md)||
-|preview|string||
-|topic|string||
-|uniqueSenders|string collection||
+|HasAttachments|Boolean||
+|Id|String| Read-only.|
+|LastDeliveredDateTime|DateTimeOffset|The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
+|Preview|String||
+|Topic|String||
+|UniqueSenders|String collection||
 
 ### Relationships
 | Relationship | Type	|Description|
 |:---------------|:--------|:----------|
-|threads|[conversationThread](conversationthread.md) collection| Read-only. Nullable.|
+|Threads|[ConversationThread](conversationthread.md) collection| Read-only. Nullable.|
 
 ### JSON representation
 
@@ -37,17 +37,17 @@ Here is a JSON representation of the resource.
   "optionalProperties": [
 
   ],
-  "@odata.type": "microsoft.graph.conversation"
+  "@odata.type": "microsoft.graph.Conversation"
 }-->
 
 ```json
 {
-  "hasAttachments": true,
-  "id": "string (identifier)",
-  "lastDeliveredDateTime": "String (timestamp)",
-  "preview": "string",
-  "topic": "string",
-  "uniqueSenders": ["string"]
+  "HasAttachments": true,
+  "Id": "String (identifier)",
+  "LastDeliveredDateTime": "String (timestamp)",
+  "Preview": "String",
+  "Topic": "String",
+  "UniqueSenders": ["String"]
 }
 
 ```
@@ -56,7 +56,7 @@ Here is a JSON representation of the resource.
 2015-10-25 14:57:30 UTC -->
 <!-- {
   "type": "#page.annotation",
-  "description": "conversation resource",
+  "description": "Conversation resource",
   "keywords": "",
   "section": "documentation",
   "tocPath": ""

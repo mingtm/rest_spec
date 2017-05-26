@@ -1,4 +1,4 @@
-# patternedRecurrence resource type
+# PatternedRecurrence resource type
 
 
 
@@ -6,8 +6,8 @@
 ### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|pattern|[recurrencePattern](recurrencepattern.md)||
-|range|[recurrenceRange](recurrencerange.md)||
+|Pattern|[RecurrencePattern](recurrencepattern.md)||
+|Range|[RecurrenceRange](recurrencerange.md)||
 
 ### JSON representation
 
@@ -18,13 +18,13 @@ Here is a JSON representation of the resource.
   "optionalProperties": [
 
   ],
-  "@odata.type": "microsoft.graph.patternedRecurrence"
+  "@odata.type": "microsoft.graph.PatternedRecurrence"
 }-->
 
 ```json
 {
-  "pattern": {"@odata.type": "microsoft.graph.recurrencePattern"},
-  "range": {"@odata.type": "microsoft.graph.recurrenceRange"}
+  "Pattern": {"@odata.type": "microsoft.graph.RecurrencePattern"},
+  "Range": {"@odata.type": "microsoft.graph.RecurrenceRange"}
 }
 
 ```
@@ -33,7 +33,7 @@ Here is a JSON representation of the resource.
 2015-10-25 14:57:30 UTC -->
 <!-- {
   "type": "#page.annotation",
-  "description": "patternedRecurrence resource",
+  "description": "PatternedRecurrence resource",
   "keywords": "",
   "section": "documentation",
   "tocPath": ""

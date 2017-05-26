@@ -1,4 +1,4 @@
-# recipient resource type
+# Recipient resource type
 
 
 
@@ -6,7 +6,7 @@
 ### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|emailAddress|[emailAddress](emailaddress.md)||
+|EmailAddress|[EmailAddress](emailaddress.md)||
 
 ### JSON representation
 
@@ -17,12 +17,12 @@ Here is a JSON representation of the resource.
   "optionalProperties": [
 
   ],
-  "@odata.type": "microsoft.graph.recipient"
+  "@odata.type": "microsoft.graph.Recipient"
 }-->
 
 ```json
 {
-  "emailAddress": {"@odata.type": "microsoft.graph.emailAddress"}
+  "EmailAddress": {"@odata.type": "microsoft.graph.EmailAddress"}
 }
 
 ```
@@ -31,7 +31,7 @@ Here is a JSON representation of the resource.
 2015-10-25 14:57:30 UTC -->
 <!-- {
   "type": "#page.annotation",
-  "description": "recipient resource",
+  "description": "Recipient resource",
   "keywords": "",
   "section": "documentation",
   "tocPath": ""

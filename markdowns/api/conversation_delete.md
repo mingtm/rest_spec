@@ -1,12 +1,14 @@
-# Delete conversation
+# Delete Conversation
 
-Delete conversation.
+Delete Conversation.
 ### Prerequisites
 The following **scopes** are required to execute this API: 
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
-DELETE /groups/<id>/conversations/<id>
+DELETE /Groups/<Id>/Conversations/<Id>
+DELETE /me/JoinedGroups/<Id>/Conversations/<Id>
+DELETE /Users/<Id>/JoinedGroups/<Id>/Conversations/<Id>
 
 ```
 ### Request headers
@@ -30,7 +32,7 @@ Here is an example of the request.
   "name": "delete_conversation"
 }-->
 ```http
-DELETE https://graph.microsoft.com/beta/groups/<id>/conversations/<id>
+DELETE https://graph.microsoft.com/beta/Groups/<Id>/Conversations/<Id>
 ```
 ##### Response
 Here is an example of the response. Note: The response object shown here may be truncated for brevity. All of the properties will be returned from an actual call.
@@ -46,7 +48,7 @@ HTTP/1.1 204 No Content
 2015-10-25 14:57:30 UTC -->
 <!-- {
   "type": "#page.annotation",
-  "description": "Delete conversation",
+  "description": "Delete Conversation",
   "keywords": "",
   "section": "documentation",
   "tocPath": ""

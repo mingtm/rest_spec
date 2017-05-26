@@ -6,8 +6,9 @@ The following **scopes** are required to execute this API:
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
-PATCH /groups/<id>/threads/<id>/posts/<id>
-PATCH /groups/<id>/conversations/<id>/threads/<id>/posts/<id>
+PATCH /Groups/<Id>/Threads/<Id>/Posts/<Id>
+PATCH /me/JoinedGroups/<Id>/Threads/<Id>/Posts/<Id>
+PATCH /Users/<Id>/JoinedGroups/<Id>/Threads/<Id>/Posts/<Id>
 ```
 ### Optional request headers
 | Name       | Description|
@@ -20,21 +21,21 @@ In the request body, supply the values for relevant fields that should be update
 
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|body|itemBody||
-|categories|string||
-|changeKey|string||
-|conversationId|string||
-|conversationThreadId|string||
-|createdDateTime|dateTimeOffset||
-|from|recipient||
-|hasAttachments|boolean||
-|lastModifiedDateTime|dateTimeOffset||
-|newParticipants|recipient||
-|receivedDateTime|dateTimeOffset||
-|sender|recipient||
+|Body|ItemBody||
+|Categories|String||
+|ChangeKey|String||
+|ConversationId|String||
+|ConversationThreadId|String||
+|CreatedDateTime|DateTimeOffset||
+|From|Recipient||
+|HasAttachments|Boolean||
+|LastModifiedDateTime|DateTimeOffset||
+|NewParticipants|Recipient||
+|ReceivedDateTime|DateTimeOffset||
+|Sender|Recipient||
 
 ### Response
-If successful, this method returns a `200 OK` response code and updated [post](../resources/post.md) object in the response body.
+If successful, this method returns a `200 OK` response code and updated [Post](../resources/post.md) object in the response body.
 ### Example
 ##### Request
 Here is an example of the request.
@@ -43,30 +44,30 @@ Here is an example of the request.
   "name": "update_post"
 }-->
 ```http
-PATCH https://graph.microsoft.com/beta/groups/<id>/threads/<id>/posts/<id>
+PATCH https://graph.microsoft.com/beta/Groups/<Id>/Threads/<Id>/Posts/<Id>
 Content-type: application/json
 Content-length: 426
 
 {
-  "body": {
-    "contentType": "contentType-value",
-    "content": "content-value"
+  "Body": {
+    "ContentType": "ContentType-value",
+    "Content": "Content-value"
   },
-  "receivedDateTime": "datetime-value",
-  "hasAttachments": true,
-  "from": {
-    "emailAddress": {
-      "name": "name-value",
-      "address": "address-value"
+  "ReceivedDateTime": "datetime-value",
+  "HasAttachments": true,
+  "From": {
+    "EmailAddress": {
+      "Name": "Name-value",
+      "Address": "Address-value"
     }
   },
-  "sender": {
-    "emailAddress": {
-      "name": "name-value",
-      "address": "address-value"
+  "Sender": {
+    "EmailAddress": {
+      "Name": "Name-value",
+      "Address": "Address-value"
     }
   },
-  "conversationThreadId": "conversationThreadId-value"
+  "ConversationThreadId": "ConversationThreadId-value"
 }
 ```
 ##### Response
@@ -74,7 +75,7 @@ Here is an example of the response. Note: The response object shown here may be 
 <!-- {
   "blockType": "response",
   "truncated": true,
-  "@odata.type": "microsoft.graph.post"
+  "@odata.type": "microsoft.graph.Post"
 } -->
 ```http
 HTTP/1.1 200 OK
@@ -82,25 +83,25 @@ Content-type: application/json
 Content-length: 426
 
 {
-  "body": {
-    "contentType": "contentType-value",
-    "content": "content-value"
+  "Body": {
+    "ContentType": "ContentType-value",
+    "Content": "Content-value"
   },
-  "receivedDateTime": "datetime-value",
-  "hasAttachments": true,
-  "from": {
-    "emailAddress": {
-      "name": "name-value",
-      "address": "address-value"
+  "ReceivedDateTime": "datetime-value",
+  "HasAttachments": true,
+  "From": {
+    "EmailAddress": {
+      "Name": "Name-value",
+      "Address": "Address-value"
     }
   },
-  "sender": {
-    "emailAddress": {
-      "name": "name-value",
-      "address": "address-value"
+  "Sender": {
+    "EmailAddress": {
+      "Name": "Name-value",
+      "Address": "Address-value"
     }
   },
-  "conversationThreadId": "conversationThreadId-value"
+  "ConversationThreadId": "ConversationThreadId-value"
 }
 ```
 

@@ -6,9 +6,9 @@ The following **scopes** are required to execute this API:
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
-PATCH /me/messages/<id>
-PATCH /users/<id>/messages/<id>
-PATCH /me/mailFolders/<id>/messages/<id>
+PATCH /me/Messages/<Id>
+PATCH /Users/<Id>/Messages/<Id>
+PATCH /me/MailFolders/<Id>/Messages/<Id>
 ```
 ### Optional request headers
 | Name       | Description|
@@ -21,35 +21,40 @@ In the request body, supply the values for relevant fields that should be update
 
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|bccRecipients|recipient||
-|body|itemBody||
-|bodyPreview|string||
-|categories|string||
-|ccRecipients|recipient||
-|changeKey|string||
-|conversationId|string||
-|createdDateTime|dateTimeOffset||
-|from|recipient||
-|hasAttachments|boolean||
-|importance|string| Possible values are: `low`, `normal`, `high`.|
-|internetMessageId|string||
-|isDeliveryReceiptRequested|boolean||
-|isDraft|boolean||
-|isRead|boolean||
-|isReadReceiptRequested|boolean||
-|lastModifiedDateTime|dateTimeOffset||
-|parentFolderId|string||
-|receivedDateTime|dateTimeOffset||
-|replyTo|recipient||
-|sender|recipient||
-|sentDateTime|dateTimeOffset||
-|subject|string||
-|toRecipients|recipient||
-|uniqueBody|itemBody||
-|webLink|string||
+|BccRecipients|Recipient||
+|Body|ItemBody||
+|BodyPreview|String||
+|Categories|String||
+|CcRecipients|Recipient||
+|ChangeKey|String||
+|ConversationId|String||
+|ConversationIndex|Binary||
+|CreatedDateTime|DateTimeOffset||
+|Flag|FollowupFlag||
+|From|Recipient||
+|HasAttachments|Boolean||
+|Importance|string| Possible values are: `Low`, `Normal`, `High`.|
+|InferenceClassification|string| Possible values are: `Focused`, `Other`.|
+|InternetMessageId|String||
+|IsDeliveryReceiptRequested|Boolean||
+|IsDraft|Boolean||
+|IsRead|Boolean||
+|IsReadReceiptRequested|Boolean||
+|LastModifiedDateTime|DateTimeOffset||
+|ParentFolderId|String||
+|ReceivedDateTime|DateTimeOffset||
+|ReplyTo|Recipient||
+|Sender|Recipient||
+|SentDateTime|DateTimeOffset||
+|Subject|String||
+|ToRecipients|Recipient||
+|UniqueBody|ItemBody||
+|UnsubscribeData|String||
+|UnsubscribeEnabled|Boolean||
+|WebLink|String||
 
 ### Response
-If successful, this method returns a `200 OK` response code and updated [message](../resources/message.md) object in the response body.
+If successful, this method returns a `200 OK` response code and updated [Message](../resources/message.md) object in the response body.
 ### Example
 ##### Request
 Here is an example of the request.
@@ -58,19 +63,19 @@ Here is an example of the request.
   "name": "update_message"
 }-->
 ```http
-PATCH https://graph.microsoft.com/beta/me/messages/<id>
+PATCH https://graph.microsoft.com/beta/me/Messages/<Id>
 Content-type: application/json
 Content-length: 272
 
 {
-  "receivedDateTime": "datetime-value",
-  "sentDateTime": "datetime-value",
-  "hasAttachments": true,
-  "internetMessageId": "internetMessageId-value",
-  "subject": "subject-value",
-  "body": {
-    "contentType": "contentType-value",
-    "content": "content-value"
+  "ReceivedDateTime": "datetime-value",
+  "SentDateTime": "datetime-value",
+  "HasAttachments": true,
+  "InternetMessageId": "InternetMessageId-value",
+  "Subject": "Subject-value",
+  "Body": {
+    "ContentType": "ContentType-value",
+    "Content": "Content-value"
   }
 }
 ```
@@ -79,7 +84,7 @@ Here is an example of the response. Note: The response object shown here may be 
 <!-- {
   "blockType": "response",
   "truncated": true,
-  "@odata.type": "microsoft.graph.message"
+  "@odata.type": "microsoft.graph.Message"
 } -->
 ```http
 HTTP/1.1 200 OK
@@ -87,14 +92,14 @@ Content-type: application/json
 Content-length: 272
 
 {
-  "receivedDateTime": "datetime-value",
-  "sentDateTime": "datetime-value",
-  "hasAttachments": true,
-  "internetMessageId": "internetMessageId-value",
-  "subject": "subject-value",
-  "body": {
-    "contentType": "contentType-value",
-    "content": "content-value"
+  "ReceivedDateTime": "datetime-value",
+  "SentDateTime": "datetime-value",
+  "HasAttachments": true,
+  "InternetMessageId": "InternetMessageId-value",
+  "Subject": "Subject-value",
+  "Body": {
+    "ContentType": "ContentType-value",
+    "Content": "Content-value"
   }
 }
 ```

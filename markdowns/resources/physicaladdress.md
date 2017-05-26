@@ -1,4 +1,4 @@
-# physicalAddress resource type
+# PhysicalAddress resource type
 
 
 
@@ -6,11 +6,13 @@
 ### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|city|string||
-|countryOrRegion|string||
-|postalCode|string||
-|state|string||
-|street|string||
+|City|String||
+|CountryOrRegion|String||
+|PostOfficeBox|String||
+|PostalCode|String||
+|State|String||
+|Street|String||
+|Type|String| Possible values are: `Unknown`, `Home`, `Business`, `Other`.|
 
 ### JSON representation
 
@@ -21,16 +23,18 @@ Here is a JSON representation of the resource.
   "optionalProperties": [
 
   ],
-  "@odata.type": "microsoft.graph.physicalAddress"
+  "@odata.type": "microsoft.graph.PhysicalAddress"
 }-->
 
 ```json
 {
-  "city": "string",
-  "countryOrRegion": "string",
-  "postalCode": "string",
-  "state": "string",
-  "street": "string"
+  "City": "String",
+  "CountryOrRegion": "String",
+  "PostOfficeBox": "String",
+  "PostalCode": "String",
+  "State": "String",
+  "Street": "String",
+  "Type": "String"
 }
 
 ```
@@ -39,7 +43,7 @@ Here is a JSON representation of the resource.
 2015-10-25 14:57:30 UTC -->
 <!-- {
   "type": "#page.annotation",
-  "description": "physicalAddress resource",
+  "description": "PhysicalAddress resource",
   "keywords": "",
   "section": "documentation",
   "tocPath": ""

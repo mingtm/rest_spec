@@ -6,9 +6,9 @@ The following **scopes** are required to execute this API:
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
-PATCH /me/events/<id>
-PATCH /me/calendarView/<id>
-PATCH /users/<id>/events/<id>
+PATCH /me/Events/<Id>
+PATCH /me/CalendarView/<Id>
+PATCH /Users/<Id>/Events/<Id>
 ```
 ### Optional request headers
 | Name       | Description|
@@ -21,40 +21,42 @@ In the request body, supply the values for relevant fields that should be update
 
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|attendees|attendee||
-|body|itemBody||
-|bodyPreview|string||
-|categories|string||
-|changeKey|string||
-|createdDateTime|dateTimeOffset||
-|end|dateTimeTimeZone||
-|hasAttachments|boolean||
-|iCalUId|string||
-|importance|string| Possible values are: `low`, `normal`, `high`.|
-|isAllDay|boolean||
-|isCancelled|boolean||
-|isOrganizer|boolean||
-|isReminderOn|boolean||
-|lastModifiedDateTime|dateTimeOffset||
-|location|location||
-|organizer|recipient||
-|originalEndTimeZone|string||
-|originalStart|dateTimeOffset||
-|originalStartTimeZone|string||
-|recurrence|patternedRecurrence||
-|reminderMinutesBeforeStart|int32||
-|responseRequested|boolean||
-|responseStatus|responseStatus||
-|sensitivity|string| Possible values are: `normal`, `personal`, `private`, `confidential`.|
-|seriesMasterId|string||
-|showAs|string| Possible values are: `free`, `tentative`, `busy`, `oof`, `workingElsewhere`, `unknown`.|
-|start|dateTimeTimeZone||
-|subject|string||
-|type|string| Possible values are: `singleInstance`, `occurrence`, `exception`, `seriesMaster`.|
-|webLink|string||
+|Attendance|AttendanceInfo||
+|Attendees|Attendee||
+|Body|ItemBody||
+|BodyPreview|String||
+|Categories|String||
+|ChangeKey|String||
+|CreatedDateTime|DateTimeOffset||
+|End|DateTimeTimeZone||
+|HasAttachments|Boolean||
+|Importance|string| Possible values are: `Low`, `Normal`, `High`.|
+|IsAllDay|Boolean||
+|IsCancelled|Boolean||
+|IsOrganizer|Boolean||
+|IsReminderOn|Boolean||
+|LastModifiedDateTime|DateTimeOffset||
+|Location|Location||
+|OnlineMeetingUrl|String||
+|Organizer|Recipient||
+|OriginalEndTimeZone|String||
+|OriginalStart|DateTimeOffset||
+|OriginalStartTimeZone|String||
+|Recurrence|PatternedRecurrence||
+|ReminderMinutesBeforeStart|Int32||
+|ResponseRequested|Boolean||
+|ResponseStatus|ResponseStatus||
+|Sensitivity|string| Possible values are: `Normal`, `Personal`, `Private`, `Confidential`.|
+|SeriesMasterId|String||
+|ShowAs|string| Possible values are: `Free`, `Tentative`, `Busy`, `Oof`, `WorkingElsewhere`, `Unknown`.|
+|Start|DateTimeTimeZone||
+|Subject|String||
+|Type|string| Possible values are: `SingleInstance`, `Occurrence`, `Exception`, `SeriesMaster`.|
+|WebLink|String||
+|iCalUId|String||
 
 ### Response
-If successful, this method returns a `200 OK` response code and updated [event](../resources/event.md) object in the response body.
+If successful, this method returns a `200 OK` response code and updated [Event](../resources/event.md) object in the response body.
 ### Example
 ##### Request
 Here is an example of the request.
@@ -63,20 +65,20 @@ Here is an example of the request.
   "name": "update_event"
 }-->
 ```http
-PATCH https://graph.microsoft.com/beta/me/events/<id>
+PATCH https://graph.microsoft.com/beta/me/Events/<Id>
 Content-type: application/json
 Content-length: 294
 
 {
-  "originalStartTimeZone": "originalStartTimeZone-value",
-  "originalEndTimeZone": "originalEndTimeZone-value",
-  "responseStatus": {
-    "response": "response-value",
-    "time": "datetime-value"
+  "OriginalStartTimeZone": "OriginalStartTimeZone-value",
+  "OriginalEndTimeZone": "OriginalEndTimeZone-value",
+  "ResponseStatus": {
+    "Response": "Response-value",
+    "Time": "datetime-value"
   },
   "iCalUId": "iCalUId-value",
-  "reminderMinutesBeforeStart": 99,
-  "isReminderOn": true
+  "ReminderMinutesBeforeStart": 99,
+  "IsReminderOn": true
 }
 ```
 ##### Response
@@ -84,7 +86,7 @@ Here is an example of the response. Note: The response object shown here may be 
 <!-- {
   "blockType": "response",
   "truncated": true,
-  "@odata.type": "microsoft.graph.event"
+  "@odata.type": "microsoft.graph.Event"
 } -->
 ```http
 HTTP/1.1 200 OK
@@ -92,15 +94,15 @@ Content-type: application/json
 Content-length: 294
 
 {
-  "originalStartTimeZone": "originalStartTimeZone-value",
-  "originalEndTimeZone": "originalEndTimeZone-value",
-  "responseStatus": {
-    "response": "response-value",
-    "time": "datetime-value"
+  "OriginalStartTimeZone": "OriginalStartTimeZone-value",
+  "OriginalEndTimeZone": "OriginalEndTimeZone-value",
+  "ResponseStatus": {
+    "Response": "Response-value",
+    "Time": "datetime-value"
   },
   "iCalUId": "iCalUId-value",
-  "reminderMinutesBeforeStart": 99,
-  "isReminderOn": true
+  "ReminderMinutesBeforeStart": 99,
+  "IsReminderOn": true
 }
 ```
 

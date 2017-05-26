@@ -1,0 +1,78 @@
+# Create Group
+
+Use this API to create a new Group.
+### Prerequisites
+The following **scopes** are required to execute this API: 
+### HTTP request
+<!-- { "blockType": "ignored" } -->
+```http
+POST /me/JoinedGroups
+POST /Users/<Id>/JoinedGroups
+
+```
+### Request headers
+| Name       | Description|
+|:---------------|:----------|
+| Authorization  | Bearer <code>|
+| Workbook-Session-Id  | Workbook session Id that determines if changes are persisted or not. Optional.|
+
+### Request body
+In the request body, supply a JSON representation of [Group](../resources/group.md) object.
+
+
+### Response
+If successful, this method returns `201, Created` response code and [Group](../resources/group.md) object in the response body.
+
+### Example
+##### Request
+Here is an example of the request.
+<!-- {
+  "blockType": "request",
+  "name": "create_group_from_user"
+}-->
+```http
+POST https://graph.microsoft.com/beta/me/JoinedGroups
+Content-type: application/json
+Content-length: 221
+
+{
+  "AccessType": "AccessType-value",
+  "AllowExternalSenders": true,
+  "AutoSubscribeNewMembers": true,
+  "Description": "Description-value",
+  "DisplayName": "DisplayName-value",
+  "EmailAddress": "EmailAddress-value"
+}
+```
+In the request body, supply a JSON representation of [Group](../resources/group.md) object.
+##### Response
+Here is an example of the response. Note: The response object shown here may be truncated for brevity. All of the properties will be returned from an actual call.
+<!-- {
+  "blockType": "response",
+  "truncated": true,
+  "@odata.type": "microsoft.graph.Group"
+} -->
+```http
+HTTP/1.1 201 Created
+Content-type: application/json
+Content-length: 221
+
+{
+  "AccessType": "AccessType-value",
+  "AllowExternalSenders": true,
+  "AutoSubscribeNewMembers": true,
+  "Description": "Description-value",
+  "DisplayName": "DisplayName-value",
+  "EmailAddress": "EmailAddress-value"
+}
+```
+
+<!-- uuid: 8fcb5dbc-d5aa-4681-8e31-b001d5168d79
+2015-10-25 14:57:30 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "Create Group",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

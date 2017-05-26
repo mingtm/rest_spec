@@ -1,14 +1,14 @@
-# Delete directoryObject
+# Delete DirectoryObject
 
-Delete directoryObject.
+Delete DirectoryObject.
 ### Prerequisites
 The following **scopes** are required to execute this API: 
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
-DELETE /me/manager
-DELETE /me/memberOf/<id>
-DELETE /users/<id>/manager
+DELETE /Groups/<Id>/RejectedSenders/<Id>
+DELETE /Groups/<Id>/AcceptedSenders/<Id>
+DELETE /me/JoinedGroups/<Id>/AcceptedSenders/<Id>
 
 ```
 ### Request headers
@@ -32,7 +32,7 @@ Here is an example of the request.
   "name": "delete_directoryobject"
 }-->
 ```http
-DELETE https://graph.microsoft.com/beta/me/manager
+DELETE https://graph.microsoft.com/beta/Groups/<Id>/RejectedSenders/<Id>
 ```
 ##### Response
 Here is an example of the response. Note: The response object shown here may be truncated for brevity. All of the properties will be returned from an actual call.
@@ -48,7 +48,7 @@ HTTP/1.1 204 No Content
 2015-10-25 14:57:30 UTC -->
 <!-- {
   "type": "#page.annotation",
-  "description": "Delete directoryObject",
+  "description": "Delete DirectoryObject",
   "keywords": "",
   "section": "documentation",
   "tocPath": ""

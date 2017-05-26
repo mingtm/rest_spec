@@ -1,4 +1,4 @@
-# reminder resource type
+# Reminder resource type
 
 
 
@@ -6,14 +6,14 @@
 ### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|changeKey|string||
-|eventEndTime|[dateTimeTimeZone](datetimetimezone.md)||
-|eventId|string||
-|eventLocation|[location](location.md)||
-|eventStartTime|[dateTimeTimeZone](datetimetimezone.md)||
-|eventSubject|string||
-|eventWebLink|string||
-|reminderFireTime|[dateTimeTimeZone](datetimetimezone.md)||
+|ChangeKey|String||
+|EventEndTime|[DateTimeTimeZone](datetimetimezone.md)||
+|EventId|String||
+|EventLocation|[Location](location.md)||
+|EventStartTime|[DateTimeTimeZone](datetimetimezone.md)||
+|EventSubject|String||
+|EventWebLink|String||
+|ReminderFireTime|[DateTimeTimeZone](datetimetimezone.md)||
 
 ### JSON representation
 
@@ -24,19 +24,19 @@ Here is a JSON representation of the resource.
   "optionalProperties": [
 
   ],
-  "@odata.type": "microsoft.graph.reminder"
+  "@odata.type": "microsoft.graph.Reminder"
 }-->
 
 ```json
 {
-  "changeKey": "string",
-  "eventEndTime": {"@odata.type": "microsoft.graph.dateTimeTimeZone"},
-  "eventId": "string",
-  "eventLocation": {"@odata.type": "microsoft.graph.location"},
-  "eventStartTime": {"@odata.type": "microsoft.graph.dateTimeTimeZone"},
-  "eventSubject": "string",
-  "eventWebLink": "string",
-  "reminderFireTime": {"@odata.type": "microsoft.graph.dateTimeTimeZone"}
+  "ChangeKey": "String",
+  "EventEndTime": {"@odata.type": "microsoft.graph.DateTimeTimeZone"},
+  "EventId": "String",
+  "EventLocation": {"@odata.type": "microsoft.graph.Location"},
+  "EventStartTime": {"@odata.type": "microsoft.graph.DateTimeTimeZone"},
+  "EventSubject": "String",
+  "EventWebLink": "String",
+  "ReminderFireTime": {"@odata.type": "microsoft.graph.DateTimeTimeZone"}
 }
 
 ```
@@ -45,7 +45,7 @@ Here is a JSON representation of the resource.
 2015-10-25 14:57:30 UTC -->
 <!-- {
   "type": "#page.annotation",
-  "description": "reminder resource",
+  "description": "Reminder resource",
   "keywords": "",
   "section": "documentation",
   "tocPath": ""

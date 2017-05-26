@@ -1,4 +1,4 @@
-# List users
+# List Users
 
 Retrieve a list of user objects.
 ### Prerequisites
@@ -6,19 +6,10 @@ The following **scopes** are required to execute this API:
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
-GET /users
+GET /Users
 ```
 ### Optional query parameters
-|Name|Value|Description|
-|:---------------|:--------|:-------|
-|$count|none|The count of related entities can be requested by specifying the $count query option.|
-|$expand|string|Comma-separated list of relationships to expand and include in the response. See relationships table of [user](../resources/user.md) for supported names. |
-|$filter|string|Filter string that lets you filter the response based on a set of criteria.|
-|$orderby|string|Comma-separated list of properties that are used to sort the order of items in the response collection.|
-|$select|string|Comma-separated list of properties to include in the response.|
-|$skip|int|The number of items to skip in a result set.|
-|$skipToken|string|Paging token that is used to get the next set of results.|
-|$top|int|The number of items to return in a result set.|
+This method supports the [OData Query Parameters](http://graph.microsoft.io/docs/overview/query_parameters) to help customize the response.
 
 ### Request headers
 | Name      |Description|
@@ -29,7 +20,7 @@ GET /users
 ### Request body
 Do not supply a request body for this method.
 ### Response
-If successful, this method returns a `200 OK` response code and collection of [user](../resources/user.md) objects in the response body.
+If successful, this method returns a `200 OK` response code and collection of [User](../resources/user.md) objects in the response body.
 ### Example
 ##### Request
 Here is an example of the request.
@@ -38,46 +29,51 @@ Here is an example of the request.
   "name": "get_users"
 }-->
 ```http
-GET https://graph.microsoft.com/beta/users
+GET https://graph.microsoft.com/beta/Users
 ```
 ##### Response
 Here is an example of the response. Note: The response object shown here may be truncated for brevity. All of the properties will be returned from an actual call.
 <!-- {
   "blockType": "response",
   "truncated": true,
-  "@odata.type": "microsoft.graph.user",
+  "@odata.type": "microsoft.graph.User",
   "isCollection": true
 } -->
 ```http
 HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 608
+Content-length: 889
 
 {
   "value": [
     {
-      "accountEnabled": true,
-      "assignedLicenses": [
-        {
-          "disabledPlans": [
-            "disabledPlans-value"
-          ],
-          "skuId": "skuId-value"
+      "EmailAddress": "EmailAddress-value",
+      "DisplayName": "DisplayName-value",
+      "Alias": "Alias-value",
+      "MailboxSettings": {
+        "AutomaticRepliesSetting": {
+          "Status": "Status-value",
+          "ExternalAudience": "ExternalAudience-value",
+          "ScheduledStartDateTime": {
+            "DateTime": {
+            },
+            "TimeZone": "TimeZone-value"
+          },
+          "ScheduledEndDateTime": {
+            "DateTime": {
+            },
+            "TimeZone": "TimeZone-value"
+          },
+          "InternalReplyMessage": "InternalReplyMessage-value",
+          "ExternalReplyMessage": "ExternalReplyMessage-value"
+        },
+        "TimeZone": "TimeZone-value",
+        "Language": {
+          "Locale": "Locale-value",
+          "DisplayName": "DisplayName-value"
         }
-      ],
-      "assignedPlans": [
-        {
-          "assignedDateTime": "datetime-value",
-          "capabilityStatus": "capabilityStatus-value",
-          "service": "service-value",
-          "servicePlanId": "servicePlanId-value"
-        }
-      ],
-      "businessPhones": [
-        "businessPhones-value"
-      ],
-      "city": "city-value",
-      "companyName": "companyName-value"
+      },
+      "Id": "Id-value"
     }
   ]
 }
@@ -87,7 +83,7 @@ Content-length: 608
 2015-10-25 14:57:30 UTC -->
 <!-- {
   "type": "#page.annotation",
-  "description": "List users",
+  "description": "List Users",
   "keywords": "",
   "section": "documentation",
   "tocPath": ""

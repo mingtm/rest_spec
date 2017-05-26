@@ -1,5 +1,5 @@
 {
-  "name": "itemBody",
+  "name": "ItemBody",
   "description": "",
   "collectionOf": null,
   "isComplexType": true,
@@ -28,12 +28,12 @@
   },
   "properties": [
     {
-      "name": "contentType",
+      "name": "ContentType",
       "description": "",
       "isKey": false,
       "dataType": "String",
       "isReadOnly": false,
-      "enumName": "bodyType",
+      "enumName": "BodyType",
       "isCollection": false,
       "isRelationship": false,
       "supportFilter": false,
@@ -42,10 +42,10 @@
       "isUnicode": null
     },
     {
-      "name": "content",
+      "name": "Content",
       "description": "",
       "isKey": false,
-      "dataType": "string",
+      "dataType": "String",
       "isReadOnly": false,
       "enumName": null,
       "isCollection": false,
@@ -53,7 +53,7 @@
       "supportFilter": false,
       "allowPostToCollection": true,
       "isNullable": null,
-      "isUnicode": false
+      "isUnicode": null
     }
   ],
   "methods": [

@@ -1,7 +1,7 @@
 {
-  "name": "groups",
+  "name": "Groups",
   "description": "",
-  "collectionOf": "group",
+  "collectionOf": "Group",
   "isComplexType": false,
   "isEntitySet": true,
   "isOpenType": false,
@@ -25,7 +25,7 @@
   "updateDescription": null,
   "deleteDescription": null,
   "restPath": {
-    "/groups": true
+    "/Groups": true
   },
   "properties": [
 

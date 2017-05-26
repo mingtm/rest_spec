@@ -1,4 +1,4 @@
-# directoryObject resource type
+# DirectoryObject resource type
 
 
 
@@ -7,16 +7,13 @@
 
 | Method		   | Return Type	|Description|
 |:---------------|:--------|:----------|
-|[Get directoryObject](../api/directoryobject_get.md) | [directoryObject](directoryobject.md) |Read properties and relationships of directoryObject object.|
-|[Delete](../api/directoryobject_delete.md) | None |Delete directoryObject object. |
-|[Checkmembergroups](../api/directoryobject_checkmembergroups.md)|string collection||
-|[Getmembergroups](../api/directoryobject_getmembergroups.md)|string collection||
-|[Getmemberobjects](../api/directoryobject_getmemberobjects.md)|string collection||
+|[Get DirectoryObject](../api/directoryobject_get.md) | [DirectoryObject](directoryobject.md) |Read properties and relationships of directoryObject object.|
+|[Delete](../api/directoryobject_delete.md) | None |Delete DirectoryObject object. |
 
 ### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|id|string| Read-only.|
+|Id|String| Read-only.|
 
 ### Relationships
 None
@@ -31,12 +28,12 @@ Here is a JSON representation of the resource.
   "optionalProperties": [
 
   ],
-  "@odata.type": "microsoft.graph.directoryObject"
+  "@odata.type": "microsoft.graph.DirectoryObject"
 }-->
 
 ```json
 {
-  "id": "string (identifier)"
+  "Id": "String (identifier)"
 }
 
 ```
@@ -45,7 +42,7 @@ Here is a JSON representation of the resource.
 2015-10-25 14:57:30 UTC -->
 <!-- {
   "type": "#page.annotation",
-  "description": "directoryObject resource",
+  "description": "DirectoryObject resource",
   "keywords": "",
   "section": "documentation",
   "tocPath": ""

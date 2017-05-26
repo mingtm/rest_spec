@@ -1,14 +1,13 @@
-# Create contactFolder
+# Create ContactFolder
 
-Use this API to create a new contactFolder.
+Use this API to create a new ContactFolder.
 ### Prerequisites
 The following **scopes** are required to execute this API: 
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
-POST /me/contactFolders/<id>/childFolders
-POST /users/<id>/contactFolders/<id>/childFolders
-POST /drive/root/createdByUser/contactFolders/<id>/childFolders
+POST /me/ContactFolders/<Id>/ChildFolders
+POST /Users/<Id>/ContactFolders/<Id>/ChildFolders
 
 ```
 ### Request headers
@@ -18,11 +17,11 @@ POST /drive/root/createdByUser/contactFolders/<id>/childFolders
 | Workbook-Session-Id  | Workbook session Id that determines if changes are persisted or not. Optional.|
 
 ### Request body
-In the request body, supply a JSON representation of [contactFolder](../resources/contactfolder.md) object.
+In the request body, supply a JSON representation of [ContactFolder](../resources/contactfolder.md) object.
 
 
 ### Response
-If successful, this method returns `201, Created` response code and [contactFolder](../resources/contactfolder.md) object in the response body.
+If successful, this method returns `201, Created` response code and [ContactFolder](../resources/contactfolder.md) object in the response body.
 
 ### Example
 ##### Request
@@ -32,32 +31,34 @@ Here is an example of the request.
   "name": "create_contactfolder_from_contactfolder"
 }-->
 ```http
-POST https://graph.microsoft.com/beta/me/contactFolders/<id>/childFolders
+POST https://graph.microsoft.com/beta/me/ContactFolders/<Id>/ChildFolders
 Content-type: application/json
-Content-length: 84
+Content-length: 126
 
 {
-  "parentFolderId": "parentFolderId-value",
-  "displayName": "displayName-value"
+  "ParentFolderId": "ParentFolderId-value",
+  "DisplayName": "DisplayName-value",
+  "WellKnownName": "WellKnownName-value"
 }
 ```
-In the request body, supply a JSON representation of [contactFolder](../resources/contactfolder.md) object.
+In the request body, supply a JSON representation of [ContactFolder](../resources/contactfolder.md) object.
 ##### Response
 Here is an example of the response. Note: The response object shown here may be truncated for brevity. All of the properties will be returned from an actual call.
 <!-- {
   "blockType": "response",
   "truncated": true,
-  "@odata.type": "microsoft.graph.contactFolder"
+  "@odata.type": "microsoft.graph.ContactFolder"
 } -->
 ```http
 HTTP/1.1 201 Created
 Content-type: application/json
-Content-length: 104
+Content-length: 146
 
 {
-  "parentFolderId": "parentFolderId-value",
-  "displayName": "displayName-value",
-  "id": "id-value"
+  "ParentFolderId": "ParentFolderId-value",
+  "DisplayName": "DisplayName-value",
+  "WellKnownName": "WellKnownName-value",
+  "Id": "Id-value"
 }
 ```
 
@@ -65,7 +66,7 @@ Content-length: 104
 2015-10-25 14:57:30 UTC -->
 <!-- {
   "type": "#page.annotation",
-  "description": "Create contactFolder",
+  "description": "Create ContactFolder",
   "keywords": "",
   "section": "documentation",
   "tocPath": ""

@@ -1,4 +1,4 @@
-# post: forward
+# Post: Forward
 
 
 ### Prerequisites
@@ -6,8 +6,9 @@ The following **scopes** are required to execute this API:
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
-POST /groups/<id>/threads/<id>/posts/<id>/forward
-POST /groups/<id>/conversations/<id>/threads/<id>/posts/<id>/forward
+POST /Groups/<Id>/Threads/<Id>/Posts/<Id>/Forward
+POST /me/JoinedGroups/<Id>/Threads/<Id>/Posts/<Id>/Forward
+POST /Users/<Id>/JoinedGroups/<Id>/Threads/<Id>/Posts/<Id>/Forward
 
 ```
 ### Request headers
@@ -21,8 +22,8 @@ In the request body, provide a JSON object with the following parameters.
 
 | Parameter	   | Type	|Description|
 |:---------------|:--------|:----------|
-|comment|string||
-|toRecipients|recipient||
+|Comment|String||
+|ToRecipients|Recipient||
 
 ### Response
 If successful, this method returns `200, OK` response code. It does not return anything in the response body.
@@ -36,17 +37,17 @@ Here is an example of the request.
   "name": "post_forward"
 }-->
 ```http
-POST https://graph.microsoft.com/beta/groups/<id>/threads/<id>/posts/<id>/forward
+POST https://graph.microsoft.com/beta/Groups/<Id>/Threads/<Id>/Posts/<Id>/Forward
 Content-type: application/json
 Content-length: 166
 
 {
-  "comment": "comment-value",
-  "toRecipients": [
+  "Comment": "Comment-value",
+  "ToRecipients": [
     {
-      "emailAddress": {
-        "name": "name-value",
-        "address": "address-value"
+      "EmailAddress": {
+        "Name": "Name-value",
+        "Address": "Address-value"
       }
     }
   ]
@@ -68,7 +69,7 @@ HTTP/1.1 200 OK
 2015-10-25 14:57:30 UTC -->
 <!-- {
   "type": "#page.annotation",
-  "description": "post: forward",
+  "description": "Post: Forward",
   "keywords": "",
   "section": "documentation",
   "tocPath": ""

@@ -1,4 +1,4 @@
-# group: addFavorite
+# Group: AddFavorite
 
 
 ### Prerequisites
@@ -6,7 +6,9 @@ The following **scopes** are required to execute this API:
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
-POST /groups/<id>/addFavorite
+POST /Groups/<Id>/AddFavorite
+POST /me/JoinedGroups/<Id>/AddFavorite
+POST /Users/<Id>/JoinedGroups/<Id>/AddFavorite
 
 ```
 ### Request headers
@@ -29,7 +31,7 @@ Here is an example of the request.
   "name": "group_addfavorite"
 }-->
 ```http
-POST https://graph.microsoft.com/beta/groups/<id>/addFavorite
+POST https://graph.microsoft.com/beta/Groups/<Id>/AddFavorite
 ```
 
 ##### Response
@@ -47,7 +49,7 @@ HTTP/1.1 200 OK
 2015-10-25 14:57:30 UTC -->
 <!-- {
   "type": "#page.annotation",
-  "description": "group: addFavorite",
+  "description": "Group: AddFavorite",
   "keywords": "",
   "section": "documentation",
   "tocPath": ""

@@ -1,5 +1,5 @@
 {
-  "name": "subscription",
+  "name": "Subscription",
   "description": "",
   "collectionOf": null,
   "isComplexType": false,
@@ -25,70 +25,18 @@
   "updateDescription": "",
   "deleteDescription": "",
   "restPath": {
-    "/subscriptions/<id>": true
+    "/Users/<Id>/Subscriptions/<Id>": true,
+    "/Users/<Id>/JoinedGroups/<Id>/Subscriptions/<Id>": true,
+    "/Groups/<Id>/Subscriptions/<Id>": true,
+    "/me/Subscriptions/<Id>": true,
+    "/me/JoinedGroups/<Id>/Subscriptions/<Id>": true
   },
   "properties": [
     {
-      "name": "resource",
+      "name": "Resource",
       "description": "",
       "isKey": false,
-      "dataType": "string",
-      "isReadOnly": false,
-      "enumName": null,
-      "isCollection": false,
-      "isRelationship": false,
-      "supportFilter": false,
-      "allowPostToCollection": true,
-      "isNullable": false,
-      "isUnicode": false
-    },
-    {
-      "name": "changeType",
-      "description": "",
-      "isKey": false,
-      "dataType": "string",
-      "isReadOnly": false,
-      "enumName": null,
-      "isCollection": false,
-      "isRelationship": false,
-      "supportFilter": false,
-      "allowPostToCollection": true,
-      "isNullable": false,
-      "isUnicode": false
-    },
-    {
-      "name": "clientState",
-      "description": "",
-      "isKey": false,
-      "dataType": "string",
-      "isReadOnly": false,
-      "enumName": null,
-      "isCollection": false,
-      "isRelationship": false,
-      "supportFilter": false,
-      "allowPostToCollection": true,
-      "isNullable": null,
-      "isUnicode": false
-    },
-    {
-      "name": "notificationUrl",
-      "description": "",
-      "isKey": false,
-      "dataType": "string",
-      "isReadOnly": false,
-      "enumName": null,
-      "isCollection": false,
-      "isRelationship": false,
-      "supportFilter": false,
-      "allowPostToCollection": true,
-      "isNullable": false,
-      "isUnicode": false
-    },
-    {
-      "name": "expirationDateTime",
-      "description": "",
-      "isKey": false,
-      "dataType": "dateTimeOffset",
+      "dataType": "String",
       "isReadOnly": false,
       "enumName": null,
       "isCollection": false,
@@ -99,18 +47,32 @@
       "isUnicode": null
     },
     {
-      "name": "id",
+      "name": "ChangeType",
+      "description": "",
+      "isKey": false,
+      "dataType": "string",
+      "isReadOnly": false,
+      "enumName": "ChangeType",
+      "isCollection": false,
+      "isRelationship": false,
+      "supportFilter": false,
+      "allowPostToCollection": true,
+      "isNullable": null,
+      "isUnicode": null
+    },
+    {
+      "name": "Id",
       "description": "",
       "isKey": true,
-      "dataType": "string",
+      "dataType": "String",
       "isReadOnly": true,
       "enumName": null,
       "isCollection": false,
       "isRelationship": false,
       "supportFilter": false,
       "allowPostToCollection": true,
-      "isNullable": false,
-      "isUnicode": false
+      "isNullable": null,
+      "isUnicode": null
     }
   ],
   "methods": [

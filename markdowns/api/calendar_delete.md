@@ -1,14 +1,14 @@
-# Delete calendar
+# Delete Calendar
 
-Delete calendar.
+Delete Calendar.
 ### Prerequisites
 The following **scopes** are required to execute this API: 
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
-DELETE /me/calendar
-DELETE /users/<id>/calendar
-DELETE /groups/<id>/calendar
+DELETE /me/Calendar
+DELETE /Users/<Id>/Calendar
+DELETE /Groups/<Id>/Calendar
 
 ```
 ### Request headers
@@ -32,7 +32,7 @@ Here is an example of the request.
   "name": "delete_calendar"
 }-->
 ```http
-DELETE https://graph.microsoft.com/beta/me/calendar
+DELETE https://graph.microsoft.com/beta/me/Calendar
 ```
 ##### Response
 Here is an example of the response. Note: The response object shown here may be truncated for brevity. All of the properties will be returned from an actual call.
@@ -48,7 +48,7 @@ HTTP/1.1 204 No Content
 2015-10-25 14:57:30 UTC -->
 <!-- {
   "type": "#page.annotation",
-  "description": "Delete calendar",
+  "description": "Delete Calendar",
   "keywords": "",
   "section": "documentation",
   "tocPath": ""

@@ -6,9 +6,8 @@ The following **scopes** are required to execute this API:
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
-PATCH /me/contactFolders/<id>
-PATCH /users/<id>/contactFolders/<id>
-PATCH /drive/root/createdByUser/contactFolders/<id>
+PATCH /me/ContactFolders/<Id>
+PATCH /Users/<Id>/ContactFolders/<Id>
 ```
 ### Optional request headers
 | Name       | Description|
@@ -21,11 +20,12 @@ In the request body, supply the values for relevant fields that should be update
 
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|displayName|string||
-|parentFolderId|string||
+|DisplayName|String||
+|ParentFolderId|String||
+|WellKnownName|String||
 
 ### Response
-If successful, this method returns a `200 OK` response code and updated [contactFolder](../resources/contactfolder.md) object in the response body.
+If successful, this method returns a `200 OK` response code and updated [ContactFolder](../resources/contactfolder.md) object in the response body.
 ### Example
 ##### Request
 Here is an example of the request.
@@ -34,13 +34,14 @@ Here is an example of the request.
   "name": "update_contactfolder"
 }-->
 ```http
-PATCH https://graph.microsoft.com/beta/me/contactFolders/<id>
+PATCH https://graph.microsoft.com/beta/me/ContactFolders/<Id>
 Content-type: application/json
-Content-length: 84
+Content-length: 126
 
 {
-  "parentFolderId": "parentFolderId-value",
-  "displayName": "displayName-value"
+  "ParentFolderId": "ParentFolderId-value",
+  "DisplayName": "DisplayName-value",
+  "WellKnownName": "WellKnownName-value"
 }
 ```
 ##### Response
@@ -48,17 +49,18 @@ Here is an example of the response. Note: The response object shown here may be 
 <!-- {
   "blockType": "response",
   "truncated": true,
-  "@odata.type": "microsoft.graph.contactFolder"
+  "@odata.type": "microsoft.graph.ContactFolder"
 } -->
 ```http
 HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 104
+Content-length: 146
 
 {
-  "parentFolderId": "parentFolderId-value",
-  "displayName": "displayName-value",
-  "id": "id-value"
+  "ParentFolderId": "ParentFolderId-value",
+  "DisplayName": "DisplayName-value",
+  "WellKnownName": "WellKnownName-value",
+  "Id": "Id-value"
 }
 ```
 

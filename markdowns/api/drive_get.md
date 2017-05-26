@@ -1,4 +1,4 @@
-# Get drive
+# Get Drive
 
 Retrieve the properties and relationships of drive object.
 ### Prerequisites
@@ -6,16 +6,11 @@ The following **scopes** are required to execute this API:
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
-GET /drive
-GET /me/drive
-GET /drives/<id>
+GET /me/Drives/<Id>
+GET /Users/<Id>/Drives/<Id>
 ```
 ### Optional query parameters
-|Name|Value|Description|
-|:---------------|:--------|:-------|
-|$count|none|The count of related entities can be requested by specifying the $count query option.|
-|$expand|string|Comma-separated list of relationships to expand and include in the response. See relationships table of [drive](../resources/drive.md) object for supported names. |
-|$select|string|Comma-separated list of properties to include in the response.|
+This method supports the [OData Query Parameters](http://graph.microsoft.io/docs/overview/query_parameters) to help customize the response.
 
 ### Request headers
 | Name      |Description|
@@ -26,7 +21,7 @@ GET /drives/<id>
 ### Request body
 Do not supply a request body for this method.
 ### Response
-If successful, this method returns a `200 OK` response code and [drive](../resources/drive.md) object in the response body.
+If successful, this method returns a `200 OK` response code and [Drive](../resources/drive.md) object in the response body.
 ### Example
 ##### Request
 Here is an example of the request.
@@ -35,44 +30,36 @@ Here is an example of the request.
   "name": "get_drive"
 }-->
 ```http
-GET https://graph.microsoft.com/beta/drive
+GET https://graph.microsoft.com/beta/me/Drives/<Id>
 ```
 ##### Response
 Here is an example of the response. Note: The response object shown here may be truncated for brevity. All of the properties will be returned from an actual call.
 <!-- {
   "blockType": "response",
   "truncated": true,
-  "@odata.type": "microsoft.graph.drive"
+  "@odata.type": "microsoft.graph.Drive"
 } -->
 ```http
 HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 458
+Content-length: 370
 
 {
-  "driveType": "driveType-value",
-  "owner": {
-    "application": {
-      "displayName": "displayName-value",
-      "id": "id-value"
-    },
-    "device": {
-      "displayName": "displayName-value",
-      "id": "id-value"
-    },
-    "user": {
-      "displayName": "displayName-value",
-      "id": "id-value"
-    }
-  },
-  "quota": {
-    "deleted": 99,
-    "remaining": 99,
-    "state": "state-value",
-    "total": 99,
-    "used": 99
-  },
-  "id": "id-value"
+  "Id": "Id-value",
+  "EntityACL": {
+    "AccessControlEntries": [
+      {
+        "AccessRight": "AccessRight-value",
+        "AccessType": "AccessType-value",
+        "Claim": {
+          "Type": "Type-value",
+          "Value": "Value-value",
+          "ValueType": "ValueType-value",
+          "OriginalIssuer": "OriginalIssuer-value"
+        }
+      }
+    ]
+  }
 }
 ```
 
@@ -80,7 +67,7 @@ Content-length: 458
 2015-10-25 14:57:30 UTC -->
 <!-- {
   "type": "#page.annotation",
-  "description": "Get drive",
+  "description": "Get Drive",
   "keywords": "",
   "section": "documentation",
   "tocPath": ""

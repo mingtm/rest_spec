@@ -1,4 +1,4 @@
-# recurrenceRange resource type
+# RecurrenceRange resource type
 
 
 
@@ -6,11 +6,11 @@
 ### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|endDate|date||
-|numberOfOccurrences|int32||
-|recurrenceTimeZone|string||
-|startDate|date||
-|type|String| Possible values are: `endDate`, `noEnd`, `numbered`.|
+|EndDate|Date||
+|NumberOfOccurrences|Int32||
+|RecurrenceTimeZone|String||
+|StartDate|Date||
+|Type|String| Possible values are: `EndDate`, `NoEnd`, `Numbered`.|
 
 ### JSON representation
 
@@ -21,16 +21,16 @@ Here is a JSON representation of the resource.
   "optionalProperties": [
 
   ],
-  "@odata.type": "microsoft.graph.recurrenceRange"
+  "@odata.type": "microsoft.graph.RecurrenceRange"
 }-->
 
 ```json
 {
-  "endDate": "String (timestamp)",
-  "numberOfOccurrences": 1024,
-  "recurrenceTimeZone": "string",
-  "startDate": "String (timestamp)",
-  "type": "String"
+  "EndDate": "String (timestamp)",
+  "NumberOfOccurrences": 1024,
+  "RecurrenceTimeZone": "String",
+  "StartDate": "String (timestamp)",
+  "Type": "String"
 }
 
 ```
@@ -39,7 +39,7 @@ Here is a JSON representation of the resource.
 2015-10-25 14:57:30 UTC -->
 <!-- {
   "type": "#page.annotation",
-  "description": "recurrenceRange resource",
+  "description": "RecurrenceRange resource",
   "keywords": "",
   "section": "documentation",
   "tocPath": ""

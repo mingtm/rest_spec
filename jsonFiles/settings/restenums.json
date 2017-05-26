@@ -1,329 +1,720 @@
 {
-  "bodyType": {
+  "AutomaticRepliesStatus": {
     "isExclusive": true,
     "options": {
-      "text": {
+      "Disabled": {
         "value": "0",
         "description": ""
       },
-      "html": {
-        "value": "1",
-        "description": ""
-      }
-    }
-  },
-  "importance": {
-    "isExclusive": true,
-    "options": {
-      "low": {
-        "value": "0",
-        "description": ""
-      },
-      "normal": {
+      "AlwaysEnabled": {
         "value": "1",
         "description": ""
       },
-      "high": {
+      "Scheduled": {
         "value": "2",
         "description": ""
       }
     }
   },
-  "calendarColor": {
+  "ExternalAudienceScope": {
     "isExclusive": true,
     "options": {
-      "lightBlue": {
+      "None": {
         "value": "0",
         "description": ""
       },
-      "lightGreen": {
+      "ContactsOnly": {
         "value": "1",
         "description": ""
       },
-      "lightOrange": {
+      "All": {
+        "value": "2",
+        "description": ""
+      }
+    }
+  },
+  "AttendeeType": {
+    "isExclusive": true,
+    "options": {
+      "Required": {
+        "value": "0",
+        "description": ""
+      },
+      "Optional": {
+        "value": "1",
+        "description": ""
+      },
+      "Resource": {
+        "value": "2",
+        "description": ""
+      }
+    }
+  },
+  "FreeBusyStatus": {
+    "isExclusive": true,
+    "options": {
+      "Free": {
+        "value": "0",
+        "description": ""
+      },
+      "Tentative": {
+        "value": "1",
+        "description": ""
+      },
+      "Busy": {
         "value": "2",
         "description": ""
       },
-      "lightGray": {
+      "Oof": {
         "value": "3",
         "description": ""
       },
-      "lightYellow": {
+      "WorkingElsewhere": {
         "value": "4",
         "description": ""
       },
-      "lightTeal": {
+      "Unknown": {
+        "value": "-1",
+        "description": ""
+      }
+    }
+  },
+  "PhysicalAddressType": {
+    "isExclusive": true,
+    "options": {
+      "Unknown": {
+        "value": "0",
+        "description": ""
+      },
+      "Home": {
+        "value": "1",
+        "description": ""
+      },
+      "Business": {
+        "value": "2",
+        "description": ""
+      },
+      "Other": {
+        "value": "3",
+        "description": ""
+      }
+    }
+  },
+  "ActivityDomain": {
+    "isExclusive": true,
+    "options": {
+      "Unknown": {
+        "value": "0",
+        "description": ""
+      },
+      "Work": {
+        "value": "1",
+        "description": ""
+      },
+      "Personal": {
+        "value": "2",
+        "description": ""
+      }
+    }
+  },
+  "BodyType": {
+    "isExclusive": true,
+    "options": {
+      "Text": {
+        "value": "0",
+        "description": ""
+      },
+      "HTML": {
+        "value": "1",
+        "description": ""
+      }
+    }
+  },
+  "Importance": {
+    "isExclusive": true,
+    "options": {
+      "Low": {
+        "value": "0",
+        "description": ""
+      },
+      "Normal": {
+        "value": "1",
+        "description": ""
+      },
+      "High": {
+        "value": "2",
+        "description": ""
+      }
+    }
+  },
+  "InferenceClassificationType": {
+    "isExclusive": true,
+    "options": {
+      "Focused": {
+        "value": "0",
+        "description": ""
+      },
+      "Other": {
+        "value": "1",
+        "description": ""
+      }
+    }
+  },
+  "FollowupFlagStatus": {
+    "isExclusive": true,
+    "options": {
+      "NotFlagged": {
+        "value": "0",
+        "description": ""
+      },
+      "Complete": {
+        "value": "1",
+        "description": ""
+      },
+      "Flagged": {
+        "value": "2",
+        "description": ""
+      }
+    }
+  },
+  "CalendarColor": {
+    "isExclusive": true,
+    "options": {
+      "LightBlue": {
+        "value": "0",
+        "description": ""
+      },
+      "LightGreen": {
+        "value": "1",
+        "description": ""
+      },
+      "LightOrange": {
+        "value": "2",
+        "description": ""
+      },
+      "LightGray": {
+        "value": "3",
+        "description": ""
+      },
+      "LightYellow": {
+        "value": "4",
+        "description": ""
+      },
+      "LightTeal": {
         "value": "5",
         "description": ""
       },
-      "lightPink": {
+      "LightPink": {
         "value": "6",
         "description": ""
       },
-      "lightBrown": {
+      "LightBrown": {
         "value": "7",
         "description": ""
       },
-      "lightRed": {
+      "LightRed": {
         "value": "8",
         "description": ""
       },
-      "maxColor": {
+      "MaxColor": {
         "value": "9",
         "description": ""
       },
-      "auto": {
+      "Auto": {
         "value": "-1",
         "description": ""
       }
     }
   },
-  "responseType": {
+  "ResponseType": {
     "isExclusive": true,
     "options": {
-      "none": {
+      "None": {
         "value": "0",
         "description": ""
       },
-      "organizer": {
+      "Organizer": {
         "value": "1",
         "description": ""
       },
-      "tentativelyAccepted": {
+      "TentativelyAccepted": {
         "value": "2",
         "description": ""
       },
-      "accepted": {
+      "Accepted": {
         "value": "3",
         "description": ""
       },
-      "declined": {
+      "Declined": {
         "value": "4",
         "description": ""
       },
-      "notResponded": {
+      "NotResponded": {
         "value": "5",
         "description": ""
       }
     }
   },
-  "sensitivity": {
+  "Sensitivity": {
     "isExclusive": true,
     "options": {
-      "normal": {
+      "Normal": {
         "value": "0",
         "description": ""
       },
-      "personal": {
+      "Personal": {
         "value": "1",
         "description": ""
       },
-      "private": {
+      "Private": {
         "value": "2",
         "description": ""
       },
-      "confidential": {
+      "Confidential": {
         "value": "3",
         "description": ""
       }
     }
   },
-  "recurrencePatternType": {
+  "RecurrencePatternType": {
     "isExclusive": true,
     "options": {
-      "daily": {
+      "Daily": {
         "value": "0",
         "description": ""
       },
-      "weekly": {
+      "Weekly": {
         "value": "1",
         "description": ""
       },
-      "absoluteMonthly": {
+      "AbsoluteMonthly": {
         "value": "2",
         "description": ""
       },
-      "relativeMonthly": {
+      "RelativeMonthly": {
         "value": "3",
         "description": ""
       },
-      "absoluteYearly": {
+      "AbsoluteYearly": {
         "value": "4",
         "description": ""
       },
-      "relativeYearly": {
+      "RelativeYearly": {
         "value": "5",
         "description": ""
       }
     }
   },
-  "dayOfWeek": {
+  "DayOfWeek": {
     "isExclusive": true,
     "options": {
-      "sunday": {
+      "Sunday": {
         "value": "0",
         "description": ""
       },
-      "monday": {
+      "Monday": {
         "value": "1",
         "description": ""
       },
-      "tuesday": {
+      "Tuesday": {
         "value": "2",
         "description": ""
       },
-      "wednesday": {
+      "Wednesday": {
         "value": "3",
         "description": ""
       },
-      "thursday": {
+      "Thursday": {
         "value": "4",
         "description": ""
       },
-      "friday": {
+      "Friday": {
         "value": "5",
         "description": ""
       },
-      "saturday": {
+      "Saturday": {
         "value": "6",
         "description": ""
       }
     }
   },
-  "weekIndex": {
+  "WeekIndex": {
     "isExclusive": true,
     "options": {
-      "first": {
+      "First": {
         "value": "0",
         "description": ""
       },
-      "second": {
+      "Second": {
         "value": "1",
         "description": ""
       },
-      "third": {
+      "Third": {
         "value": "2",
         "description": ""
       },
-      "fourth": {
+      "Fourth": {
         "value": "3",
         "description": ""
       },
-      "last": {
+      "Last": {
         "value": "4",
         "description": ""
       }
     }
   },
-  "recurrenceRangeType": {
+  "RecurrenceRangeType": {
     "isExclusive": true,
     "options": {
-      "endDate": {
+      "EndDate": {
         "value": "0",
         "description": ""
       },
-      "noEnd": {
+      "NoEnd": {
         "value": "1",
         "description": ""
       },
-      "numbered": {
+      "Numbered": {
         "value": "2",
         "description": ""
       }
     }
   },
-  "freeBusyStatus": {
+  "EventType": {
     "isExclusive": true,
     "options": {
-      "free": {
+      "SingleInstance": {
         "value": "0",
         "description": ""
       },
-      "tentative": {
+      "Occurrence": {
         "value": "1",
         "description": ""
       },
-      "busy": {
+      "Exception": {
         "value": "2",
         "description": ""
       },
-      "oof": {
+      "SeriesMaster": {
+        "value": "3",
+        "description": ""
+      }
+    }
+  },
+  "PhysicalPresence": {
+    "isExclusive": true,
+    "options": {
+      "NoPresence": {
+        "value": "0",
+        "description": ""
+      },
+      "InRoom": {
+        "value": "1",
+        "description": ""
+      },
+      "LeftRoom": {
+        "value": "2",
+        "description": ""
+      }
+    }
+  },
+  "SkypePresence": {
+    "isExclusive": true,
+    "options": {
+      "NoStatus": {
+        "value": "0",
+        "description": ""
+      },
+      "OnSkype": {
+        "value": "1",
+        "description": ""
+      },
+      "LeftSkype": {
+        "value": "2",
+        "description": ""
+      }
+    }
+  },
+  "EtaRequestStatus": {
+    "isExclusive": true,
+    "options": {
+      "NoRequest": {
+        "value": "0",
+        "description": ""
+      },
+      "EtaRequestPending": {
+        "value": "1",
+        "description": ""
+      },
+      "EtaRequested": {
+        "value": "2",
+        "description": ""
+      },
+      "EtaResponseReceived": {
+        "value": "3",
+        "description": ""
+      }
+    }
+  },
+  "EtaResponse": {
+    "isExclusive": true,
+    "options": {
+      "NoResponse": {
+        "value": "0",
+        "description": ""
+      },
+      "OnMyWay": {
+        "value": "1",
+        "description": ""
+      },
+      "BeThereIn5": {
+        "value": "2",
+        "description": ""
+      },
+      "BeThereIn10": {
         "value": "3",
         "description": ""
       },
-      "workingElsewhere": {
+      "StartWithoutMe": {
         "value": "4",
         "description": ""
       },
-      "unknown": {
-        "value": "-1",
-        "description": ""
-      }
-    }
-  },
-  "eventType": {
-    "isExclusive": true,
-    "options": {
-      "singleInstance": {
-        "value": "0",
-        "description": ""
-      },
-      "occurrence": {
-        "value": "1",
-        "description": ""
-      },
-      "exception": {
-        "value": "2",
-        "description": ""
-      },
-      "seriesMaster": {
-        "value": "3",
-        "description": ""
-      }
-    }
-  },
-  "attendeeType": {
-    "isExclusive": true,
-    "options": {
-      "required": {
-        "value": "0",
-        "description": ""
-      },
-      "optional": {
-        "value": "1",
-        "description": ""
-      },
-      "resource": {
-        "value": "2",
-        "description": ""
-      }
-    }
-  },
-  "meetingMessageType": {
-    "isExclusive": true,
-    "options": {
-      "none": {
-        "value": "0",
-        "description": ""
-      },
-      "meetingRequest": {
-        "value": "1",
-        "description": ""
-      },
-      "meetingCancelled": {
-        "value": "2",
-        "description": ""
-      },
-      "meetingAccepted": {
-        "value": "3",
-        "description": ""
-      },
-      "meetingTenativelyAccepted": {
-        "value": "4",
-        "description": ""
-      },
-      "meetingDeclined": {
+      "CantMakeIt": {
         "value": "5",
+        "description": ""
+      }
+    }
+  },
+  "WebsiteType": {
+    "isExclusive": true,
+    "options": {
+      "Other": {
+        "value": "0",
+        "description": ""
+      },
+      "Home": {
+        "value": "1",
+        "description": ""
+      },
+      "Work": {
+        "value": "2",
+        "description": ""
+      },
+      "Blog": {
+        "value": "3",
+        "description": ""
+      },
+      "Profile": {
+        "value": "4",
+        "description": ""
+      }
+    }
+  },
+  "PhoneType": {
+    "isExclusive": true,
+    "options": {
+      "Home": {
+        "value": "0",
+        "description": ""
+      },
+      "Business": {
+        "value": "1",
+        "description": ""
+      },
+      "Mobile": {
+        "value": "2",
+        "description": ""
+      },
+      "Other": {
+        "value": "3",
+        "description": ""
+      },
+      "Assistant": {
+        "value": "4",
+        "description": ""
+      },
+      "HomeFax": {
+        "value": "5",
+        "description": ""
+      },
+      "BusinessFax": {
+        "value": "6",
+        "description": ""
+      },
+      "OtherFax": {
+        "value": "7",
+        "description": ""
+      },
+      "Pager": {
+        "value": "8",
+        "description": ""
+      },
+      "Radio": {
+        "value": "9",
+        "description": ""
+      }
+    }
+  },
+  "MeetingMessageType": {
+    "isExclusive": true,
+    "options": {
+      "None": {
+        "value": "0",
+        "description": ""
+      },
+      "MeetingRequest": {
+        "value": "1",
+        "description": ""
+      },
+      "MeetingCancelled": {
+        "value": "2",
+        "description": ""
+      },
+      "MeetingAccepted": {
+        "value": "3",
+        "description": ""
+      },
+      "MeetingTentativelyAccepted": {
+        "value": "4",
+        "description": ""
+      },
+      "MeetingDeclined": {
+        "value": "5",
+        "description": ""
+      }
+    }
+  },
+  "ReferenceAttachmentProvider": {
+    "isExclusive": true,
+    "options": {
+      "Other": {
+        "value": "0",
+        "description": ""
+      },
+      "OneDriveBusiness": {
+        "value": "1",
+        "description": ""
+      },
+      "OneDriveConsumer": {
+        "value": "2",
+        "description": ""
+      },
+      "Dropbox": {
+        "value": "3",
+        "description": ""
+      }
+    }
+  },
+  "ReferenceAttachmentPermission": {
+    "isExclusive": true,
+    "options": {
+      "Other": {
+        "value": "0",
+        "description": ""
+      },
+      "View": {
+        "value": "1",
+        "description": ""
+      },
+      "Edit": {
+        "value": "2",
+        "description": ""
+      }
+    }
+  },
+  "GroupAccessType": {
+    "isExclusive": true,
+    "options": {
+      "None": {
+        "value": "0",
+        "description": ""
+      },
+      "Private": {
+        "value": "1",
+        "description": ""
+      },
+      "Secret": {
+        "value": "2",
+        "description": ""
+      },
+      "Public": {
+        "value": "3",
+        "description": ""
+      }
+    }
+  },
+  "AccessControlRight": {
+    "isExclusive": true,
+    "options": {
+      "Read": {
+        "value": "1",
+        "description": ""
+      },
+      "Write": {
+        "value": "2",
+        "description": ""
+      }
+    }
+  },
+  "AccessControlType": {
+    "isExclusive": true,
+    "options": {
+      "Deny": {
+        "value": "0",
+        "description": ""
+      },
+      "Grant": {
+        "value": "1",
+        "description": ""
+      }
+    }
+  },
+  "ChangeType": {
+    "isExclusive": false,
+    "options": {
+      "Created": {
+        "value": "1",
+        "description": ""
+      },
+      "Updated": {
+        "value": "2",
+        "description": ""
+      },
+      "Deleted": {
+        "value": "4",
+        "description": ""
+      },
+      "Acknowledgment": {
+        "value": "8",
+        "description": ""
+      },
+      "Missed": {
+        "value": "16",
+        "description": ""
+      }
+    }
+  },
+  "TaskStatus": {
+    "isExclusive": true,
+    "options": {
+      "NotStarted": {
+        "value": "0",
+        "description": ""
+      },
+      "InProgress": {
+        "value": "1",
+        "description": ""
+      },
+      "Completed": {
+        "value": "2",
+        "description": ""
+      },
+      "WaitingOnOthers": {
+        "value": "3",
+        "description": ""
+      },
+      "Deferred": {
+        "value": "4",
         "description": ""
       }
     }

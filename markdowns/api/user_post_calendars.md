@@ -1,14 +1,13 @@
-# Create calendar
+# Create Calendar
 
-Use this API to create a new calendar.
+Use this API to create a new Calendar.
 ### Prerequisites
 The following **scopes** are required to execute this API: 
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
-POST /me/calendars
-POST /users/<id>/calendars
-POST /drive/root/createdByUser/calendars
+POST /me/Calendars
+POST /Users/<Id>/Calendars
 
 ```
 ### Request headers
@@ -18,11 +17,11 @@ POST /drive/root/createdByUser/calendars
 | Workbook-Session-Id  | Workbook session Id that determines if changes are persisted or not. Optional.|
 
 ### Request body
-In the request body, supply a JSON representation of [calendar](../resources/calendar.md) object.
+In the request body, supply a JSON representation of [Calendar](../resources/calendar.md) object.
 
 
 ### Response
-If successful, this method returns `201, Created` response code and [calendar](../resources/calendar.md) object in the response body.
+If successful, this method returns `201, Created` response code and [Calendar](../resources/calendar.md) object in the response body.
 
 ### Example
 ##### Request
@@ -32,34 +31,36 @@ Here is an example of the request.
   "name": "create_calendar_from_user"
 }-->
 ```http
-POST https://graph.microsoft.com/beta/me/calendars
+POST https://graph.microsoft.com/beta/me/Calendars
 Content-type: application/json
-Content-length: 86
+Content-length: 115
 
 {
-  "name": "name-value",
-  "color": "color-value",
-  "changeKey": "changeKey-value"
+  "Name": "Name-value",
+  "Color": "Color-value",
+  "IsDefaultCalendar": true,
+  "ChangeKey": "ChangeKey-value"
 }
 ```
-In the request body, supply a JSON representation of [calendar](../resources/calendar.md) object.
+In the request body, supply a JSON representation of [Calendar](../resources/calendar.md) object.
 ##### Response
 Here is an example of the response. Note: The response object shown here may be truncated for brevity. All of the properties will be returned from an actual call.
 <!-- {
   "blockType": "response",
   "truncated": true,
-  "@odata.type": "microsoft.graph.calendar"
+  "@odata.type": "microsoft.graph.Calendar"
 } -->
 ```http
 HTTP/1.1 201 Created
 Content-type: application/json
-Content-length: 106
+Content-length: 135
 
 {
-  "name": "name-value",
-  "color": "color-value",
-  "changeKey": "changeKey-value",
-  "id": "id-value"
+  "Name": "Name-value",
+  "Color": "Color-value",
+  "IsDefaultCalendar": true,
+  "ChangeKey": "ChangeKey-value",
+  "Id": "Id-value"
 }
 ```
 
@@ -67,7 +68,7 @@ Content-length: 106
 2015-10-25 14:57:30 UTC -->
 <!-- {
   "type": "#page.annotation",
-  "description": "Create calendar",
+  "description": "Create Calendar",
   "keywords": "",
   "section": "documentation",
   "tocPath": ""

@@ -1,4 +1,4 @@
-# Get calendar
+# Get Calendar
 
 Retrieve the properties and relationships of calendar object.
 ### Prerequisites
@@ -6,16 +6,12 @@ The following **scopes** are required to execute this API:
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
-GET /me/calendar
-GET /users/<id>/calendar
-GET /groups/<id>/calendar
+GET /me/Calendar
+GET /Users/<Id>/Calendar
+GET /Groups/<Id>/Calendar
 ```
 ### Optional query parameters
-|Name|Value|Description|
-|:---------------|:--------|:-------|
-|$count|none|The count of related entities can be requested by specifying the $count query option.|
-|$expand|string|Comma-separated list of relationships to expand and include in the response. See relationships table of [calendar](../resources/calendar.md) object for supported names. |
-|$select|string|Comma-separated list of properties to include in the response.|
+This method supports the [OData Query Parameters](http://graph.microsoft.io/docs/overview/query_parameters) to help customize the response.
 
 ### Request headers
 | Name      |Description|
@@ -26,7 +22,7 @@ GET /groups/<id>/calendar
 ### Request body
 Do not supply a request body for this method.
 ### Response
-If successful, this method returns a `200 OK` response code and [calendar](../resources/calendar.md) object in the response body.
+If successful, this method returns a `200 OK` response code and [Calendar](../resources/calendar.md) object in the response body.
 ### Example
 ##### Request
 Here is an example of the request.
@@ -35,25 +31,26 @@ Here is an example of the request.
   "name": "get_calendar"
 }-->
 ```http
-GET https://graph.microsoft.com/beta/me/calendar
+GET https://graph.microsoft.com/beta/me/Calendar
 ```
 ##### Response
 Here is an example of the response. Note: The response object shown here may be truncated for brevity. All of the properties will be returned from an actual call.
 <!-- {
   "blockType": "response",
   "truncated": true,
-  "@odata.type": "microsoft.graph.calendar"
+  "@odata.type": "microsoft.graph.Calendar"
 } -->
 ```http
 HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 106
+Content-length: 135
 
 {
-  "name": "name-value",
-  "color": "color-value",
-  "changeKey": "changeKey-value",
-  "id": "id-value"
+  "Name": "Name-value",
+  "Color": "Color-value",
+  "IsDefaultCalendar": true,
+  "ChangeKey": "ChangeKey-value",
+  "Id": "Id-value"
 }
 ```
 
@@ -61,7 +58,7 @@ Content-length: 106
 2015-10-25 14:57:30 UTC -->
 <!-- {
   "type": "#page.annotation",
-  "description": "Get calendar",
+  "description": "Get Calendar",
   "keywords": "",
   "section": "documentation",
   "tocPath": ""

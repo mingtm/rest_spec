@@ -1,4 +1,4 @@
-# List acceptedSenders
+# List AcceptedSenders
 
 Retrieve a list of directoryobject objects.
 ### Prerequisites
@@ -6,13 +6,12 @@ The following **scopes** are required to execute this API:
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
-GET /groups/<id>/acceptedSenders
+GET /Groups/<Id>/AcceptedSenders
+GET /me/JoinedGroups/<Id>/AcceptedSenders
+GET /Users/<Id>/JoinedGroups/<Id>/AcceptedSenders
 ```
 ### Optional query parameters
-|Name|Value|Description|
-|:---------------|:--------|:-------|
-|$orderby|string|Comma-separated list of properties that are used to sort the order of items in the response collection.|
-|$top|int|The number of items to return in a result set.|
+This method supports the [OData Query Parameters](http://graph.microsoft.io/docs/overview/query_parameters) to help customize the response.
 
 ### Request headers
 | Name      |Description|
@@ -23,7 +22,7 @@ GET /groups/<id>/acceptedSenders
 ### Request body
 Do not supply a request body for this method.
 ### Response
-If successful, this method returns a `200 OK` response code and collection of [directoryObject](../resources/directoryobject.md) objects in the response body.
+If successful, this method returns a `200 OK` response code and collection of [DirectoryObject](../resources/directoryobject.md) objects in the response body.
 ### Example
 ##### Request
 Here is an example of the request.
@@ -32,14 +31,14 @@ Here is an example of the request.
   "name": "get_acceptedsenders"
 }-->
 ```http
-GET https://graph.microsoft.com/beta/groups/<id>/acceptedSenders
+GET https://graph.microsoft.com/beta/Groups/<Id>/AcceptedSenders
 ```
 ##### Response
 Here is an example of the response. Note: The response object shown here may be truncated for brevity. All of the properties will be returned from an actual call.
 <!-- {
   "blockType": "response",
   "truncated": true,
-  "@odata.type": "microsoft.graph.directoryObject",
+  "@odata.type": "microsoft.graph.DirectoryObject",
   "isCollection": true
 } -->
 ```http
@@ -50,7 +49,7 @@ Content-length: 55
 {
   "value": [
     {
-      "id": "id-value"
+      "Id": "Id-value"
     }
   ]
 }
@@ -60,7 +59,7 @@ Content-length: 55
 2015-10-25 14:57:30 UTC -->
 <!-- {
   "type": "#page.annotation",
-  "description": "List acceptedSenders",
+  "description": "List AcceptedSenders",
   "keywords": "",
   "section": "documentation",
   "tocPath": ""

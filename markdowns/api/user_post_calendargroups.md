@@ -1,14 +1,13 @@
-# Create calendarGroup
+# Create CalendarGroup
 
-Use this API to create a new calendarGroup.
+Use this API to create a new CalendarGroup.
 ### Prerequisites
 The following **scopes** are required to execute this API: 
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
-POST /me/calendarGroups
-POST /users/<id>/calendarGroups
-POST /drive/root/createdByUser/calendarGroups
+POST /me/CalendarGroups
+POST /Users/<Id>/CalendarGroups
 
 ```
 ### Request headers
@@ -18,11 +17,11 @@ POST /drive/root/createdByUser/calendarGroups
 | Workbook-Session-Id  | Workbook session Id that determines if changes are persisted or not. Optional.|
 
 ### Request body
-In the request body, supply a JSON representation of [calendarGroup](../resources/calendargroup.md) object.
+In the request body, supply a JSON representation of [CalendarGroup](../resources/calendargroup.md) object.
 
 
 ### Response
-If successful, this method returns `201, Created` response code and [calendarGroup](../resources/calendargroup.md) object in the response body.
+If successful, this method returns `201, Created` response code and [CalendarGroup](../resources/calendargroup.md) object in the response body.
 
 ### Example
 ##### Request
@@ -32,23 +31,23 @@ Here is an example of the request.
   "name": "create_calendargroup_from_user"
 }-->
 ```http
-POST https://graph.microsoft.com/beta/me/calendarGroups
+POST https://graph.microsoft.com/beta/me/CalendarGroups
 Content-type: application/json
 Content-length: 90
 
 {
-  "name": "name-value",
-  "classId": "classId-value",
-  "changeKey": "changeKey-value"
+  "Name": "Name-value",
+  "ClassId": "ClassId-value",
+  "ChangeKey": "ChangeKey-value"
 }
 ```
-In the request body, supply a JSON representation of [calendarGroup](../resources/calendargroup.md) object.
+In the request body, supply a JSON representation of [CalendarGroup](../resources/calendargroup.md) object.
 ##### Response
 Here is an example of the response. Note: The response object shown here may be truncated for brevity. All of the properties will be returned from an actual call.
 <!-- {
   "blockType": "response",
   "truncated": true,
-  "@odata.type": "microsoft.graph.calendarGroup"
+  "@odata.type": "microsoft.graph.CalendarGroup"
 } -->
 ```http
 HTTP/1.1 201 Created
@@ -56,10 +55,10 @@ Content-type: application/json
 Content-length: 110
 
 {
-  "name": "name-value",
-  "classId": "classId-value",
-  "changeKey": "changeKey-value",
-  "id": "id-value"
+  "Name": "Name-value",
+  "ClassId": "ClassId-value",
+  "ChangeKey": "ChangeKey-value",
+  "Id": "Id-value"
 }
 ```
 
@@ -67,7 +66,7 @@ Content-length: 110
 2015-10-25 14:57:30 UTC -->
 <!-- {
   "type": "#page.annotation",
-  "description": "Create calendarGroup",
+  "description": "Create CalendarGroup",
   "keywords": "",
   "section": "documentation",
   "tocPath": ""

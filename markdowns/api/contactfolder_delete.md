@@ -1,14 +1,13 @@
-# Delete contactFolder
+# Delete ContactFolder
 
-Delete contactFolder.
+Delete ContactFolder.
 ### Prerequisites
 The following **scopes** are required to execute this API: 
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
-DELETE /me/contactFolders/<id>
-DELETE /users/<id>/contactFolders/<id>
-DELETE /drive/root/createdByUser/contactFolders/<id>
+DELETE /me/ContactFolders/<Id>
+DELETE /Users/<Id>/ContactFolders/<Id>
 
 ```
 ### Request headers
@@ -32,7 +31,7 @@ Here is an example of the request.
   "name": "delete_contactfolder"
 }-->
 ```http
-DELETE https://graph.microsoft.com/beta/me/contactFolders/<id>
+DELETE https://graph.microsoft.com/beta/me/ContactFolders/<Id>
 ```
 ##### Response
 Here is an example of the response. Note: The response object shown here may be truncated for brevity. All of the properties will be returned from an actual call.
@@ -48,7 +47,7 @@ HTTP/1.1 204 No Content
 2015-10-25 14:57:30 UTC -->
 <!-- {
   "type": "#page.annotation",
-  "description": "Delete contactFolder",
+  "description": "Delete ContactFolder",
   "keywords": "",
   "section": "documentation",
   "tocPath": ""

@@ -1,7 +1,7 @@
 {
-  "name": "users",
+  "name": "Users",
   "description": "",
-  "collectionOf": "user",
+  "collectionOf": "User",
   "isComplexType": false,
   "isEntitySet": true,
   "isOpenType": false,
@@ -25,7 +25,7 @@
   "updateDescription": null,
   "deleteDescription": null,
   "restPath": {
-    "/users": true
+    "/Users": true
   },
   "properties": [
 

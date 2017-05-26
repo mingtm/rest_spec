@@ -1,14 +1,13 @@
-# Delete user
+# Delete User
 
-Delete user.
+Delete User.
 ### Prerequisites
 The following **scopes** are required to execute this API: 
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
 DELETE /me
-DELETE /users/<id>
-DELETE /drive/root/createdByUser
+DELETE /Users/<Id>
 
 ```
 ### Request headers
@@ -48,7 +47,7 @@ HTTP/1.1 204 No Content
 2015-10-25 14:57:30 UTC -->
 <!-- {
   "type": "#page.annotation",
-  "description": "Delete user",
+  "description": "Delete User",
   "keywords": "",
   "section": "documentation",
   "tocPath": ""

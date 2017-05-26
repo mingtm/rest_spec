@@ -1,5 +1,5 @@
 {
-  "name": "entity",
+  "name": "Entity",
   "description": "",
   "collectionOf": null,
   "isComplexType": false,
@@ -28,18 +28,18 @@
   },
   "properties": [
     {
-      "name": "id",
+      "name": "Id",
       "description": "",
       "isKey": true,
-      "dataType": "string",
+      "dataType": "String",
       "isReadOnly": true,
       "enumName": null,
       "isCollection": false,
       "isRelationship": false,
       "supportFilter": false,
       "allowPostToCollection": true,
-      "isNullable": false,
-      "isUnicode": false
+      "isNullable": null,
+      "isUnicode": null
     }
   ],
   "methods": [

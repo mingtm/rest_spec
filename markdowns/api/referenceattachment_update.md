@@ -19,14 +19,20 @@ In the request body, supply the values for relevant fields that should be update
 
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|contentType|string||
-|isInline|boolean||
-|lastModifiedDateTime|dateTimeOffset||
-|name|string||
-|size|int32||
+|ContentType|String||
+|IsFolder|Boolean||
+|IsInline|Boolean||
+|LastModifiedDateTime|DateTimeOffset||
+|Name|String||
+|Permission|string| Possible values are: `Other`, `View`, `Edit`.|
+|PreviewUrl|String||
+|ProviderType|string| Possible values are: `Other`, `OneDriveBusiness`, `OneDriveConsumer`, `Dropbox`.|
+|Size|Int32||
+|SourceUrl|String||
+|ThumbnailUrl|String||
 
 ### Response
-If successful, this method returns a `200 OK` response code and updated [referenceAttachment](../resources/referenceattachment.md) object in the response body.
+If successful, this method returns a `200 OK` response code and updated [ReferenceAttachment](../resources/referenceattachment.md) object in the response body.
 ### Example
 ##### Request
 Here is an example of the request.
@@ -37,14 +43,15 @@ Here is an example of the request.
 ```http
 
 Content-type: application/json
-Content-length: 142
+Content-length: 208
 
 {
-  "lastModifiedDateTime": "datetime-value",
-  "name": "name-value",
-  "contentType": "contentType-value",
-  "size": 99,
-  "isInline": true
+  "SourceUrl": "SourceUrl-value",
+  "ProviderType": "ProviderType-value",
+  "ThumbnailUrl": "ThumbnailUrl-value",
+  "PreviewUrl": "PreviewUrl-value",
+  "Permission": "Permission-value",
+  "IsFolder": true
 }
 ```
 ##### Response
@@ -52,20 +59,20 @@ Here is an example of the response. Note: The response object shown here may be 
 <!-- {
   "blockType": "response",
   "truncated": true,
-  "@odata.type": "microsoft.graph.referenceAttachment"
+  "@odata.type": "microsoft.graph.ReferenceAttachment"
 } -->
 ```http
 HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 162
+Content-length: 208
 
 {
-  "lastModifiedDateTime": "datetime-value",
-  "name": "name-value",
-  "contentType": "contentType-value",
-  "size": 99,
-  "isInline": true,
-  "id": "id-value"
+  "SourceUrl": "SourceUrl-value",
+  "ProviderType": "ProviderType-value",
+  "ThumbnailUrl": "ThumbnailUrl-value",
+  "PreviewUrl": "PreviewUrl-value",
+  "Permission": "Permission-value",
+  "IsFolder": true
 }
 ```
 

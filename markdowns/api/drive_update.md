@@ -6,9 +6,8 @@ The following **scopes** are required to execute this API:
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
-PATCH /drive
-PATCH /me/drive
-PATCH /drives/<id>
+PATCH /me/Drives/<Id>
+PATCH /Users/<Id>/Drives/<Id>
 ```
 ### Optional request headers
 | Name       | Description|
@@ -21,12 +20,10 @@ In the request body, supply the values for relevant fields that should be update
 
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|driveType|string||
-|owner|identitySet||
-|quota|quota||
+|EntityACL|AccessControlList||
 
 ### Response
-If successful, this method returns a `200 OK` response code and updated [drive](../resources/drive.md) object in the response body.
+If successful, this method returns a `200 OK` response code and updated [Drive](../resources/drive.md) object in the response body.
 ### Example
 ##### Request
 Here is an example of the request.
@@ -35,32 +32,24 @@ Here is an example of the request.
   "name": "update_drive"
 }-->
 ```http
-PATCH https://graph.microsoft.com/beta/drive
+PATCH https://graph.microsoft.com/beta/me/Drives/<Id>
 Content-type: application/json
-Content-length: 438
+Content-length: 350
 
 {
-  "driveType": "driveType-value",
-  "owner": {
-    "application": {
-      "displayName": "displayName-value",
-      "id": "id-value"
-    },
-    "device": {
-      "displayName": "displayName-value",
-      "id": "id-value"
-    },
-    "user": {
-      "displayName": "displayName-value",
-      "id": "id-value"
-    }
-  },
-  "quota": {
-    "deleted": 99,
-    "remaining": 99,
-    "state": "state-value",
-    "total": 99,
-    "used": 99
+  "EntityACL": {
+    "AccessControlEntries": [
+      {
+        "AccessRight": "AccessRight-value",
+        "AccessType": "AccessType-value",
+        "Claim": {
+          "Type": "Type-value",
+          "Value": "Value-value",
+          "ValueType": "ValueType-value",
+          "OriginalIssuer": "OriginalIssuer-value"
+        }
+      }
+    ]
   }
 }
 ```
@@ -69,37 +58,29 @@ Here is an example of the response. Note: The response object shown here may be 
 <!-- {
   "blockType": "response",
   "truncated": true,
-  "@odata.type": "microsoft.graph.drive"
+  "@odata.type": "microsoft.graph.Drive"
 } -->
 ```http
 HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 458
+Content-length: 370
 
 {
-  "driveType": "driveType-value",
-  "owner": {
-    "application": {
-      "displayName": "displayName-value",
-      "id": "id-value"
-    },
-    "device": {
-      "displayName": "displayName-value",
-      "id": "id-value"
-    },
-    "user": {
-      "displayName": "displayName-value",
-      "id": "id-value"
-    }
-  },
-  "quota": {
-    "deleted": 99,
-    "remaining": 99,
-    "state": "state-value",
-    "total": 99,
-    "used": 99
-  },
-  "id": "id-value"
+  "Id": "Id-value",
+  "EntityACL": {
+    "AccessControlEntries": [
+      {
+        "AccessRight": "AccessRight-value",
+        "AccessType": "AccessType-value",
+        "Claim": {
+          "Type": "Type-value",
+          "Value": "Value-value",
+          "ValueType": "ValueType-value",
+          "OriginalIssuer": "OriginalIssuer-value"
+        }
+      }
+    ]
+  }
 }
 ```
 

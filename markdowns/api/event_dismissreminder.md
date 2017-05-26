@@ -1,4 +1,4 @@
-# event: dismissReminder
+# Event: DismissReminder
 
 
 ### Prerequisites
@@ -6,9 +6,9 @@ The following **scopes** are required to execute this API:
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
-POST /me/events/<id>/dismissReminder
-POST /me/calendarView/<id>/dismissReminder
-POST /users/<id>/events/<id>/dismissReminder
+POST /me/Events/<Id>/DismissReminder
+POST /me/CalendarView/<Id>/DismissReminder
+POST /Users/<Id>/Events/<Id>/DismissReminder
 
 ```
 ### Request headers
@@ -31,7 +31,7 @@ Here is an example of the request.
   "name": "event_dismissreminder"
 }-->
 ```http
-POST https://graph.microsoft.com/beta/me/events/<id>/dismissReminder
+POST https://graph.microsoft.com/beta/me/Events/<Id>/DismissReminder
 ```
 
 ##### Response
@@ -49,7 +49,7 @@ HTTP/1.1 200 OK
 2015-10-25 14:57:30 UTC -->
 <!-- {
   "type": "#page.annotation",
-  "description": "event: dismissReminder",
+  "description": "Event: DismissReminder",
   "keywords": "",
   "section": "documentation",
   "tocPath": ""

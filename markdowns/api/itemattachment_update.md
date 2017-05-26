@@ -19,14 +19,14 @@ In the request body, supply the values for relevant fields that should be update
 
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|contentType|string||
-|isInline|boolean||
-|lastModifiedDateTime|dateTimeOffset||
-|name|string||
-|size|int32||
+|ContentType|String||
+|IsInline|Boolean||
+|LastModifiedDateTime|DateTimeOffset||
+|Name|String||
+|Size|Int32||
 
 ### Response
-If successful, this method returns a `200 OK` response code and updated [itemAttachment](../resources/itemattachment.md) object in the response body.
+If successful, this method returns a `200 OK` response code and updated [ItemAttachment](../resources/itemattachment.md) object in the response body.
 ### Example
 ##### Request
 Here is an example of the request.
@@ -40,11 +40,11 @@ Content-type: application/json
 Content-length: 142
 
 {
-  "lastModifiedDateTime": "datetime-value",
-  "name": "name-value",
-  "contentType": "contentType-value",
-  "size": 99,
-  "isInline": true
+  "LastModifiedDateTime": "datetime-value",
+  "Name": "Name-value",
+  "ContentType": "ContentType-value",
+  "Size": 99,
+  "IsInline": true
 }
 ```
 ##### Response
@@ -52,7 +52,7 @@ Here is an example of the response. Note: The response object shown here may be 
 <!-- {
   "blockType": "response",
   "truncated": true,
-  "@odata.type": "microsoft.graph.itemAttachment"
+  "@odata.type": "microsoft.graph.ItemAttachment"
 } -->
 ```http
 HTTP/1.1 200 OK
@@ -60,12 +60,12 @@ Content-type: application/json
 Content-length: 162
 
 {
-  "lastModifiedDateTime": "datetime-value",
-  "name": "name-value",
-  "contentType": "contentType-value",
-  "size": 99,
-  "isInline": true,
-  "id": "id-value"
+  "LastModifiedDateTime": "datetime-value",
+  "Name": "Name-value",
+  "ContentType": "ContentType-value",
+  "Size": 99,
+  "IsInline": true,
+  "Id": "Id-value"
 }
 ```
 

@@ -1,4 +1,4 @@
-# group resource type
+# Group resource type
 
 
 
@@ -7,31 +7,26 @@
 
 | Method		   | Return Type	|Description|
 |:---------------|:--------|:----------|
-|[Get group](../api/group_get.md) | [group](group.md) |Read properties and relationships of group object.|
-|[Create acceptedSender](../api/group_post_acceptedsenders.md) |[directoryObject](directoryobject.md)| Create a new acceptedSender by posting to the acceptedSenders collection.|
-|[List acceptedSenders](../api/group_list_acceptedsenders.md) |[directoryObject](directoryobject.md) collection| Get a acceptedSender object collection.|
-|[Create event](../api/group_post_calendarview.md) |[event](event.md)| Create a new event by posting to the calendarView collection.|
-|[List calendarView](../api/group_list_calendarview.md) |[event](event.md) collection| Get a event object collection.|
-|[Create conversation](../api/group_post_conversations.md) |[conversation](conversation.md)| Create a new conversation by posting to the conversations collection.|
-|[List conversations](../api/group_list_conversations.md) |[conversation](conversation.md) collection| Get a conversation object collection.|
-|[Create event](../api/group_post_events.md) |[event](event.md)| Create a new event by posting to the events collection.|
-|[List events](../api/group_list_events.md) |[event](event.md) collection| Get a event object collection.|
-|[Create memberOf](../api/group_post_memberof.md) |[directoryObject](directoryobject.md)| Create a new memberOf by posting to the memberOf collection.|
-|[List memberOf](../api/group_list_memberof.md) |[directoryObject](directoryobject.md) collection| Get a memberOf object collection.|
-|[Create member](../api/group_post_members.md) |[directoryObject](directoryobject.md)| Create a new member by posting to the members collection.|
-|[List members](../api/group_list_members.md) |[directoryObject](directoryobject.md) collection| Get a member object collection.|
-|[Create owner](../api/group_post_owners.md) |[directoryObject](directoryobject.md)| Create a new owner by posting to the owners collection.|
-|[List owners](../api/group_list_owners.md) |[directoryObject](directoryobject.md) collection| Get a owner object collection.|
-|[Create rejectedSender](../api/group_post_rejectedsenders.md) |[directoryObject](directoryobject.md)| Create a new rejectedSender by posting to the rejectedSenders collection.|
-|[List rejectedSenders](../api/group_list_rejectedsenders.md) |[directoryObject](directoryobject.md) collection| Get a rejectedSender object collection.|
-|[Create thread](../api/group_post_threads.md) |[conversationThread](conversationthread.md)| Create a new thread by posting to the threads collection.|
-|[List threads](../api/group_list_threads.md) |[conversationThread](conversationthread.md) collection| Get a thread object collection.|
-|[Update](../api/group_update.md) | [group](group.md)	|Update group object. |
-|[Delete](../api/group_delete.md) | None |Delete group object. |
+|[Get Group](../api/group_get.md) | [Group](group.md) |Read properties and relationships of group object.|
+|[Create AcceptedSender](../api/group_post_acceptedsenders.md) |[DirectoryObject](directoryobject.md)| Create a new AcceptedSender by posting to the AcceptedSenders collection.|
+|[List AcceptedSenders](../api/group_list_acceptedsenders.md) |[DirectoryObject](directoryobject.md) collection| Get a AcceptedSender object collection.|
+|[Create Event](../api/group_post_calendarview.md) |[Event](event.md)| Create a new Event by posting to the CalendarView collection.|
+|[List CalendarView](../api/group_list_calendarview.md) |[Event](event.md) collection| Get a Event object collection.|
+|[Create Conversation](../api/group_post_conversations.md) |[Conversation](conversation.md)| Create a new Conversation by posting to the Conversations collection.|
+|[List Conversations](../api/group_list_conversations.md) |[Conversation](conversation.md) collection| Get a Conversation object collection.|
+|[Create Event](../api/group_post_events.md) |[Event](event.md)| Create a new Event by posting to the Events collection.|
+|[List Events](../api/group_list_events.md) |[Event](event.md) collection| Get a Event object collection.|
+|[Create Photo](../api/group_post_photos.md) |[Photo](photo.md)| Create a new Photo by posting to the Photos collection.|
+|[List Photos](../api/group_list_photos.md) |[Photo](photo.md) collection| Get a Photo object collection.|
+|[Create RejectedSender](../api/group_post_rejectedsenders.md) |[DirectoryObject](directoryobject.md)| Create a new RejectedSender by posting to the RejectedSenders collection.|
+|[List RejectedSenders](../api/group_list_rejectedsenders.md) |[DirectoryObject](directoryobject.md) collection| Get a RejectedSender object collection.|
+|[Create Subscription](../api/group_post_subscriptions.md) |[Subscription](subscription.md)| Create a new Subscription by posting to the Subscriptions collection.|
+|[List Subscriptions](../api/group_list_subscriptions.md) |[Subscription](subscription.md) collection| Get a Subscription object collection.|
+|[Create Thread](../api/group_post_threads.md) |[ConversationThread](conversationthread.md)| Create a new Thread by posting to the Threads collection.|
+|[List Threads](../api/group_list_threads.md) |[ConversationThread](conversationthread.md) collection| Get a Thread object collection.|
+|[Update](../api/group_update.md) | [Group](group.md)	|Update Group object. |
+|[Delete](../api/group_delete.md) | None |Delete Group object. |
 |[Addfavorite](../api/group_addfavorite.md)|None||
-|[Checkmembergroups](../api/group_checkmembergroups.md)|string collection||
-|[Getmembergroups](../api/group_getmembergroups.md)|string collection||
-|[Getmemberobjects](../api/group_getmemberobjects.md)|string collection||
 |[Removefavorite](../api/group_removefavorite.md)|None||
 |[Resetunseencount](../api/group_resetunseencount.md)|None||
 |[Subscribebymail](../api/group_subscribebymail.md)|None||
@@ -40,40 +35,30 @@
 ### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|allowExternalSenders|boolean||
-|autoSubscribeNewMembers|boolean||
-|description|string||
-|displayName|string||
-|groupTypes|string collection||
-|id|string| Read-only.|
-|isSubscribedByMail|boolean||
-|mail|string||
-|mailEnabled|boolean||
-|mailNickname|string||
-|onPremisesLastSyncDateTime|[dateTimeOffset](datetimeoffset.md)||
-|onPremisesSecurityIdentifier|string||
-|onPremisesSyncEnabled|boolean||
-|proxyAddresses|string collection||
-|securityEnabled|boolean||
-|unseenCount|int32||
-|visibility|string||
+|AccessType|string| Possible values are: `None`, `Private`, `Secret`, `Public`.|
+|AllowExternalSenders|Boolean||
+|AutoSubscribeNewMembers|Boolean||
+|Description|String||
+|DisplayName|String||
+|EmailAddress|String||
+|Id|String| Read-only.|
+|IsFavorite|Boolean||
+|IsSubscribedByMail|Boolean||
+|UnseenCount|Int32||
 
 ### Relationships
 | Relationship | Type	|Description|
 |:---------------|:--------|:----------|
-|acceptedSenders|[directoryObject](directoryobject.md) collection| Read-only. Nullable.|
-|calendar|[calendar](calendar.md)| Read-only. Nullable.|
-|calendarView|[event](event.md) collection| Read-only. Nullable.|
-|conversations|[conversation](conversation.md) collection| Read-only. Nullable.|
-|createdOnBehalfOf|[directoryObject](directoryobject.md)| Read-only. Nullable.|
-|drive|[drive](drive.md)| Read-only. Nullable.|
-|events|[event](event.md) collection| Read-only. Nullable.|
-|memberOf|[directoryObject](directoryobject.md) collection| Read-only. Nullable.|
-|members|[directoryObject](directoryobject.md) collection| Read-only. Nullable.|
-|owners|[directoryObject](directoryobject.md) collection| Read-only. Nullable.|
-|photo|[profilePhoto](profilephoto.md)| Read-only. Nullable.|
-|rejectedSenders|[directoryObject](directoryobject.md) collection| Read-only. Nullable.|
-|threads|[conversationThread](conversationthread.md) collection| Read-only. Nullable.|
+|AcceptedSenders|[DirectoryObject](directoryobject.md) collection| Read-only. Nullable.|
+|Calendar|[Calendar](calendar.md)| Read-only. Nullable.|
+|CalendarView|[Event](event.md) collection| Read-only. Nullable.|
+|Conversations|[Conversation](conversation.md) collection| Read-only. Nullable.|
+|Events|[Event](event.md) collection| Read-only. Nullable.|
+|Photo|[Photo](photo.md)| Read-only. Nullable.|
+|Photos|[Photo](photo.md) collection| Read-only. Nullable.|
+|RejectedSenders|[DirectoryObject](directoryobject.md) collection| Read-only. Nullable.|
+|Subscriptions|[Subscription](subscription.md) collection| Read-only. Nullable.|
+|Threads|[ConversationThread](conversationthread.md) collection| Read-only. Nullable.|
 
 ### JSON representation
 
@@ -84,28 +69,21 @@ Here is a JSON representation of the resource.
   "optionalProperties": [
 
   ],
-  "@odata.type": "microsoft.graph.group"
+  "@odata.type": "microsoft.graph.Group"
 }-->
 
 ```json
 {
-  "allowExternalSenders": true,
-  "autoSubscribeNewMembers": true,
-  "description": "string",
-  "displayName": "string",
-  "groupTypes": ["string"],
-  "id": "string (identifier)",
-  "isSubscribedByMail": true,
-  "mail": "string",
-  "mailEnabled": true,
-  "mailNickname": "string",
-  "onPremisesLastSyncDateTime": "String (timestamp)",
-  "onPremisesSecurityIdentifier": "string",
-  "onPremisesSyncEnabled": true,
-  "proxyAddresses": ["string"],
-  "securityEnabled": true,
-  "unseenCount": 1024,
-  "visibility": "string"
+  "AccessType": "string",
+  "AllowExternalSenders": true,
+  "AutoSubscribeNewMembers": true,
+  "Description": "String",
+  "DisplayName": "String",
+  "EmailAddress": "String",
+  "Id": "String (identifier)",
+  "IsFavorite": true,
+  "IsSubscribedByMail": true,
+  "UnseenCount": 1024
 }
 
 ```
@@ -114,7 +92,7 @@ Here is a JSON representation of the resource.
 2015-10-25 14:57:30 UTC -->
 <!-- {
   "type": "#page.annotation",
-  "description": "group resource",
+  "description": "Group resource",
   "keywords": "",
   "section": "documentation",
   "tocPath": ""

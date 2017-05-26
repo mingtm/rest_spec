@@ -6,7 +6,9 @@ The following **scopes** are required to execute this API:
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
-PATCH /subscriptions/<id>
+PATCH /me/Subscriptions/<Id>
+PATCH /Users/<Id>/Subscriptions/<Id>
+PATCH /Groups/<Id>/Subscriptions/<Id>
 ```
 ### Optional request headers
 | Name       | Description|
@@ -19,14 +21,11 @@ In the request body, supply the values for relevant fields that should be update
 
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|changeType|string||
-|clientState|string||
-|expirationDateTime|dateTimeOffset||
-|notificationUrl|string||
-|resource|string||
+|ChangeType|string| Possible values are: `Created`, `Updated`, `Deleted`, `Acknowledgment`, `Missed`.|
+|Resource|String||
 
 ### Response
-If successful, this method returns a `200 OK` response code and updated [subscription](../resources/subscription.md) object in the response body.
+If successful, this method returns a `200 OK` response code and updated [Subscription](../resources/subscription.md) object in the response body.
 ### Example
 ##### Request
 Here is an example of the request.
@@ -35,16 +34,13 @@ Here is an example of the request.
   "name": "update_subscription"
 }-->
 ```http
-PATCH https://graph.microsoft.com/beta/subscriptions/<id>
+PATCH https://graph.microsoft.com/beta/me/Subscriptions/<Id>
 Content-type: application/json
-Content-length: 196
+Content-length: 70
 
 {
-  "resource": "resource-value",
-  "changeType": "changeType-value",
-  "clientState": "clientState-value",
-  "notificationUrl": "notificationUrl-value",
-  "expirationDateTime": "datetime-value"
+  "Resource": "Resource-value",
+  "ChangeType": "ChangeType-value"
 }
 ```
 ##### Response
@@ -52,20 +48,17 @@ Here is an example of the response. Note: The response object shown here may be 
 <!-- {
   "blockType": "response",
   "truncated": true,
-  "@odata.type": "microsoft.graph.subscription"
+  "@odata.type": "microsoft.graph.Subscription"
 } -->
 ```http
 HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 216
+Content-length: 90
 
 {
-  "resource": "resource-value",
-  "changeType": "changeType-value",
-  "clientState": "clientState-value",
-  "notificationUrl": "notificationUrl-value",
-  "expirationDateTime": "datetime-value",
-  "id": "id-value"
+  "Resource": "Resource-value",
+  "ChangeType": "ChangeType-value",
+  "Id": "Id-value"
 }
 ```
 

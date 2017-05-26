@@ -1,5 +1,5 @@
 {
-  "name": "responseStatus",
+  "name": "ResponseStatus",
   "description": "",
   "collectionOf": null,
   "isComplexType": true,
@@ -28,12 +28,12 @@
   },
   "properties": [
     {
-      "name": "response",
+      "name": "Response",
       "description": "",
       "isKey": false,
       "dataType": "String",
       "isReadOnly": false,
-      "enumName": "responseType",
+      "enumName": "ResponseType",
       "isCollection": false,
       "isRelationship": false,
       "supportFilter": false,
@@ -42,10 +42,10 @@
       "isUnicode": null
     },
     {
-      "name": "time",
+      "name": "Time",
       "description": "",
       "isKey": false,
-      "dataType": "dateTimeOffset",
+      "dataType": "DateTimeOffset",
       "isReadOnly": false,
       "enumName": null,
       "isCollection": false,

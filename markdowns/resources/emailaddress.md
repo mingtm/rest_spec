@@ -1,4 +1,4 @@
-# emailAddress resource type
+# EmailAddress resource type
 
 
 
@@ -6,8 +6,8 @@
 ### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|address|string||
-|name|string||
+|Address|String||
+|Name|String||
 
 ### JSON representation
 
@@ -18,13 +18,13 @@ Here is a JSON representation of the resource.
   "optionalProperties": [
 
   ],
-  "@odata.type": "microsoft.graph.emailAddress"
+  "@odata.type": "microsoft.graph.EmailAddress"
 }-->
 
 ```json
 {
-  "address": "string",
-  "name": "string"
+  "Address": "String",
+  "Name": "String"
 }
 
 ```
@@ -33,7 +33,7 @@ Here is a JSON representation of the resource.
 2015-10-25 14:57:30 UTC -->
 <!-- {
   "type": "#page.annotation",
-  "description": "emailAddress resource",
+  "description": "EmailAddress resource",
   "keywords": "",
   "section": "documentation",
   "tocPath": ""

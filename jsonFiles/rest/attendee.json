@@ -1,5 +1,5 @@
 {
-  "name": "attendee",
+  "name": "Attendee",
   "description": "",
   "collectionOf": null,
   "isComplexType": true,
@@ -28,26 +28,12 @@
   },
   "properties": [
     {
-      "name": "status",
+      "name": "Status",
       "description": "",
       "isKey": false,
-      "dataType": "responseStatus",
+      "dataType": "ResponseStatus",
       "isReadOnly": false,
       "enumName": null,
-      "isCollection": false,
-      "isRelationship": false,
-      "supportFilter": false,
-      "allowPostToCollection": true,
-      "isNullable": null,
-      "isUnicode": null
-    },
-    {
-      "name": "type",
-      "description": "",
-      "isKey": false,
-      "dataType": "String",
-      "isReadOnly": false,
-      "enumName": "attendeeType",
       "isCollection": false,
       "isRelationship": false,
       "supportFilter": false,

@@ -1,5 +1,5 @@
 {
-  "name": "recipient",
+  "name": "Recipient",
   "description": "",
   "collectionOf": null,
   "isComplexType": true,
@@ -28,10 +28,10 @@
   },
   "properties": [
     {
-      "name": "emailAddress",
+      "name": "EmailAddress",
       "description": "",
       "isKey": false,
-      "dataType": "emailAddress",
+      "dataType": "EmailAddress",
       "isReadOnly": false,
       "enumName": null,
       "isCollection": false,

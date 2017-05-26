@@ -1,4 +1,4 @@
-# group: subscribeByMail
+# Group: SubscribeByMail
 
 
 ### Prerequisites
@@ -6,7 +6,9 @@ The following **scopes** are required to execute this API:
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
-POST /groups/<id>/subscribeByMail
+POST /Groups/<Id>/SubscribeByMail
+POST /me/JoinedGroups/<Id>/SubscribeByMail
+POST /Users/<Id>/JoinedGroups/<Id>/SubscribeByMail
 
 ```
 ### Request headers
@@ -29,7 +31,7 @@ Here is an example of the request.
   "name": "group_subscribebymail"
 }-->
 ```http
-POST https://graph.microsoft.com/beta/groups/<id>/subscribeByMail
+POST https://graph.microsoft.com/beta/Groups/<Id>/SubscribeByMail
 ```
 
 ##### Response
@@ -47,7 +49,7 @@ HTTP/1.1 200 OK
 2015-10-25 14:57:30 UTC -->
 <!-- {
   "type": "#page.annotation",
-  "description": "group: subscribeByMail",
+  "description": "Group: SubscribeByMail",
   "keywords": "",
   "section": "documentation",
   "tocPath": ""

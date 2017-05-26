@@ -1,4 +1,4 @@
-# List contacts
+# List Contacts
 
 Retrieve a list of contact objects.
 ### Prerequisites
@@ -6,21 +6,11 @@ The following **scopes** are required to execute this API:
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
-GET /me/contacts
-GET /users/<id>/contacts
-GET /drive/root/createdByUser/contacts
+GET /me/Contacts
+GET /Users/<Id>/Contacts
 ```
 ### Optional query parameters
-|Name|Value|Description|
-|:---------------|:--------|:-------|
-|$count|none|The count of related entities can be requested by specifying the $count query option.|
-|$expand|string|Comma-separated list of relationships to expand and include in the response. See relationships table of [contact](../resources/contact.md) for supported names. |
-|$filter|string|Filter string that lets you filter the response based on a set of criteria.|
-|$orderby|string|Comma-separated list of properties that are used to sort the order of items in the response collection.|
-|$select|string|Comma-separated list of properties to include in the response.|
-|$skip|int|The number of items to skip in a result set.|
-|$skipToken|string|Paging token that is used to get the next set of results.|
-|$top|int|The number of items to return in a result set.|
+This method supports the [OData Query Parameters](http://graph.microsoft.io/docs/overview/query_parameters) to help customize the response.
 
 ### Request headers
 | Name      |Description|
@@ -31,7 +21,7 @@ GET /drive/root/createdByUser/contacts
 ### Request body
 Do not supply a request body for this method.
 ### Response
-If successful, this method returns a `200 OK` response code and collection of [contact](../resources/contact.md) objects in the response body.
+If successful, this method returns a `200 OK` response code and collection of [Contact](../resources/contact.md) objects in the response body.
 ### Example
 ##### Request
 Here is an example of the request.
@@ -40,14 +30,14 @@ Here is an example of the request.
   "name": "get_contacts"
 }-->
 ```http
-GET https://graph.microsoft.com/beta/me/contacts
+GET https://graph.microsoft.com/beta/me/Contacts
 ```
 ##### Response
 Here is an example of the response. Note: The response object shown here may be truncated for brevity. All of the properties will be returned from an actual call.
 <!-- {
   "blockType": "response",
   "truncated": true,
-  "@odata.type": "microsoft.graph.contact",
+  "@odata.type": "microsoft.graph.Contact",
   "isCollection": true
 } -->
 ```http
@@ -58,12 +48,12 @@ Content-length: 263
 {
   "value": [
     {
-      "parentFolderId": "parentFolderId-value",
-      "birthday": "datetime-value",
-      "fileAs": "fileAs-value",
-      "displayName": "displayName-value",
-      "givenName": "givenName-value",
-      "initials": "initials-value"
+      "ParentFolderId": "ParentFolderId-value",
+      "Birthday": "datetime-value",
+      "FileAs": "FileAs-value",
+      "DisplayName": "DisplayName-value",
+      "GivenName": "GivenName-value",
+      "Initials": "Initials-value"
     }
   ]
 }
@@ -73,7 +63,7 @@ Content-length: 263
 2015-10-25 14:57:30 UTC -->
 <!-- {
   "type": "#page.annotation",
-  "description": "List contacts",
+  "description": "List Contacts",
   "keywords": "",
   "section": "documentation",
   "tocPath": ""

@@ -6,9 +6,8 @@ The following **scopes** are required to execute this API:
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
-PATCH /me/calendarGroups/<id>
-PATCH /users/<id>/calendarGroups/<id>
-PATCH /drive/root/createdByUser/calendarGroups/<id>
+PATCH /me/CalendarGroups/<Id>
+PATCH /Users/<Id>/CalendarGroups/<Id>
 ```
 ### Optional request headers
 | Name       | Description|
@@ -21,12 +20,12 @@ In the request body, supply the values for relevant fields that should be update
 
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|changeKey|string||
-|classId|guid||
-|name|string||
+|ChangeKey|String||
+|ClassId|Guid||
+|Name|String||
 
 ### Response
-If successful, this method returns a `200 OK` response code and updated [calendarGroup](../resources/calendargroup.md) object in the response body.
+If successful, this method returns a `200 OK` response code and updated [CalendarGroup](../resources/calendargroup.md) object in the response body.
 ### Example
 ##### Request
 Here is an example of the request.
@@ -35,14 +34,14 @@ Here is an example of the request.
   "name": "update_calendargroup"
 }-->
 ```http
-PATCH https://graph.microsoft.com/beta/me/calendarGroups/<id>
+PATCH https://graph.microsoft.com/beta/me/CalendarGroups/<Id>
 Content-type: application/json
 Content-length: 90
 
 {
-  "name": "name-value",
-  "classId": "classId-value",
-  "changeKey": "changeKey-value"
+  "Name": "Name-value",
+  "ClassId": "ClassId-value",
+  "ChangeKey": "ChangeKey-value"
 }
 ```
 ##### Response
@@ -50,7 +49,7 @@ Here is an example of the response. Note: The response object shown here may be 
 <!-- {
   "blockType": "response",
   "truncated": true,
-  "@odata.type": "microsoft.graph.calendarGroup"
+  "@odata.type": "microsoft.graph.CalendarGroup"
 } -->
 ```http
 HTTP/1.1 200 OK
@@ -58,10 +57,10 @@ Content-type: application/json
 Content-length: 110
 
 {
-  "name": "name-value",
-  "classId": "classId-value",
-  "changeKey": "changeKey-value",
-  "id": "id-value"
+  "Name": "Name-value",
+  "ClassId": "ClassId-value",
+  "ChangeKey": "ChangeKey-value",
+  "Id": "Id-value"
 }
 ```
 

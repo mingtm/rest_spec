@@ -1,4 +1,4 @@
-# entity resource type
+# Entity resource type
 
 
 
@@ -7,13 +7,13 @@
 
 | Method		   | Return Type	|Description|
 |:---------------|:--------|:----------|
-|[Get entity](../api/entity_get.md) | [entity](entity.md) |Read properties and relationships of entity object.|
-|[Delete](../api/entity_delete.md) | None |Delete entity object. |
+|[Get Entity](../api/entity_get.md) | [Entity](entity.md) |Read properties and relationships of entity object.|
+|[Delete](../api/entity_delete.md) | None |Delete Entity object. |
 
 ### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|id|string| Read-only.|
+|Id|String| Read-only.|
 
 ### Relationships
 None
@@ -28,12 +28,12 @@ Here is a JSON representation of the resource.
   "optionalProperties": [
 
   ],
-  "@odata.type": "microsoft.graph.entity"
+  "@odata.type": "microsoft.graph.Entity"
 }-->
 
 ```json
 {
-  "id": "string (identifier)"
+  "Id": "String (identifier)"
 }
 
 ```
@@ -42,7 +42,7 @@ Here is a JSON representation of the resource.
 2015-10-25 14:57:30 UTC -->
 <!-- {
   "type": "#page.annotation",
-  "description": "entity resource",
+  "description": "Entity resource",
   "keywords": "",
   "section": "documentation",
   "tocPath": ""

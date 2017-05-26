@@ -1,5 +1,5 @@
 {
-  "name": "recurrencePattern",
+  "name": "RecurrencePattern",
   "description": "",
   "collectionOf": null,
   "isComplexType": true,
@@ -28,12 +28,12 @@
   },
   "properties": [
     {
-      "name": "type",
+      "name": "Type",
       "description": "",
       "isKey": false,
       "dataType": "String",
       "isReadOnly": false,
-      "enumName": "recurrencePatternType",
+      "enumName": "RecurrencePatternType",
       "isCollection": false,
       "isRelationship": false,
       "supportFilter": false,
@@ -42,10 +42,10 @@
       "isUnicode": null
     },
     {
-      "name": "interval",
+      "name": "Interval",
       "description": "",
       "isKey": false,
-      "dataType": "int32",
+      "dataType": "Int32",
       "isReadOnly": false,
       "enumName": null,
       "isCollection": false,
@@ -56,10 +56,10 @@
       "isUnicode": null
     },
     {
-      "name": "month",
+      "name": "Month",
       "description": "",
       "isKey": false,
-      "dataType": "int32",
+      "dataType": "Int32",
       "isReadOnly": false,
       "enumName": null,
       "isCollection": false,
@@ -70,10 +70,10 @@
       "isUnicode": null
     },
     {
-      "name": "dayOfMonth",
+      "name": "DayOfMonth",
       "description": "",
       "isKey": false,
-      "dataType": "int32",
+      "dataType": "Int32",
       "isReadOnly": false,
       "enumName": null,
       "isCollection": false,
@@ -84,12 +84,12 @@
       "isUnicode": null
     },
     {
-      "name": "daysOfWeek",
+      "name": "DaysOfWeek",
       "description": "",
       "isKey": false,
       "dataType": "String",
       "isReadOnly": false,
-      "enumName": "dayOfWeek",
+      "enumName": "DayOfWeek",
       "isCollection": true,
       "isRelationship": false,
       "supportFilter": false,
@@ -98,12 +98,12 @@
       "isUnicode": null
     },
     {
-      "name": "firstDayOfWeek",
+      "name": "FirstDayOfWeek",
       "description": "",
       "isKey": false,
       "dataType": "String",
       "isReadOnly": false,
-      "enumName": "dayOfWeek",
+      "enumName": "DayOfWeek",
       "isCollection": false,
       "isRelationship": false,
       "supportFilter": false,
@@ -112,12 +112,12 @@
       "isUnicode": null
     },
     {
-      "name": "index",
+      "name": "Index",
       "description": "",
       "isKey": false,
       "dataType": "String",
       "isReadOnly": false,
-      "enumName": "weekIndex",
+      "enumName": "WeekIndex",
       "isCollection": false,
       "isRelationship": false,
       "supportFilter": false,

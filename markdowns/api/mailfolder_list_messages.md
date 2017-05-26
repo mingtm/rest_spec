@@ -1,4 +1,4 @@
-# List messages
+# List Messages
 
 Retrieve a list of message objects.
 ### Prerequisites
@@ -6,21 +6,11 @@ The following **scopes** are required to execute this API:
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
-GET /me/mailFolders/<id>/messages
-GET /users/<id>/mailFolders/<id>/messages
-GET /drive/root/createdByUser/mailFolders/<id>/messages
+GET /me/MailFolders/<Id>/Messages
+GET /Users/<Id>/MailFolders/<Id>/Messages
 ```
 ### Optional query parameters
-|Name|Value|Description|
-|:---------------|:--------|:-------|
-|$count|none|The count of related entities can be requested by specifying the $count query option.|
-|$expand|string|Comma-separated list of relationships to expand and include in the response. See relationships table of [message](../resources/message.md) for supported names. |
-|$filter|string|Filter string that lets you filter the response based on a set of criteria.|
-|$orderby|string|Comma-separated list of properties that are used to sort the order of items in the response collection.|
-|$select|string|Comma-separated list of properties to include in the response.|
-|$skip|int|The number of items to skip in a result set.|
-|$skipToken|string|Paging token that is used to get the next set of results.|
-|$top|int|The number of items to return in a result set.|
+This method supports the [OData Query Parameters](http://graph.microsoft.io/docs/overview/query_parameters) to help customize the response.
 
 ### Request headers
 | Name      |Description|
@@ -31,7 +21,7 @@ GET /drive/root/createdByUser/mailFolders/<id>/messages
 ### Request body
 Do not supply a request body for this method.
 ### Response
-If successful, this method returns a `200 OK` response code and collection of [message](../resources/message.md) objects in the response body.
+If successful, this method returns a `200 OK` response code and collection of [Message](../resources/message.md) objects in the response body.
 ### Example
 ##### Request
 Here is an example of the request.
@@ -40,14 +30,14 @@ Here is an example of the request.
   "name": "get_messages"
 }-->
 ```http
-GET https://graph.microsoft.com/beta/me/mailFolders/<id>/messages
+GET https://graph.microsoft.com/beta/me/MailFolders/<Id>/Messages
 ```
 ##### Response
 Here is an example of the response. Note: The response object shown here may be truncated for brevity. All of the properties will be returned from an actual call.
 <!-- {
   "blockType": "response",
   "truncated": true,
-  "@odata.type": "microsoft.graph.message",
+  "@odata.type": "microsoft.graph.Message",
   "isCollection": true
 } -->
 ```http
@@ -58,14 +48,14 @@ Content-length: 337
 {
   "value": [
     {
-      "receivedDateTime": "datetime-value",
-      "sentDateTime": "datetime-value",
-      "hasAttachments": true,
-      "internetMessageId": "internetMessageId-value",
-      "subject": "subject-value",
-      "body": {
-        "contentType": "contentType-value",
-        "content": "content-value"
+      "ReceivedDateTime": "datetime-value",
+      "SentDateTime": "datetime-value",
+      "HasAttachments": true,
+      "InternetMessageId": "InternetMessageId-value",
+      "Subject": "Subject-value",
+      "Body": {
+        "ContentType": "ContentType-value",
+        "Content": "Content-value"
       }
     }
   ]
@@ -76,7 +66,7 @@ Content-length: 337
 2015-10-25 14:57:30 UTC -->
 <!-- {
   "type": "#page.annotation",
-  "description": "List messages",
+  "description": "List Messages",
   "keywords": "",
   "section": "documentation",
   "tocPath": ""

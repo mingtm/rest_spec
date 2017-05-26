@@ -1,5 +1,5 @@
 {
-  "name": "recurrenceRange",
+  "name": "RecurrenceRange",
   "description": "",
   "collectionOf": null,
   "isComplexType": true,
@@ -28,12 +28,12 @@
   },
   "properties": [
     {
-      "name": "type",
+      "name": "Type",
       "description": "",
       "isKey": false,
       "dataType": "String",
       "isReadOnly": false,
-      "enumName": "recurrenceRangeType",
+      "enumName": "RecurrenceRangeType",
       "isCollection": false,
       "isRelationship": false,
       "supportFilter": false,
@@ -42,10 +42,10 @@
       "isUnicode": null
     },
     {
-      "name": "startDate",
+      "name": "StartDate",
       "description": "",
       "isKey": false,
-      "dataType": "date",
+      "dataType": "Date",
       "isReadOnly": false,
       "enumName": null,
       "isCollection": false,
@@ -56,10 +56,10 @@
       "isUnicode": null
     },
     {
-      "name": "endDate",
+      "name": "EndDate",
       "description": "",
       "isKey": false,
-      "dataType": "date",
+      "dataType": "Date",
       "isReadOnly": false,
       "enumName": null,
       "isCollection": false,
@@ -70,10 +70,10 @@
       "isUnicode": null
     },
     {
-      "name": "recurrenceTimeZone",
+      "name": "RecurrenceTimeZone",
       "description": "",
       "isKey": false,
-      "dataType": "string",
+      "dataType": "String",
       "isReadOnly": false,
       "enumName": null,
       "isCollection": false,
@@ -81,13 +81,13 @@
       "supportFilter": false,
       "allowPostToCollection": true,
       "isNullable": null,
-      "isUnicode": false
+      "isUnicode": null
     },
     {
-      "name": "numberOfOccurrences",
+      "name": "NumberOfOccurrences",
       "description": "",
       "isKey": false,
-      "dataType": "int32",
+      "dataType": "Int32",
       "isReadOnly": false,
       "enumName": null,
       "isCollection": false,

@@ -1,10 +1,10 @@
 {
-  "name": "group",
+  "name": "Group",
   "description": "",
   "collectionOf": null,
   "isComplexType": false,
   "isEntitySet": false,
-  "isOpenType": true,
+  "isOpenType": false,
   "allowPatch": true,
   "allowUpsert": true,
   "allowPatchCreate": true,
@@ -25,70 +25,30 @@
   "updateDescription": "",
   "deleteDescription": "",
   "restPath": {
-    "/groups/<id>": true
+    "/Users/<Id>/JoinedGroups/<Id>": true,
+    "/Groups/<Id>": true,
+    "/me/JoinedGroups/<Id>": true
   },
   "properties": [
     {
-      "name": "description",
+      "name": "AccessType",
       "description": "",
       "isKey": false,
       "dataType": "string",
       "isReadOnly": false,
-      "enumName": null,
+      "enumName": "GroupAccessType",
       "isCollection": false,
       "isRelationship": false,
       "supportFilter": false,
       "allowPostToCollection": true,
       "isNullable": null,
-      "isUnicode": false
+      "isUnicode": null
     },
     {
-      "name": "displayName",
+      "name": "AllowExternalSenders",
       "description": "",
       "isKey": false,
-      "dataType": "string",
-      "isReadOnly": false,
-      "enumName": null,
-      "isCollection": false,
-      "isRelationship": false,
-      "supportFilter": false,
-      "allowPostToCollection": true,
-      "isNullable": null,
-      "isUnicode": false
-    },
-    {
-      "name": "groupTypes",
-      "description": "",
-      "isKey": false,
-      "dataType": "string",
-      "isReadOnly": false,
-      "enumName": null,
-      "isCollection": true,
-      "isRelationship": false,
-      "supportFilter": false,
-      "allowPostToCollection": true,
-      "isNullable": false,
-      "isUnicode": false
-    },
-    {
-      "name": "mail",
-      "description": "",
-      "isKey": false,
-      "dataType": "string",
-      "isReadOnly": false,
-      "enumName": null,
-      "isCollection": false,
-      "isRelationship": false,
-      "supportFilter": false,
-      "allowPostToCollection": true,
-      "isNullable": null,
-      "isUnicode": false
-    },
-    {
-      "name": "mailEnabled",
-      "description": "",
-      "isKey": false,
-      "dataType": "boolean",
+      "dataType": "Boolean",
       "isReadOnly": false,
       "enumName": null,
       "isCollection": false,
@@ -99,24 +59,10 @@
       "isUnicode": null
     },
     {
-      "name": "mailNickname",
+      "name": "AutoSubscribeNewMembers",
       "description": "",
       "isKey": false,
-      "dataType": "string",
-      "isReadOnly": false,
-      "enumName": null,
-      "isCollection": false,
-      "isRelationship": false,
-      "supportFilter": false,
-      "allowPostToCollection": true,
-      "isNullable": null,
-      "isUnicode": false
-    },
-    {
-      "name": "onPremisesLastSyncDateTime",
-      "description": "",
-      "isKey": false,
-      "dataType": "dateTimeOffset",
+      "dataType": "Boolean",
       "isReadOnly": false,
       "enumName": null,
       "isCollection": false,
@@ -127,24 +73,10 @@
       "isUnicode": null
     },
     {
-      "name": "onPremisesSecurityIdentifier",
+      "name": "Description",
       "description": "",
       "isKey": false,
-      "dataType": "string",
-      "isReadOnly": false,
-      "enumName": null,
-      "isCollection": false,
-      "isRelationship": false,
-      "supportFilter": false,
-      "allowPostToCollection": true,
-      "isNullable": null,
-      "isUnicode": false
-    },
-    {
-      "name": "onPremisesSyncEnabled",
-      "description": "",
-      "isKey": false,
-      "dataType": "boolean",
+      "dataType": "String",
       "isReadOnly": false,
       "enumName": null,
       "isCollection": false,
@@ -155,24 +87,10 @@
       "isUnicode": null
     },
     {
-      "name": "proxyAddresses",
+      "name": "DisplayName",
       "description": "",
       "isKey": false,
-      "dataType": "string",
-      "isReadOnly": false,
-      "enumName": null,
-      "isCollection": true,
-      "isRelationship": false,
-      "supportFilter": false,
-      "allowPostToCollection": true,
-      "isNullable": false,
-      "isUnicode": false
-    },
-    {
-      "name": "securityEnabled",
-      "description": "",
-      "isKey": false,
-      "dataType": "boolean",
+      "dataType": "String",
       "isReadOnly": false,
       "enumName": null,
       "isCollection": false,
@@ -183,24 +101,10 @@
       "isUnicode": null
     },
     {
-      "name": "visibility",
+      "name": "EmailAddress",
       "description": "",
       "isKey": false,
-      "dataType": "string",
-      "isReadOnly": false,
-      "enumName": null,
-      "isCollection": false,
-      "isRelationship": false,
-      "supportFilter": false,
-      "allowPostToCollection": true,
-      "isNullable": null,
-      "isUnicode": false
-    },
-    {
-      "name": "allowExternalSenders",
-      "description": "",
-      "isKey": false,
-      "dataType": "boolean",
+      "dataType": "String",
       "isReadOnly": false,
       "enumName": null,
       "isCollection": false,
@@ -211,10 +115,10 @@
       "isUnicode": null
     },
     {
-      "name": "autoSubscribeNewMembers",
+      "name": "IsFavorite",
       "description": "",
       "isKey": false,
-      "dataType": "boolean",
+      "dataType": "Boolean",
       "isReadOnly": false,
       "enumName": null,
       "isCollection": false,
@@ -225,10 +129,10 @@
       "isUnicode": null
     },
     {
-      "name": "isSubscribedByMail",
+      "name": "IsSubscribedByMail",
       "description": "",
       "isKey": false,
-      "dataType": "boolean",
+      "dataType": "Boolean",
       "isReadOnly": false,
       "enumName": null,
       "isCollection": false,
@@ -239,10 +143,10 @@
       "isUnicode": null
     },
     {
-      "name": "unseenCount",
+      "name": "UnseenCount",
       "description": "",
       "isKey": false,
-      "dataType": "int32",
+      "dataType": "Int32",
       "isReadOnly": false,
       "enumName": null,
       "isCollection": false,
@@ -253,24 +157,24 @@
       "isUnicode": null
     },
     {
-      "name": "id",
+      "name": "Id",
       "description": "",
       "isKey": true,
-      "dataType": "string",
+      "dataType": "String",
       "isReadOnly": true,
       "enumName": null,
       "isCollection": false,
       "isRelationship": false,
       "supportFilter": false,
       "allowPostToCollection": true,
-      "isNullable": false,
-      "isUnicode": false
+      "isNullable": null,
+      "isUnicode": null
     },
     {
-      "name": "members",
+      "name": "Threads",
       "description": "",
       "isKey": false,
-      "dataType": "directoryObject",
+      "dataType": "ConversationThread",
       "isReadOnly": true,
       "enumName": null,
       "isCollection": true,
@@ -281,24 +185,10 @@
       "isUnicode": null
     },
     {
-      "name": "memberOf",
+      "name": "Calendar",
       "description": "",
       "isKey": false,
-      "dataType": "directoryObject",
-      "isReadOnly": true,
-      "enumName": null,
-      "isCollection": true,
-      "isRelationship": true,
-      "supportFilter": false,
-      "allowPostToCollection": true,
-      "isNullable": true,
-      "isUnicode": null
-    },
-    {
-      "name": "createdOnBehalfOf",
-      "description": "",
-      "isKey": false,
-      "dataType": "directoryObject",
+      "dataType": "Calendar",
       "isReadOnly": true,
       "enumName": null,
       "isCollection": false,
@@ -309,10 +199,10 @@
       "isUnicode": null
     },
     {
-      "name": "owners",
+      "name": "CalendarView",
       "description": "",
       "isKey": false,
-      "dataType": "directoryObject",
+      "dataType": "Event",
       "isReadOnly": true,
       "enumName": null,
       "isCollection": true,
@@ -323,10 +213,10 @@
       "isUnicode": null
     },
     {
-      "name": "threads",
+      "name": "Events",
       "description": "",
       "isKey": false,
-      "dataType": "conversationThread",
+      "dataType": "Event",
       "isReadOnly": true,
       "enumName": null,
       "isCollection": true,
@@ -337,10 +227,38 @@
       "isUnicode": null
     },
     {
-      "name": "calendar",
+      "name": "Conversations",
       "description": "",
       "isKey": false,
-      "dataType": "calendar",
+      "dataType": "Conversation",
+      "isReadOnly": true,
+      "enumName": null,
+      "isCollection": true,
+      "isRelationship": true,
+      "supportFilter": false,
+      "allowPostToCollection": true,
+      "isNullable": true,
+      "isUnicode": null
+    },
+    {
+      "name": "Subscriptions",
+      "description": "",
+      "isKey": false,
+      "dataType": "Subscription",
+      "isReadOnly": true,
+      "enumName": null,
+      "isCollection": true,
+      "isRelationship": true,
+      "supportFilter": false,
+      "allowPostToCollection": true,
+      "isNullable": true,
+      "isUnicode": null
+    },
+    {
+      "name": "Photo",
+      "description": "",
+      "isKey": false,
+      "dataType": "Photo",
       "isReadOnly": true,
       "enumName": null,
       "isCollection": false,
@@ -351,10 +269,10 @@
       "isUnicode": null
     },
     {
-      "name": "calendarView",
+      "name": "Photos",
       "description": "",
       "isKey": false,
-      "dataType": "event",
+      "dataType": "Photo",
       "isReadOnly": true,
       "enumName": null,
       "isCollection": true,
@@ -365,10 +283,10 @@
       "isUnicode": null
     },
     {
-      "name": "events",
+      "name": "AcceptedSenders",
       "description": "",
       "isKey": false,
-      "dataType": "event",
+      "dataType": "DirectoryObject",
       "isReadOnly": true,
       "enumName": null,
       "isCollection": true,
@@ -379,69 +297,13 @@
       "isUnicode": null
     },
     {
-      "name": "conversations",
+      "name": "RejectedSenders",
       "description": "",
       "isKey": false,
-      "dataType": "conversation",
+      "dataType": "DirectoryObject",
       "isReadOnly": true,
       "enumName": null,
       "isCollection": true,
-      "isRelationship": true,
-      "supportFilter": false,
-      "allowPostToCollection": true,
-      "isNullable": true,
-      "isUnicode": null
-    },
-    {
-      "name": "photo",
-      "description": "",
-      "isKey": false,
-      "dataType": "profilePhoto",
-      "isReadOnly": true,
-      "enumName": null,
-      "isCollection": false,
-      "isRelationship": true,
-      "supportFilter": false,
-      "allowPostToCollection": true,
-      "isNullable": true,
-      "isUnicode": null
-    },
-    {
-      "name": "acceptedSenders",
-      "description": "",
-      "isKey": false,
-      "dataType": "directoryObject",
-      "isReadOnly": true,
-      "enumName": null,
-      "isCollection": true,
-      "isRelationship": true,
-      "supportFilter": false,
-      "allowPostToCollection": true,
-      "isNullable": true,
-      "isUnicode": null
-    },
-    {
-      "name": "rejectedSenders",
-      "description": "",
-      "isKey": false,
-      "dataType": "directoryObject",
-      "isReadOnly": true,
-      "enumName": null,
-      "isCollection": true,
-      "isRelationship": true,
-      "supportFilter": false,
-      "allowPostToCollection": true,
-      "isNullable": true,
-      "isUnicode": null
-    },
-    {
-      "name": "drive",
-      "description": "",
-      "isKey": false,
-      "dataType": "drive",
-      "isReadOnly": true,
-      "enumName": null,
-      "isCollection": false,
       "isRelationship": true,
       "supportFilter": false,
       "allowPostToCollection": true,
@@ -451,7 +313,7 @@
   ],
   "methods": [
     {
-      "name": "subscribeByMail",
+      "name": "SubscribeByMail",
       "displayName": "",
       "description": "",
       "prerequisites": "",
@@ -471,7 +333,7 @@
       ]
     },
     {
-      "name": "unsubscribeByMail",
+      "name": "UnsubscribeByMail",
       "displayName": "",
       "description": "",
       "prerequisites": "",
@@ -491,7 +353,7 @@
       ]
     },
     {
-      "name": "addFavorite",
+      "name": "AddFavorite",
       "displayName": "",
       "description": "",
       "prerequisites": "",
@@ -511,7 +373,7 @@
       ]
     },
     {
-      "name": "removeFavorite",
+      "name": "RemoveFavorite",
       "displayName": "",
       "description": "",
       "prerequisites": "",
@@ -531,7 +393,7 @@
       ]
     },
     {
-      "name": "resetUnseenCount",
+      "name": "ResetUnseenCount",
       "displayName": "",
       "description": "",
       "prerequisites": "",
@@ -548,93 +410,6 @@
       ],
       "parameters": [
 
-      ]
-    },
-    {
-      "name": "checkMemberGroups",
-      "displayName": "",
-      "description": "",
-      "prerequisites": "",
-      "returnType": "string",
-      "isReturnNullable": false,
-      "isReturnTypeCollection": true,
-      "httpSuccessCode": "200",
-      "isFunction": false,
-      "scopes": [
-
-      ],
-      "errorCodes": [
-
-      ],
-      "parameters": [
-        {
-          "name": "groupIds",
-          "description": "",
-          "dataType": "string",
-          "isCollection": true,
-          "isRequired": true,
-          "enumName": null,
-          "isNullable": false,
-          "isUnicode": false
-        }
-      ]
-    },
-    {
-      "name": "getMemberGroups",
-      "displayName": "",
-      "description": "",
-      "prerequisites": "",
-      "returnType": "string",
-      "isReturnNullable": false,
-      "isReturnTypeCollection": true,
-      "httpSuccessCode": "200",
-      "isFunction": false,
-      "scopes": [
-
-      ],
-      "errorCodes": [
-
-      ],
-      "parameters": [
-        {
-          "name": "securityEnabledOnly",
-          "description": "",
-          "dataType": "boolean",
-          "isCollection": false,
-          "isRequired": true,
-          "enumName": null,
-          "isNullable": null,
-          "isUnicode": null
-        }
-      ]
-    },
-    {
-      "name": "getMemberObjects",
-      "displayName": "",
-      "description": "",
-      "prerequisites": "",
-      "returnType": "string",
-      "isReturnNullable": false,
-      "isReturnTypeCollection": true,
-      "httpSuccessCode": "200",
-      "isFunction": false,
-      "scopes": [
-
-      ],
-      "errorCodes": [
-
-      ],
-      "parameters": [
-        {
-          "name": "securityEnabledOnly",
-          "description": "",
-          "dataType": "boolean",
-          "isCollection": false,
-          "isRequired": true,
-          "enumName": null,
-          "isNullable": null,
-          "isUnicode": null
-        }
       ]
     }
   ]

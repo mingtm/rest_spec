@@ -1,4 +1,4 @@
-# group: removeFavorite
+# Group: RemoveFavorite
 
 
 ### Prerequisites
@@ -6,7 +6,9 @@ The following **scopes** are required to execute this API:
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
-POST /groups/<id>/removeFavorite
+POST /Groups/<Id>/RemoveFavorite
+POST /me/JoinedGroups/<Id>/RemoveFavorite
+POST /Users/<Id>/JoinedGroups/<Id>/RemoveFavorite
 
 ```
 ### Request headers
@@ -29,7 +31,7 @@ Here is an example of the request.
   "name": "group_removefavorite"
 }-->
 ```http
-POST https://graph.microsoft.com/beta/groups/<id>/removeFavorite
+POST https://graph.microsoft.com/beta/Groups/<Id>/RemoveFavorite
 ```
 
 ##### Response
@@ -47,7 +49,7 @@ HTTP/1.1 200 OK
 2015-10-25 14:57:30 UTC -->
 <!-- {
   "type": "#page.annotation",
-  "description": "group: removeFavorite",
+  "description": "Group: RemoveFavorite",
   "keywords": "",
   "section": "documentation",
   "tocPath": ""

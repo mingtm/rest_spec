@@ -1,4 +1,4 @@
-# eventMessage: send
+# EventMessage: Send
 
 
 ### Prerequisites
@@ -47,7 +47,7 @@ HTTP/1.1 200 OK
 2015-10-25 14:57:30 UTC -->
 <!-- {
   "type": "#page.annotation",
-  "description": "eventMessage: send",
+  "description": "EventMessage: Send",
   "keywords": "",
   "section": "documentation",
   "tocPath": ""

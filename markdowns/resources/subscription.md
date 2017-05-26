@@ -1,4 +1,4 @@
-# subscription resource type
+# Subscription resource type
 
 
 
@@ -7,19 +7,16 @@
 
 | Method		   | Return Type	|Description|
 |:---------------|:--------|:----------|
-|[Get subscription](../api/subscription_get.md) | [subscription](subscription.md) |Read properties and relationships of subscription object.|
-|[Update](../api/subscription_update.md) | [subscription](subscription.md)	|Update subscription object. |
-|[Delete](../api/subscription_delete.md) | None |Delete subscription object. |
+|[Get Subscription](../api/subscription_get.md) | [Subscription](subscription.md) |Read properties and relationships of subscription object.|
+|[Update](../api/subscription_update.md) | [Subscription](subscription.md)	|Update Subscription object. |
+|[Delete](../api/subscription_delete.md) | None |Delete Subscription object. |
 
 ### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|changeType|string||
-|clientState|string||
-|expirationDateTime|[dateTimeOffset](datetimeoffset.md)||
-|id|string| Read-only.|
-|notificationUrl|string||
-|resource|string||
+|ChangeType|string| Possible values are: `Created`, `Updated`, `Deleted`, `Acknowledgment`, `Missed`.|
+|Id|String| Read-only.|
+|Resource|String||
 
 ### Relationships
 None
@@ -34,17 +31,14 @@ Here is a JSON representation of the resource.
   "optionalProperties": [
 
   ],
-  "@odata.type": "microsoft.graph.subscription"
+  "@odata.type": "microsoft.graph.Subscription"
 }-->
 
 ```json
 {
-  "changeType": "string",
-  "clientState": "string",
-  "expirationDateTime": "String (timestamp)",
-  "id": "string (identifier)",
-  "notificationUrl": "string",
-  "resource": "string"
+  "ChangeType": "string",
+  "Id": "String (identifier)",
+  "Resource": "String"
 }
 
 ```
@@ -53,7 +47,7 @@ Here is a JSON representation of the resource.
 2015-10-25 14:57:30 UTC -->
 <!-- {
   "type": "#page.annotation",
-  "description": "subscription resource",
+  "description": "Subscription resource",
   "keywords": "",
   "section": "documentation",
   "tocPath": ""

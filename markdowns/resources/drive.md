@@ -1,4 +1,4 @@
-# drive resource type
+# Drive resource type
 
 
 
@@ -7,30 +7,25 @@
 
 | Method		   | Return Type	|Description|
 |:---------------|:--------|:----------|
-|[Get drive](../api/drive_get.md) | [drive](drive.md) |Read properties and relationships of drive object.|
-|[Create driveItem](../api/drive_post_items.md) |[driveItem](driveitem.md)| Create a new driveItem by posting to the items collection.|
-|[List items](../api/drive_list_items.md) |[driveItem](driveitem.md) collection| Get a driveItem object collection.|
-|[Create driveItem](../api/drive_post_special.md) |[driveItem](driveitem.md)| Create a new driveItem by posting to the special collection.|
-|[List special](../api/drive_list_special.md) |[driveItem](driveitem.md) collection| Get a driveItem object collection.|
-|[Update](../api/drive_update.md) | [drive](drive.md)	|Update drive object. |
-|[Delete](../api/drive_delete.md) | None |Delete drive object. |
-|[Recent](../api/drive_recent.md)|[driveItem](driveitem.md) collection||
-|[Sharedwithme](../api/drive_sharedwithme.md)|[driveItem](driveitem.md) collection||
+|[Get Drive](../api/drive_get.md) | [Drive](drive.md) |Read properties and relationships of drive object.|
+|[Create Extension](../api/drive_post_extensions.md) |[Extension](extension.md)| Create a new Extension by posting to the Extensions collection.|
+|[List Extensions](../api/drive_list_extensions.md) |[Extension](extension.md) collection| Get a Extension object collection.|
+|[Create File](../api/drive_post_files.md) |[File](file.md)| Create a new File by posting to the Files collection.|
+|[List Files](../api/drive_list_files.md) |[File](file.md) collection| Get a File object collection.|
+|[Update](../api/drive_update.md) | [Drive](drive.md)	|Update Drive object. |
+|[Delete](../api/drive_delete.md) | None |Delete Drive object. |
 
 ### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|driveType|string||
-|id|string| Read-only.|
-|owner|[identitySet](identityset.md)||
-|quota|[quota](quota.md)||
+|EntityACL|[AccessControlList](accesscontrollist.md)||
+|Id|String| Read-only.|
 
 ### Relationships
 | Relationship | Type	|Description|
 |:---------------|:--------|:----------|
-|items|[driveItem](driveitem.md) collection| Read-only. Nullable.|
-|root|[driveItem](driveitem.md)| Read-only. Nullable.|
-|special|[driveItem](driveitem.md) collection| Read-only. Nullable.|
+|Extensions|[Extension](extension.md) collection| Read-only. Nullable.|
+|Files|[File](file.md) collection| Read-only. Nullable.|
 
 ### JSON representation
 
@@ -41,15 +36,13 @@ Here is a JSON representation of the resource.
   "optionalProperties": [
 
   ],
-  "@odata.type": "microsoft.graph.drive"
+  "@odata.type": "microsoft.graph.Drive"
 }-->
 
 ```json
 {
-  "driveType": "string",
-  "id": "string (identifier)",
-  "owner": {"@odata.type": "microsoft.graph.identitySet"},
-  "quota": {"@odata.type": "microsoft.graph.quota"}
+  "EntityACL": {"@odata.type": "microsoft.graph.AccessControlList"},
+  "Id": "String (identifier)"
 }
 
 ```
@@ -58,7 +51,7 @@ Here is a JSON representation of the resource.
 2015-10-25 14:57:30 UTC -->
 <!-- {
   "type": "#page.annotation",
-  "description": "drive resource",
+  "description": "Drive resource",
   "keywords": "",
   "section": "documentation",
   "tocPath": ""

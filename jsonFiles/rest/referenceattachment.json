@@ -1,5 +1,5 @@
 {
-  "name": "referenceAttachment",
+  "name": "ReferenceAttachment",
   "description": "",
   "collectionOf": null,
   "isComplexType": false,
@@ -28,10 +28,10 @@
   },
   "properties": [
     {
-      "name": "lastModifiedDateTime",
+      "name": "SourceUrl",
       "description": "",
       "isKey": false,
-      "dataType": "dateTimeOffset",
+      "dataType": "String",
       "isReadOnly": false,
       "enumName": null,
       "isCollection": false,
@@ -42,10 +42,24 @@
       "isUnicode": null
     },
     {
-      "name": "name",
+      "name": "ProviderType",
       "description": "",
       "isKey": false,
       "dataType": "string",
+      "isReadOnly": false,
+      "enumName": "ReferenceAttachmentProvider",
+      "isCollection": false,
+      "isRelationship": false,
+      "supportFilter": false,
+      "allowPostToCollection": true,
+      "isNullable": null,
+      "isUnicode": null
+    },
+    {
+      "name": "ThumbnailUrl",
+      "description": "",
+      "isKey": false,
+      "dataType": "String",
       "isReadOnly": false,
       "enumName": null,
       "isCollection": false,
@@ -53,13 +67,13 @@
       "supportFilter": false,
       "allowPostToCollection": true,
       "isNullable": null,
-      "isUnicode": false
+      "isUnicode": null
     },
     {
-      "name": "contentType",
+      "name": "PreviewUrl",
       "description": "",
       "isKey": false,
-      "dataType": "string",
+      "dataType": "String",
       "isReadOnly": false,
       "enumName": null,
       "isCollection": false,
@@ -67,13 +81,83 @@
       "supportFilter": false,
       "allowPostToCollection": true,
       "isNullable": null,
-      "isUnicode": false
+      "isUnicode": null
     },
     {
-      "name": "size",
+      "name": "Permission",
       "description": "",
       "isKey": false,
-      "dataType": "int32",
+      "dataType": "string",
+      "isReadOnly": false,
+      "enumName": "ReferenceAttachmentPermission",
+      "isCollection": false,
+      "isRelationship": false,
+      "supportFilter": false,
+      "allowPostToCollection": true,
+      "isNullable": null,
+      "isUnicode": null
+    },
+    {
+      "name": "IsFolder",
+      "description": "",
+      "isKey": false,
+      "dataType": "Boolean",
+      "isReadOnly": false,
+      "enumName": null,
+      "isCollection": false,
+      "isRelationship": false,
+      "supportFilter": false,
+      "allowPostToCollection": true,
+      "isNullable": null,
+      "isUnicode": null
+    },
+    {
+      "name": "LastModifiedDateTime",
+      "description": "",
+      "isKey": false,
+      "dataType": "DateTimeOffset",
+      "isReadOnly": false,
+      "enumName": null,
+      "isCollection": false,
+      "isRelationship": false,
+      "supportFilter": false,
+      "allowPostToCollection": true,
+      "isNullable": null,
+      "isUnicode": null
+    },
+    {
+      "name": "Name",
+      "description": "",
+      "isKey": false,
+      "dataType": "String",
+      "isReadOnly": false,
+      "enumName": null,
+      "isCollection": false,
+      "isRelationship": false,
+      "supportFilter": false,
+      "allowPostToCollection": true,
+      "isNullable": null,
+      "isUnicode": null
+    },
+    {
+      "name": "ContentType",
+      "description": "",
+      "isKey": false,
+      "dataType": "String",
+      "isReadOnly": false,
+      "enumName": null,
+      "isCollection": false,
+      "isRelationship": false,
+      "supportFilter": false,
+      "allowPostToCollection": true,
+      "isNullable": null,
+      "isUnicode": null
+    },
+    {
+      "name": "Size",
+      "description": "",
+      "isKey": false,
+      "dataType": "Int32",
       "isReadOnly": false,
       "enumName": null,
       "isCollection": false,
@@ -84,10 +168,10 @@
       "isUnicode": null
     },
     {
-      "name": "isInline",
+      "name": "IsInline",
       "description": "",
       "isKey": false,
-      "dataType": "boolean",
+      "dataType": "Boolean",
       "isReadOnly": false,
       "enumName": null,
       "isCollection": false,
@@ -98,18 +182,18 @@
       "isUnicode": null
     },
     {
-      "name": "id",
+      "name": "Id",
       "description": "",
       "isKey": true,
-      "dataType": "string",
+      "dataType": "String",
       "isReadOnly": true,
       "enumName": null,
       "isCollection": false,
       "isRelationship": false,
       "supportFilter": false,
       "allowPostToCollection": true,
-      "isNullable": false,
-      "isUnicode": false
+      "isNullable": null,
+      "isUnicode": null
     }
   ],
   "methods": [

@@ -1,4 +1,4 @@
-# attendee resource type
+# Attendee resource type
 
 
 
@@ -6,8 +6,7 @@
 ### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|status|[responseStatus](responsestatus.md)||
-|type|String| Possible values are: `required`, `optional`, `resource`.|
+|Status|[ResponseStatus](responsestatus.md)||
 
 ### JSON representation
 
@@ -18,13 +17,12 @@ Here is a JSON representation of the resource.
   "optionalProperties": [
 
   ],
-  "@odata.type": "microsoft.graph.attendee"
+  "@odata.type": "microsoft.graph.Attendee"
 }-->
 
 ```json
 {
-  "status": {"@odata.type": "microsoft.graph.responseStatus"},
-  "type": "String"
+  "Status": {"@odata.type": "microsoft.graph.ResponseStatus"}
 }
 
 ```
@@ -33,7 +31,7 @@ Here is a JSON representation of the resource.
 2015-10-25 14:57:30 UTC -->
 <!-- {
   "type": "#page.annotation",
-  "description": "attendee resource",
+  "description": "Attendee resource",
   "keywords": "",
   "section": "documentation",
   "tocPath": ""

@@ -1,5 +1,5 @@
 {
-  "name": "patternedRecurrence",
+  "name": "PatternedRecurrence",
   "description": "",
   "collectionOf": null,
   "isComplexType": true,
@@ -28,10 +28,10 @@
   },
   "properties": [
     {
-      "name": "pattern",
+      "name": "Pattern",
       "description": "",
       "isKey": false,
-      "dataType": "recurrencePattern",
+      "dataType": "RecurrencePattern",
       "isReadOnly": false,
       "enumName": null,
       "isCollection": false,
@@ -42,10 +42,10 @@
       "isUnicode": null
     },
     {
-      "name": "range",
+      "name": "Range",
       "description": "",
       "isKey": false,
-      "dataType": "recurrenceRange",
+      "dataType": "RecurrenceRange",
       "isReadOnly": false,
       "enumName": null,
       "isCollection": false,

@@ -5,11 +5,12 @@ require 'logger'
 require 'uri'
 require 'net/https'
 
+
 module SpecMaker
 	require_relative 'utils_e2j'
 	# Read and load the CSDL file
-	f  = Net::HTTP.get(URI.parse('https://graph.microsoft.com/v1.0/$metadata')) 
-	# f = File.read('../data/metadata.xml', :encoding => 'UTF-8')
+	#f  = Net::HTTP.get(URI.parse('https://graph.microsoft.com/v1.0/$metadata')) 
+	f = File.read('../data/metadata.xml', :encoding => 'UTF-8')
 
 	# Convert to JSON format. 
 	csdl=JSON.parse(Hash.from_xml(f).to_json, {:symbolize_names => true}) 
@@ -20,56 +21,77 @@ module SpecMaker
 
 	puts "Staring..."
 
-	# Process all annotationa. Load in memory.
-	
-	schema[:Annotations].each do |item|
-		dt = get_type(item[:Target]).downcase
-
-		puts "-> Processing Annotation #{dt}"
-		# puts item[:Annotation].length
-		# puts item[:Annotation]
-		
-		parse_annotations(dt, item[:Annotation])
-		@iann = @iann + 1
-	end
-
 	# Process all Enums. Load in memory.
-	schema[:EnumType].each do |item|
-		puts "-> Processing Enum #{item[:Name]}"
-		enum = {}
-		if item[:IsFlags] 
-			enum[:isExclusive] = false
-		else
-			enum[:isExclusive] = true
+	if schema[:EnumType].is_a?(Array)
+		schema[:EnumType].each do |item|
+			puts "-> Processing Enum #{item[:Name]}"
+			enum = {}
+			if item[:IsFlags] 
+				enum[:isExclusive] = false
+			else
+				enum[:isExclusive] = true
+			end
+			enum[:options] = {}
+			item[:Member].each do |member|
+				entry = {}
+				entry[:value] = member[:Value]
+				entry[:description] = ""
+				enum[:options][member[:Name].to_sym] = entry
+			end	
+			@enum_objects[camelcase(item[:Name]).to_sym] = enum
+			@ienums = @ienums + 1
 		end
-		enum[:options] = {}
-		item[:Member].each do |member|
-			entry = {}
-			entry[:value] = member[:Value]
-			entry[:description] = ""
-			enum[:options][member[:Name].to_sym] = entry
-		end	
-		@enum_objects[camelcase(item[:Name]).to_sym] = enum
-		@ienums = @ienums + 1
+    elsif schema[:EnumType].is_a?(Hash)    
+            puts "-> Processing Enum (hash) #{schema[:EnumType][:Name]}, #{schema[:EnumType]}"
+			enum = {}
+			if schema[:EnumType][:IsFlags] 
+				enum[:isExclusive] = false
+			else
+				enum[:isExclusive] = true
+			end
+			enum[:options] = {}
+			schema[:EnumType][:Member].each do |member|
+				entry = {}
+				entry[:value] = member[:Value]
+				entry[:description] = ""
+				enum[:options][member[:Name].to_sym] = entry
+			end	
+			@enum_objects[camelcase(schema[:EnumType][:Name]).to_sym] = enum
+			@ienums = @ienums + 1
 	end
+			
+
+
 
 	File.open(ENUMS, "w") do |f|
 		f.write(JSON.pretty_generate @enum_objects, :encoding => 'UTF-8')
 	end
 
 	# # Process ACTIONS
-	schema[:Action].each do |item|		
-		puts "-> Processing Action #{item[:Name]}"
+	if schema[:Action].is_a?(Array)
+		schema[:Action].each do |item|	
+			puts "-> Processing Action #{item[:Name]}"
+			@iaction = @iaction + 1
+			process_method(item, 'action')
+		end
+	elsif schema[:Action].is_a?(Hash)		
+		puts "-> Processing Action (hash) #{schema[:Action][:Name]}, #{schema[:Action]}"
 		@iaction = @iaction + 1
-		process_method(item, 'action')
+		process_method(schema[:Action], 'action')
 	end
 
 	# # Process FUNCTIONS
 
-	schema[:Function].each do |item|		
-		puts "-> Processing Function #{item[:Name]}"
-		@ifunction = @ifunction + 1
-		process_method(item, 'function')
+	if schema[:Function].is_a?(Array)
+		schema[:Function].each do |item|
+			puts "-> Processing Function #{item[:Name]}"
+			@ifunction = @ifunction + 1
+			process_method(item, 'function')
+		end
+	elsif schema[:Function].is_a?(Hash)
+			puts "-> Processing Function (hash) #{schema[:Function][:Name]}, #{schema[:Function]}"
+			@ifunction = @ifunction + 1
+			process_method(schema[:Function][:Name], 'function')
 	end
 
 	# Write Functions & Actions
@@ -143,13 +165,15 @@ module SpecMaker
 			# puts "1: #{entity}"
 			# puts "2: #{entity[:Key]}"
 			# puts "3: #{@base_types.keys}"
-			entity[:Key] = @base_types[baseType.to_sym][:Key]
-
-			entity[:Property] = merge_members(entity[:Property], 
-												@base_types[baseType.to_sym][:Property])
-			entity[:NavigationProperty]  = merge_members(entity[:NavigationProperty],
-											@base_types[baseType.to_sym][:NavigationProperty], entity[:Name])
-			@base_types[entity[:Name].to_sym] = deep_copy(entity)	
+			if !@base_types[baseType.to_sym].nil?
+				entity[:Key] = @base_types[baseType.to_sym][:Key] 
+			
+				entity[:Property] = merge_members(entity[:Property], 
+													@base_types[baseType.to_sym][:Property])
+				entity[:NavigationProperty]  = merge_members(entity[:NavigationProperty],
+												@base_types[baseType.to_sym][:NavigationProperty], entity[:Name])
+				@base_types[entity[:Name].to_sym] = deep_copy(entity)	
+			end
 		end
 		
 		@json_object[:name] = camelcase entity[:Name]

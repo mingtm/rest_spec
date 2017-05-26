@@ -1,4 +1,4 @@
-# attachment resource type
+# Attachment resource type
 
 
 
@@ -7,19 +7,19 @@
 
 | Method		   | Return Type	|Description|
 |:---------------|:--------|:----------|
-|[Get attachment](../api/attachment_get.md) | [attachment](attachment.md) |Read properties and relationships of attachment object.|
-|[Update](../api/attachment_update.md) | [attachment](attachment.md)	|Update attachment object. |
-|[Delete](../api/attachment_delete.md) | None |Delete attachment object. |
+|[Get Attachment](../api/attachment_get.md) | [Attachment](attachment.md) |Read properties and relationships of attachment object.|
+|[Update](../api/attachment_update.md) | [Attachment](attachment.md)	|Update Attachment object. |
+|[Delete](../api/attachment_delete.md) | None |Delete Attachment object. |
 
 ### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|contentType|string||
-|id|string| Read-only.|
-|isInline|boolean||
-|lastModifiedDateTime|[dateTimeOffset](datetimeoffset.md)||
-|name|string||
-|size|int32||
+|ContentType|String||
+|Id|String| Read-only.|
+|IsInline|Boolean||
+|LastModifiedDateTime|DateTimeOffset|The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
+|Name|String||
+|Size|Int32||
 
 ### Relationships
 None
@@ -34,17 +34,17 @@ Here is a JSON representation of the resource.
   "optionalProperties": [
 
   ],
-  "@odata.type": "microsoft.graph.attachment"
+  "@odata.type": "microsoft.graph.Attachment"
 }-->
 
 ```json
 {
-  "contentType": "string",
-  "id": "string (identifier)",
-  "isInline": true,
-  "lastModifiedDateTime": "String (timestamp)",
-  "name": "string",
-  "size": 1024
+  "ContentType": "String",
+  "Id": "String (identifier)",
+  "IsInline": true,
+  "LastModifiedDateTime": "String (timestamp)",
+  "Name": "String",
+  "Size": 1024
 }
 
 ```
@@ -53,7 +53,7 @@ Here is a JSON representation of the resource.
 2015-10-25 14:57:30 UTC -->
 <!-- {
   "type": "#page.annotation",
-  "description": "attachment resource",
+  "description": "Attachment resource",
   "keywords": "",
   "section": "documentation",
   "tocPath": ""

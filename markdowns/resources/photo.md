@@ -1,19 +1,26 @@
-# photo resource type
+# Photo resource type
 
 
 
+
+### Methods
+
+| Method		   | Return Type	|Description|
+|:---------------|:--------|:----------|
+|[Get Photo](../api/photo_get.md) | [Photo](photo.md) |Read properties and relationships of photo object.|
+|[Update](../api/photo_update.md) | [Photo](photo.md)	|Update Photo object. |
+|[Delete](../api/photo_delete.md) | None |Delete Photo object. |
 
 ### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|cameraMake|string||
-|cameraModel|string||
-|exposureDenominator|double||
-|exposureNumerator|double||
-|fNumber|double||
-|focalLength|double||
-|iso|int32||
-|takenDateTime|[dateTimeOffset](datetimeoffset.md)||
+|Height|Int32||
+|Id|String| Read-only.|
+|Width|Int32||
+
+### Relationships
+None
+
 
 ### JSON representation
 
@@ -24,19 +31,14 @@ Here is a JSON representation of the resource.
   "optionalProperties": [
 
   ],
-  "@odata.type": "microsoft.graph.photo"
+  "@odata.type": "microsoft.graph.Photo"
 }-->
 
 ```json
 {
-  "cameraMake": "string",
-  "cameraModel": "string",
-  "exposureDenominator": 1024,
-  "exposureNumerator": 1024,
-  "fNumber": 1024,
-  "focalLength": 1024,
-  "iso": 1024,
-  "takenDateTime": "String (timestamp)"
+  "Height": 1024,
+  "Id": "String (identifier)",
+  "Width": 1024
 }
 
 ```
@@ -45,7 +47,7 @@ Here is a JSON representation of the resource.
 2015-10-25 14:57:30 UTC -->
 <!-- {
   "type": "#page.annotation",
-  "description": "photo resource",
+  "description": "Photo resource",
   "keywords": "",
   "section": "documentation",
   "tocPath": ""

@@ -1,5 +1,5 @@
 {
-  "name": "geoCoordinates",
+  "name": "GeoCoordinates",
   "description": "",
   "collectionOf": null,
   "isComplexType": true,
@@ -28,10 +28,10 @@
   },
   "properties": [
     {
-      "name": "altitude",
+      "name": "Altitude",
       "description": "",
       "isKey": false,
-      "dataType": "double",
+      "dataType": "Double",
       "isReadOnly": false,
       "enumName": null,
       "isCollection": false,
@@ -42,10 +42,10 @@
       "isUnicode": null
     },
     {
-      "name": "latitude",
+      "name": "Latitude",
       "description": "",
       "isKey": false,
-      "dataType": "double",
+      "dataType": "Double",
       "isReadOnly": false,
       "enumName": null,
       "isCollection": false,
@@ -56,10 +56,38 @@
       "isUnicode": null
     },
     {
-      "name": "longitude",
+      "name": "Longitude",
       "description": "",
       "isKey": false,
-      "dataType": "double",
+      "dataType": "Double",
+      "isReadOnly": false,
+      "enumName": null,
+      "isCollection": false,
+      "isRelationship": false,
+      "supportFilter": false,
+      "allowPostToCollection": true,
+      "isNullable": null,
+      "isUnicode": null
+    },
+    {
+      "name": "Accuracy",
+      "description": "",
+      "isKey": false,
+      "dataType": "Double",
+      "isReadOnly": false,
+      "enumName": null,
+      "isCollection": false,
+      "isRelationship": false,
+      "supportFilter": false,
+      "allowPostToCollection": true,
+      "isNullable": null,
+      "isUnicode": null
+    },
+    {
+      "name": "AltitudeAccuracy",
+      "description": "",
+      "isKey": false,
+      "dataType": "Double",
       "isReadOnly": false,
       "enumName": null,
       "isCollection": false,

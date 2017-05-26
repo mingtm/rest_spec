@@ -1,4 +1,4 @@
-# event: accept
+# Event: Accept
 
 
 ### Prerequisites
@@ -6,9 +6,9 @@ The following **scopes** are required to execute this API:
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
-POST /me/events/<id>/accept
-POST /me/calendarView/<id>/accept
-POST /users/<id>/events/<id>/accept
+POST /me/Events/<Id>/Accept
+POST /me/CalendarView/<Id>/Accept
+POST /Users/<Id>/Events/<Id>/Accept
 
 ```
 ### Request headers
@@ -22,8 +22,8 @@ In the request body, provide a JSON object with the following parameters.
 
 | Parameter	   | Type	|Description|
 |:---------------|:--------|:----------|
-|comment|string||
-|sendResponse|boolean||
+|Comment|String||
+|SendResponse|Boolean||
 
 ### Response
 If successful, this method returns `200, OK` response code. It does not return anything in the response body.
@@ -37,13 +37,13 @@ Here is an example of the request.
   "name": "event_accept"
 }-->
 ```http
-POST https://graph.microsoft.com/beta/me/events/<id>/accept
+POST https://graph.microsoft.com/beta/me/Events/<Id>/Accept
 Content-type: application/json
 Content-length: 56
 
 {
-  "comment": "comment-value",
-  "sendResponse": true
+  "Comment": "Comment-value",
+  "SendResponse": true
 }
 ```
 
@@ -62,7 +62,7 @@ HTTP/1.1 200 OK
 2015-10-25 14:57:30 UTC -->
 <!-- {
   "type": "#page.annotation",
-  "description": "event: accept",
+  "description": "Event: Accept",
   "keywords": "",
   "section": "documentation",
   "tocPath": ""

@@ -1,4 +1,4 @@
-# Get message
+# Get Message
 
 Retrieve the properties and relationships of message object.
 ### Prerequisites
@@ -6,16 +6,12 @@ The following **scopes** are required to execute this API:
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
-GET /me/messages/<id>
-GET /users/<id>/messages/<id>
-GET /me/mailFolders/<id>/messages/<id>
+GET /me/Messages/<Id>
+GET /Users/<Id>/Messages/<Id>
+GET /me/MailFolders/<Id>/Messages/<Id>
 ```
 ### Optional query parameters
-|Name|Value|Description|
-|:---------------|:--------|:-------|
-|$count|none|The count of related entities can be requested by specifying the $count query option.|
-|$expand|string|Comma-separated list of relationships to expand and include in the response. See relationships table of [message](../resources/message.md) object for supported names. |
-|$select|string|Comma-separated list of properties to include in the response.|
+This method supports the [OData Query Parameters](http://graph.microsoft.io/docs/overview/query_parameters) to help customize the response.
 
 ### Request headers
 | Name      |Description|
@@ -26,7 +22,7 @@ GET /me/mailFolders/<id>/messages/<id>
 ### Request body
 Do not supply a request body for this method.
 ### Response
-If successful, this method returns a `200 OK` response code and [message](../resources/message.md) object in the response body.
+If successful, this method returns a `200 OK` response code and [Message](../resources/message.md) object in the response body.
 ### Example
 ##### Request
 Here is an example of the request.
@@ -35,14 +31,14 @@ Here is an example of the request.
   "name": "get_message"
 }-->
 ```http
-GET https://graph.microsoft.com/beta/me/messages/<id>
+GET https://graph.microsoft.com/beta/me/Messages/<Id>
 ```
 ##### Response
 Here is an example of the response. Note: The response object shown here may be truncated for brevity. All of the properties will be returned from an actual call.
 <!-- {
   "blockType": "response",
   "truncated": true,
-  "@odata.type": "microsoft.graph.message"
+  "@odata.type": "microsoft.graph.Message"
 } -->
 ```http
 HTTP/1.1 200 OK
@@ -50,14 +46,14 @@ Content-type: application/json
 Content-length: 272
 
 {
-  "receivedDateTime": "datetime-value",
-  "sentDateTime": "datetime-value",
-  "hasAttachments": true,
-  "internetMessageId": "internetMessageId-value",
-  "subject": "subject-value",
-  "body": {
-    "contentType": "contentType-value",
-    "content": "content-value"
+  "ReceivedDateTime": "datetime-value",
+  "SentDateTime": "datetime-value",
+  "HasAttachments": true,
+  "InternetMessageId": "InternetMessageId-value",
+  "Subject": "Subject-value",
+  "Body": {
+    "ContentType": "ContentType-value",
+    "Content": "Content-value"
   }
 }
 ```
@@ -66,7 +62,7 @@ Content-length: 272
 2015-10-25 14:57:30 UTC -->
 <!-- {
   "type": "#page.annotation",
-  "description": "Get message",
+  "description": "Get Message",
   "keywords": "",
   "section": "documentation",
   "tocPath": ""

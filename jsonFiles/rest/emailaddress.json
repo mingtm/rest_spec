@@ -1,5 +1,5 @@
 {
-  "name": "emailAddress",
+  "name": "EmailAddress",
   "description": "",
   "collectionOf": null,
   "isComplexType": true,
@@ -28,10 +28,10 @@
   },
   "properties": [
     {
-      "name": "name",
+      "name": "Name",
       "description": "",
       "isKey": false,
-      "dataType": "string",
+      "dataType": "String",
       "isReadOnly": false,
       "enumName": null,
       "isCollection": false,
@@ -39,13 +39,13 @@
       "supportFilter": false,
       "allowPostToCollection": true,
       "isNullable": null,
-      "isUnicode": false
+      "isUnicode": null
     },
     {
-      "name": "address",
+      "name": "Address",
       "description": "",
       "isKey": false,
-      "dataType": "string",
+      "dataType": "String",
       "isReadOnly": false,
       "enumName": null,
       "isCollection": false,
@@ -53,7 +53,7 @@
       "supportFilter": false,
       "allowPostToCollection": true,
       "isNullable": null,
-      "isUnicode": false
+      "isUnicode": null
     }
   ],
   "methods": [

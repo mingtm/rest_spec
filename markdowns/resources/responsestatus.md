@@ -1,4 +1,4 @@
-# responseStatus resource type
+# ResponseStatus resource type
 
 
 
@@ -6,8 +6,8 @@
 ### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|response|String| Possible values are: `none`, `organizer`, `tentativelyAccepted`, `accepted`, `declined`, `notResponded`.|
-|time|[dateTimeOffset](datetimeoffset.md)||
+|Response|String| Possible values are: `None`, `Organizer`, `TentativelyAccepted`, `Accepted`, `Declined`, `NotResponded`.|
+|Time|DateTimeOffset|The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
 
 ### JSON representation
 
@@ -18,13 +18,13 @@ Here is a JSON representation of the resource.
   "optionalProperties": [
 
   ],
-  "@odata.type": "microsoft.graph.responseStatus"
+  "@odata.type": "microsoft.graph.ResponseStatus"
 }-->
 
 ```json
 {
-  "response": "String",
-  "time": "String (timestamp)"
+  "Response": "String",
+  "Time": "String (timestamp)"
 }
 
 ```
@@ -33,7 +33,7 @@ Here is a JSON representation of the resource.
 2015-10-25 14:57:30 UTC -->
 <!-- {
   "type": "#page.annotation",
-  "description": "responseStatus resource",
+  "description": "ResponseStatus resource",
   "keywords": "",
   "section": "documentation",
   "tocPath": ""

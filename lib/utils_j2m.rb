@@ -44,7 +44,7 @@ module SpecMaker
 	QRY_SKIP = "|$skip|int|The number of items to skip in a result set.|"
 	QRY_COUNT = "|$count|none|The count of related entities can be requested by specifying the $count query option.|"
 
-	HTTP_HEADER_SAMPLE = "| Authorization  | Bearer <code>|" + NEWLINE + "| Workbook-Session-Id  | Workbook session Id that determines if changes are persisted or not. Optional.|"
+	HTTP_HEADER_SAMPLE = "| Authorization  | Bearer {code}|" + NEWLINE + "| Workbook-Session-Id  | Workbook session Id that determines if changes are persisted or not. Optional.|"
 	
 	odata_types = %w[Binary Boolean Byte Date DateTimeOffset Decimal Double Duration 
 				Guid Int Int16 Int32 Int64 SByte Single Stream String TimeOfDay 

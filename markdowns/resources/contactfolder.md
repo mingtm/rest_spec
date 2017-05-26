@@ -1,4 +1,4 @@
-# contactFolder resource type
+# ContactFolder resource type
 
 
 
@@ -7,26 +7,33 @@
 
 | Method		   | Return Type	|Description|
 |:---------------|:--------|:----------|
-|[Get contactFolder](../api/contactfolder_get.md) | [contactFolder](contactfolder.md) |Read properties and relationships of contactFolder object.|
-|[Create contactFolder](../api/contactfolder_post_childfolders.md) |[contactFolder](contactfolder.md)| Create a new contactFolder by posting to the childFolders collection.|
-|[List childFolders](../api/contactfolder_list_childfolders.md) |[contactFolder](contactfolder.md) collection| Get a contactFolder object collection.|
-|[Create contact](../api/contactfolder_post_contacts.md) |[contact](contact.md)| Create a new contact by posting to the contacts collection.|
-|[List contacts](../api/contactfolder_list_contacts.md) |[contact](contact.md) collection| Get a contact object collection.|
-|[Update](../api/contactfolder_update.md) | [contactFolder](contactfolder.md)	|Update contactFolder object. |
-|[Delete](../api/contactfolder_delete.md) | None |Delete contactFolder object. |
+|[Get ContactFolder](../api/contactfolder_get.md) | [ContactFolder](contactfolder.md) |Read properties and relationships of contactFolder object.|
+|[Create ContactFolder](../api/contactfolder_post_childfolders.md) |[ContactFolder](contactfolder.md)| Create a new ContactFolder by posting to the ChildFolders collection.|
+|[List ChildFolders](../api/contactfolder_list_childfolders.md) |[ContactFolder](contactfolder.md) collection| Get a ContactFolder object collection.|
+|[Create Contact](../api/contactfolder_post_contacts.md) |[Contact](contact.md)| Create a new Contact by posting to the Contacts collection.|
+|[List Contacts](../api/contactfolder_list_contacts.md) |[Contact](contact.md) collection| Get a Contact object collection.|
+|[Create MultiValueLegacyExtendedProperty](../api/contactfolder_post_multivalueextendedproperties.md) |[MultiValueLegacyExtendedProperty](multivaluelegacyextendedproperty.md)| Create a new MultiValueLegacyExtendedProperty by posting to the MultiValueExtendedProperties collection.|
+|[List MultiValueExtendedProperties](../api/contactfolder_list_multivalueextendedproperties.md) |[MultiValueLegacyExtendedProperty](multivaluelegacyextendedproperty.md) collection| Get a MultiValueLegacyExtendedProperty object collection.|
+|[Create SingleValueLegacyExtendedProperty](../api/contactfolder_post_singlevalueextendedproperties.md) |[SingleValueLegacyExtendedProperty](singlevaluelegacyextendedproperty.md)| Create a new SingleValueLegacyExtendedProperty by posting to the SingleValueExtendedProperties collection.|
+|[List SingleValueExtendedProperties](../api/contactfolder_list_singlevalueextendedproperties.md) |[SingleValueLegacyExtendedProperty](singlevaluelegacyextendedproperty.md) collection| Get a SingleValueLegacyExtendedProperty object collection.|
+|[Update](../api/contactfolder_update.md) | [ContactFolder](contactfolder.md)	|Update ContactFolder object. |
+|[Delete](../api/contactfolder_delete.md) | None |Delete ContactFolder object. |
 
 ### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|displayName|string||
-|id|string| Read-only.|
-|parentFolderId|string||
+|DisplayName|String||
+|Id|String| Read-only.|
+|ParentFolderId|String||
+|WellKnownName|String||
 
 ### Relationships
 | Relationship | Type	|Description|
 |:---------------|:--------|:----------|
-|childFolders|[contactFolder](contactfolder.md) collection| Read-only. Nullable.|
-|contacts|[contact](contact.md) collection| Read-only. Nullable.|
+|ChildFolders|[ContactFolder](contactfolder.md) collection| Read-only. Nullable.|
+|Contacts|[Contact](contact.md) collection| Read-only. Nullable.|
+|MultiValueExtendedProperties|[MultiValueLegacyExtendedProperty](multivaluelegacyextendedproperty.md) collection| Read-only. Nullable.|
+|SingleValueExtendedProperties|[SingleValueLegacyExtendedProperty](singlevaluelegacyextendedproperty.md) collection| Read-only. Nullable.|
 
 ### JSON representation
 
@@ -37,14 +44,15 @@ Here is a JSON representation of the resource.
   "optionalProperties": [
 
   ],
-  "@odata.type": "microsoft.graph.contactFolder"
+  "@odata.type": "microsoft.graph.ContactFolder"
 }-->
 
 ```json
 {
-  "displayName": "string",
-  "id": "string (identifier)",
-  "parentFolderId": "string"
+  "DisplayName": "String",
+  "Id": "String (identifier)",
+  "ParentFolderId": "String",
+  "WellKnownName": "String"
 }
 
 ```
@@ -53,7 +61,7 @@ Here is a JSON representation of the resource.
 2015-10-25 14:57:30 UTC -->
 <!-- {
   "type": "#page.annotation",
-  "description": "contactFolder resource",
+  "description": "ContactFolder resource",
   "keywords": "",
   "section": "documentation",
   "tocPath": ""

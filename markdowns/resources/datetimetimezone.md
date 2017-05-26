@@ -1,4 +1,4 @@
-# dateTimeTimeZone resource type
+# DateTimeTimeZone resource type
 
 
 
@@ -6,8 +6,8 @@
 ### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|dateTime|string||
-|timeZone|string||
+|DateTime|[DateTime](datetime.md)||
+|TimeZone|String||
 
 ### JSON representation
 
@@ -18,13 +18,13 @@ Here is a JSON representation of the resource.
   "optionalProperties": [
 
   ],
-  "@odata.type": "microsoft.graph.dateTimeTimeZone"
+  "@odata.type": "microsoft.graph.DateTimeTimeZone"
 }-->
 
 ```json
 {
-  "dateTime": "string",
-  "timeZone": "string"
+  "DateTime": {"@odata.type": "microsoft.graph.DateTime"},
+  "TimeZone": "String"
 }
 
 ```
@@ -33,7 +33,7 @@ Here is a JSON representation of the resource.
 2015-10-25 14:57:30 UTC -->
 <!-- {
   "type": "#page.annotation",
-  "description": "dateTimeTimeZone resource",
+  "description": "DateTimeTimeZone resource",
   "keywords": "",
   "section": "documentation",
   "tocPath": ""

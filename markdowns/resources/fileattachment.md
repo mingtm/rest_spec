@@ -1,4 +1,4 @@
-# fileAttachment resource type
+# FileAttachment resource type
 
 
 
@@ -7,22 +7,22 @@
 
 | Method		   | Return Type	|Description|
 |:---------------|:--------|:----------|
-|[Get fileAttachment](../api/fileattachment_get.md) | [fileAttachment](fileattachment.md) |Read properties and relationships of fileAttachment object.|
-|[Update](../api/fileattachment_update.md) | [fileAttachment](fileattachment.md)	|Update fileAttachment object. |
-|[Delete](../api/fileattachment_delete.md) | None |Delete fileAttachment object. |
+|[Get FileAttachment](../api/fileattachment_get.md) | [FileAttachment](fileattachment.md) |Read properties and relationships of fileAttachment object.|
+|[Update](../api/fileattachment_update.md) | [FileAttachment](fileattachment.md)	|Update FileAttachment object. |
+|[Delete](../api/fileattachment_delete.md) | None |Delete FileAttachment object. |
 
 ### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|contentBytes|binary||
-|contentId|string||
-|contentLocation|string||
-|contentType|string||
-|id|string| Read-only.|
-|isInline|boolean||
-|lastModifiedDateTime|[dateTimeOffset](datetimeoffset.md)||
-|name|string||
-|size|int32||
+|ContentBytes|Binary||
+|ContentId|String||
+|ContentLocation|String||
+|ContentType|String||
+|Id|String| Read-only.|
+|IsInline|Boolean||
+|LastModifiedDateTime|DateTimeOffset|The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
+|Name|String||
+|Size|Int32||
 
 ### Relationships
 None
@@ -37,20 +37,20 @@ Here is a JSON representation of the resource.
   "optionalProperties": [
 
   ],
-  "@odata.type": "microsoft.graph.fileAttachment"
+  "@odata.type": "microsoft.graph.FileAttachment"
 }-->
 
 ```json
 {
-  "contentBytes": "binary",
-  "contentId": "string",
-  "contentLocation": "string",
-  "contentType": "string",
-  "id": "string (identifier)",
-  "isInline": true,
-  "lastModifiedDateTime": "String (timestamp)",
-  "name": "string",
-  "size": 1024
+  "ContentBytes": "Binary",
+  "ContentId": "String",
+  "ContentLocation": "String",
+  "ContentType": "String",
+  "Id": "String (identifier)",
+  "IsInline": true,
+  "LastModifiedDateTime": "String (timestamp)",
+  "Name": "String",
+  "Size": 1024
 }
 
 ```
@@ -59,7 +59,7 @@ Here is a JSON representation of the resource.
 2015-10-25 14:57:30 UTC -->
 <!-- {
   "type": "#page.annotation",
-  "description": "fileAttachment resource",
+  "description": "FileAttachment resource",
   "keywords": "",
   "section": "documentation",
   "tocPath": ""

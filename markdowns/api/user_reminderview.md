@@ -1,4 +1,4 @@
-# user: reminderView
+# User: ReminderView
 
 
 ### Prerequisites
@@ -6,9 +6,8 @@ The following **scopes** are required to execute this API:
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
-POST /me/reminderView(startDateTime=startDateTime-value, endDateTime=endDateTime-value)
-POST /users/<id>/reminderView(startDateTime=startDateTime-value, endDateTime=endDateTime-value)
-POST /drive/root/createdByUser/reminderView(startDateTime=startDateTime-value, endDateTime=endDateTime-value)
+POST /me/ReminderView(StartDateTime=StartDateTime-value, EndDateTime=EndDateTime-value)
+POST /Users/<Id>/ReminderView(StartDateTime=StartDateTime-value, EndDateTime=EndDateTime-value)
 
 ```
 ### Request headers
@@ -22,11 +21,11 @@ In the request URL, provide following query parameters with values.
 
 | Parameter	   | Type	|Description|
 |:---------------|:--------|:----------|
-|startDateTime|string||
-|endDateTime|string||
+|StartDateTime|DateTime||
+|EndDateTime|DateTime||
 
 ### Response
-If successful, this method returns `200, OK` response code and [reminder](../resources/reminder.md) collection object in the response body.
+If successful, this method returns `200, OK` response code and [Reminder](../resources/reminder.md) collection object in the response body.
 
 ### Example
 Here is an example of how to call this API.
@@ -37,7 +36,7 @@ Here is an example of the request.
   "name": "user_reminderview"
 }-->
 ```http
-POST https://graph.microsoft.com/beta/me/reminderView
+POST https://graph.microsoft.com/beta/me/ReminderView
 ```
 
 ##### Response
@@ -45,37 +44,50 @@ Here is an example of the response. Note: The response object shown here may be 
 <!-- {
   "blockType": "response",
   "truncated": true,
-  "@odata.type": "microsoft.graph.reminder",
+  "@odata.type": "microsoft.graph.Reminder",
   "isCollection": true
 } -->
 ```http
 HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 673
+Content-length: 1025
 
 {
   "value": [
     {
-      "eventId": "eventId-value",
-      "eventStartTime": {
-        "dateTime": "dateTime-value",
-        "timeZone": "timeZone-value"
+      "EventId": "EventId-value",
+      "EventStartTime": {
+        "DateTime": {
+        },
+        "TimeZone": "TimeZone-value"
       },
-      "eventEndTime": {
-        "dateTime": "dateTime-value",
-        "timeZone": "timeZone-value"
+      "EventEndTime": {
+        "DateTime": {
+        },
+        "TimeZone": "TimeZone-value"
       },
-      "changeKey": "changeKey-value",
-      "eventSubject": "eventSubject-value",
-      "eventLocation": {
-        "displayName": "displayName-value",
-        "address": {
-          "street": "street-value",
-          "city": "city-value",
-          "state": "state-value",
-          "countryOrRegion": "countryOrRegion-value",
-          "postalCode": "postalCode-value"
-        }
+      "ChangeKey": "ChangeKey-value",
+      "EventSubject": "EventSubject-value",
+      "EventLocation": {
+        "DisplayName": "DisplayName-value",
+        "LocationEmailAddress": "LocationEmailAddress-value",
+        "Address": {
+          "Type": "Type-value",
+          "PostOfficeBox": "PostOfficeBox-value",
+          "Street": "Street-value",
+          "City": "City-value",
+          "State": "State-value",
+          "CountryOrRegion": "CountryOrRegion-value",
+          "PostalCode": "PostalCode-value"
+        },
+        "Coordinates": {
+          "Altitude": 99,
+          "Latitude": 99,
+          "Longitude": 99,
+          "Accuracy": 99,
+          "AltitudeAccuracy": 99
+        },
+        "LocationUri": "LocationUri-value"
       }
     }
   ]
@@ -86,7 +98,7 @@ Content-length: 673
 2015-10-25 14:57:30 UTC -->
 <!-- {
   "type": "#page.annotation",
-  "description": "user: reminderView",
+  "description": "User: ReminderView",
   "keywords": "",
   "section": "documentation",
   "tocPath": ""

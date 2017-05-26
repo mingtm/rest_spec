@@ -1,0 +1,64 @@
+{
+  "name": "UserConfiguration",
+  "description": "",
+  "collectionOf": null,
+  "isComplexType": false,
+  "isEntitySet": false,
+  "isOpenType": false,
+  "allowPatch": true,
+  "allowUpsert": true,
+  "allowPatchCreate": true,
+  "allowDelete": true,
+  "isReferenceable": true,
+  "isExpandable": true,
+  "isFilterable": true,
+  "isCountable": true,
+  "isSelectable": true,
+  "isSkipSupported": true,
+  "isTopSupported": true,
+  "info": null,
+  "propertyNotes": "",
+  "relationshipNotes": "",
+  "methodNotes": "",
+  "listDescription": "",
+  "createDescription": "",
+  "updateDescription": "",
+  "deleteDescription": "",
+  "restPath": {
+    "/Users/<Id>/MailFolders/<Id>/UserConfigurations/<Id>": true,
+    "/me/MailFolders/<Id>/UserConfigurations/<Id>": true
+  },
+  "properties": [
+    {
+      "name": "Id",
+      "description": "",
+      "isKey": true,
+      "dataType": "String",
+      "isReadOnly": true,
+      "enumName": null,
+      "isCollection": false,
+      "isRelationship": false,
+      "supportFilter": false,
+      "allowPostToCollection": true,
+      "isNullable": null,
+      "isUnicode": null
+    },
+    {
+      "name": "BinaryData",
+      "description": "",
+      "isKey": false,
+      "dataType": "Binary",
+      "isReadOnly": false,
+      "enumName": null,
+      "isCollection": false,
+      "isRelationship": false,
+      "supportFilter": false,
+      "allowPostToCollection": true,
+      "isNullable": null,
+      "isUnicode": null
+    }
+  ],
+  "methods": [
+
+  ]
+}

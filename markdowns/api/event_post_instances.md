@@ -1,14 +1,14 @@
-# Create event
+# Create Event
 
-Use this API to create a new event.
+Use this API to create a new Event.
 ### Prerequisites
 The following **scopes** are required to execute this API: 
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
-POST /me/events/<id>/instances
-POST /me/calendarView/<id>/instances
-POST /users/<id>/events/<id>/instances
+POST /me/Events/<Id>/Instances
+POST /me/CalendarView/<Id>/Instances
+POST /Users/<Id>/Events/<Id>/Instances
 
 ```
 ### Request headers
@@ -18,11 +18,11 @@ POST /users/<id>/events/<id>/instances
 | Workbook-Session-Id  | Workbook session Id that determines if changes are persisted or not. Optional.|
 
 ### Request body
-In the request body, supply a JSON representation of [event](../resources/event.md) object.
+In the request body, supply a JSON representation of [Event](../resources/event.md) object.
 
 
 ### Response
-If successful, this method returns `201, Created` response code and [event](../resources/event.md) object in the response body.
+If successful, this method returns `201, Created` response code and [Event](../resources/event.md) object in the response body.
 
 ### Example
 ##### Request
@@ -32,29 +32,29 @@ Here is an example of the request.
   "name": "create_event_from_event"
 }-->
 ```http
-POST https://graph.microsoft.com/beta/me/events/<id>/instances
+POST https://graph.microsoft.com/beta/me/Events/<Id>/Instances
 Content-type: application/json
 Content-length: 294
 
 {
-  "originalStartTimeZone": "originalStartTimeZone-value",
-  "originalEndTimeZone": "originalEndTimeZone-value",
-  "responseStatus": {
-    "response": "response-value",
-    "time": "datetime-value"
+  "OriginalStartTimeZone": "OriginalStartTimeZone-value",
+  "OriginalEndTimeZone": "OriginalEndTimeZone-value",
+  "ResponseStatus": {
+    "Response": "Response-value",
+    "Time": "datetime-value"
   },
   "iCalUId": "iCalUId-value",
-  "reminderMinutesBeforeStart": 99,
-  "isReminderOn": true
+  "ReminderMinutesBeforeStart": 99,
+  "IsReminderOn": true
 }
 ```
-In the request body, supply a JSON representation of [event](../resources/event.md) object.
+In the request body, supply a JSON representation of [Event](../resources/event.md) object.
 ##### Response
 Here is an example of the response. Note: The response object shown here may be truncated for brevity. All of the properties will be returned from an actual call.
 <!-- {
   "blockType": "response",
   "truncated": true,
-  "@odata.type": "microsoft.graph.event"
+  "@odata.type": "microsoft.graph.Event"
 } -->
 ```http
 HTTP/1.1 201 Created
@@ -62,15 +62,15 @@ Content-type: application/json
 Content-length: 294
 
 {
-  "originalStartTimeZone": "originalStartTimeZone-value",
-  "originalEndTimeZone": "originalEndTimeZone-value",
-  "responseStatus": {
-    "response": "response-value",
-    "time": "datetime-value"
+  "OriginalStartTimeZone": "OriginalStartTimeZone-value",
+  "OriginalEndTimeZone": "OriginalEndTimeZone-value",
+  "ResponseStatus": {
+    "Response": "Response-value",
+    "Time": "datetime-value"
   },
   "iCalUId": "iCalUId-value",
-  "reminderMinutesBeforeStart": 99,
-  "isReminderOn": true
+  "ReminderMinutesBeforeStart": 99,
+  "IsReminderOn": true
 }
 ```
 
@@ -78,7 +78,7 @@ Content-length: 294
 2015-10-25 14:57:30 UTC -->
 <!-- {
   "type": "#page.annotation",
-  "description": "Create event",
+  "description": "Create Event",
   "keywords": "",
   "section": "documentation",
   "tocPath": ""

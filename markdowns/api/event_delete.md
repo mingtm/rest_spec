@@ -1,14 +1,14 @@
-# Delete event
+# Delete Event
 
-Delete event.
+Delete Event.
 ### Prerequisites
 The following **scopes** are required to execute this API: 
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
-DELETE /me/events/<id>
-DELETE /me/calendarView/<id>
-DELETE /users/<id>/events/<id>
+DELETE /me/Events/<Id>
+DELETE /me/CalendarView/<Id>
+DELETE /Users/<Id>/Events/<Id>
 
 ```
 ### Request headers
@@ -32,7 +32,7 @@ Here is an example of the request.
   "name": "delete_event"
 }-->
 ```http
-DELETE https://graph.microsoft.com/beta/me/events/<id>
+DELETE https://graph.microsoft.com/beta/me/Events/<Id>
 ```
 ##### Response
 Here is an example of the response. Note: The response object shown here may be truncated for brevity. All of the properties will be returned from an actual call.
@@ -48,7 +48,7 @@ HTTP/1.1 204 No Content
 2015-10-25 14:57:30 UTC -->
 <!-- {
   "type": "#page.annotation",
-  "description": "Delete event",
+  "description": "Delete Event",
   "keywords": "",
   "section": "documentation",
   "tocPath": ""

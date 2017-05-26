@@ -1,6 +1,6 @@
-# Create attachment
+# Create Attachment
 
-Use this API to create a new attachment.
+Use this API to create a new Attachment.
 ### Prerequisites
 The following **scopes** are required to execute this API: 
 ### HTTP request
@@ -16,11 +16,11 @@ The following **scopes** are required to execute this API:
 | Workbook-Session-Id  | Workbook session Id that determines if changes are persisted or not. Optional.|
 
 ### Request body
-In the request body, supply a JSON representation of [attachment](../resources/attachment.md) object.
+In the request body, supply a JSON representation of [Attachment](../resources/attachment.md) object.
 
 
 ### Response
-If successful, this method returns `201, Created` response code and [attachment](../resources/attachment.md) object in the response body.
+If successful, this method returns `201, Created` response code and [Attachment](../resources/attachment.md) object in the response body.
 
 ### Example
 ##### Request
@@ -35,20 +35,20 @@ Content-type: application/json
 Content-length: 142
 
 {
-  "lastModifiedDateTime": "datetime-value",
-  "name": "name-value",
-  "contentType": "contentType-value",
-  "size": 99,
-  "isInline": true
+  "LastModifiedDateTime": "datetime-value",
+  "Name": "Name-value",
+  "ContentType": "ContentType-value",
+  "Size": 99,
+  "IsInline": true
 }
 ```
-In the request body, supply a JSON representation of [attachment](../resources/attachment.md) object.
+In the request body, supply a JSON representation of [Attachment](../resources/attachment.md) object.
 ##### Response
 Here is an example of the response. Note: The response object shown here may be truncated for brevity. All of the properties will be returned from an actual call.
 <!-- {
   "blockType": "response",
   "truncated": true,
-  "@odata.type": "microsoft.graph.attachment"
+  "@odata.type": "microsoft.graph.Attachment"
 } -->
 ```http
 HTTP/1.1 201 Created
@@ -56,12 +56,12 @@ Content-type: application/json
 Content-length: 162
 
 {
-  "lastModifiedDateTime": "datetime-value",
-  "name": "name-value",
-  "contentType": "contentType-value",
-  "size": 99,
-  "isInline": true,
-  "id": "id-value"
+  "LastModifiedDateTime": "datetime-value",
+  "Name": "Name-value",
+  "ContentType": "ContentType-value",
+  "Size": 99,
+  "IsInline": true,
+  "Id": "Id-value"
 }
 ```
 
@@ -69,7 +69,7 @@ Content-length: 162
 2015-10-25 14:57:30 UTC -->
 <!-- {
   "type": "#page.annotation",
-  "description": "Create attachment",
+  "description": "Create Attachment",
   "keywords": "",
   "section": "documentation",
   "tocPath": ""

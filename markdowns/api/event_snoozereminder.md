@@ -1,4 +1,4 @@
-# event: snoozeReminder
+# Event: SnoozeReminder
 
 
 ### Prerequisites
@@ -6,9 +6,9 @@ The following **scopes** are required to execute this API:
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
-POST /me/events/<id>/snoozeReminder
-POST /me/calendarView/<id>/snoozeReminder
-POST /users/<id>/events/<id>/snoozeReminder
+POST /me/Events/<Id>/SnoozeReminder
+POST /me/CalendarView/<Id>/SnoozeReminder
+POST /Users/<Id>/Events/<Id>/SnoozeReminder
 
 ```
 ### Request headers
@@ -22,7 +22,7 @@ In the request body, provide a JSON object with the following parameters.
 
 | Parameter	   | Type	|Description|
 |:---------------|:--------|:----------|
-|newReminderTime|dateTimeTimeZone||
+|NewReminderTime|DateTimeTimeZone||
 
 ### Response
 If successful, this method returns `200, OK` response code. It does not return anything in the response body.
@@ -36,14 +36,15 @@ Here is an example of the request.
   "name": "event_snoozereminder"
 }-->
 ```http
-POST https://graph.microsoft.com/beta/me/events/<id>/snoozeReminder
+POST https://graph.microsoft.com/beta/me/Events/<Id>/SnoozeReminder
 Content-type: application/json
-Content-length: 97
+Content-length: 88
 
 {
-  "newReminderTime": {
-    "dateTime": "dateTime-value",
-    "timeZone": "timeZone-value"
+  "NewReminderTime": {
+    "DateTime": {
+    },
+    "TimeZone": "TimeZone-value"
   }
 }
 ```
@@ -63,7 +64,7 @@ HTTP/1.1 200 OK
 2015-10-25 14:57:30 UTC -->
 <!-- {
   "type": "#page.annotation",
-  "description": "event: snoozeReminder",
+  "description": "Event: SnoozeReminder",
   "keywords": "",
   "section": "documentation",
   "tocPath": ""

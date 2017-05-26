@@ -1,4 +1,4 @@
-# Get subscription
+# Get Subscription
 
 Retrieve the properties and relationships of subscription object.
 ### Prerequisites
@@ -6,9 +6,12 @@ The following **scopes** are required to execute this API:
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
-GET /subscriptions/<id>
+GET /me/Subscriptions/<Id>
+GET /Users/<Id>/Subscriptions/<Id>
+GET /Groups/<Id>/Subscriptions/<Id>
 ```
 ### Optional query parameters
+This method supports the [OData Query Parameters](http://graph.microsoft.io/docs/overview/query_parameters) to help customize the response.
 
 ### Request headers
 | Name      |Description|
@@ -19,7 +22,7 @@ GET /subscriptions/<id>
 ### Request body
 Do not supply a request body for this method.
 ### Response
-If successful, this method returns a `200 OK` response code and [subscription](../resources/subscription.md) object in the response body.
+If successful, this method returns a `200 OK` response code and [Subscription](../resources/subscription.md) object in the response body.
 ### Example
 ##### Request
 Here is an example of the request.
@@ -28,27 +31,24 @@ Here is an example of the request.
   "name": "get_subscription"
 }-->
 ```http
-GET https://graph.microsoft.com/beta/subscriptions/<id>
+GET https://graph.microsoft.com/beta/me/Subscriptions/<Id>
 ```
 ##### Response
 Here is an example of the response. Note: The response object shown here may be truncated for brevity. All of the properties will be returned from an actual call.
 <!-- {
   "blockType": "response",
   "truncated": true,
-  "@odata.type": "microsoft.graph.subscription"
+  "@odata.type": "microsoft.graph.Subscription"
 } -->
 ```http
 HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 216
+Content-length: 90
 
 {
-  "resource": "resource-value",
-  "changeType": "changeType-value",
-  "clientState": "clientState-value",
-  "notificationUrl": "notificationUrl-value",
-  "expirationDateTime": "datetime-value",
-  "id": "id-value"
+  "Resource": "Resource-value",
+  "ChangeType": "ChangeType-value",
+  "Id": "Id-value"
 }
 ```
 
@@ -56,7 +56,7 @@ Content-length: 216
 2015-10-25 14:57:30 UTC -->
 <!-- {
   "type": "#page.annotation",
-  "description": "Get subscription",
+  "description": "Get Subscription",
   "keywords": "",
   "section": "documentation",
   "tocPath": ""

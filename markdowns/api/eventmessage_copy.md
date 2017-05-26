@@ -1,4 +1,4 @@
-# eventMessage: copy
+# EventMessage: Copy
 
 
 ### Prerequisites
@@ -20,10 +20,10 @@ In the request body, provide a JSON object with the following parameters.
 
 | Parameter	   | Type	|Description|
 |:---------------|:--------|:----------|
-|destinationId|string||
+|DestinationId|String||
 
 ### Response
-If successful, this method returns `200, OK` response code and [message](../resources/message.md) object in the response body.
+If successful, this method returns `200, OK` response code and [Message](../resources/message.md) object in the response body.
 
 ### Example
 Here is an example of how to call this API.
@@ -39,7 +39,7 @@ Content-type: application/json
 Content-length: 44
 
 {
-  "destinationId": "destinationId-value"
+  "DestinationId": "DestinationId-value"
 }
 ```
 
@@ -48,7 +48,7 @@ Here is an example of the response. Note: The response object shown here may be 
 <!-- {
   "blockType": "response",
   "truncated": true,
-  "@odata.type": "microsoft.graph.message"
+  "@odata.type": "microsoft.graph.Message"
 } -->
 ```http
 HTTP/1.1 200 OK
@@ -56,14 +56,14 @@ Content-type: application/json
 Content-length: 272
 
 {
-  "receivedDateTime": "datetime-value",
-  "sentDateTime": "datetime-value",
-  "hasAttachments": true,
-  "internetMessageId": "internetMessageId-value",
-  "subject": "subject-value",
-  "body": {
-    "contentType": "contentType-value",
-    "content": "content-value"
+  "ReceivedDateTime": "datetime-value",
+  "SentDateTime": "datetime-value",
+  "HasAttachments": true,
+  "InternetMessageId": "InternetMessageId-value",
+  "Subject": "Subject-value",
+  "Body": {
+    "ContentType": "ContentType-value",
+    "Content": "Content-value"
   }
 }
 ```
@@ -72,7 +72,7 @@ Content-length: 272
 2015-10-25 14:57:30 UTC -->
 <!-- {
   "type": "#page.annotation",
-  "description": "eventMessage: copy",
+  "description": "EventMessage: Copy",
   "keywords": "",
   "section": "documentation",
   "tocPath": ""

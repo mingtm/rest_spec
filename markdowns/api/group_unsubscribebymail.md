@@ -1,4 +1,4 @@
-# group: unsubscribeByMail
+# Group: UnsubscribeByMail
 
 
 ### Prerequisites
@@ -6,7 +6,9 @@ The following **scopes** are required to execute this API:
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
-POST /groups/<id>/unsubscribeByMail
+POST /Groups/<Id>/UnsubscribeByMail
+POST /me/JoinedGroups/<Id>/UnsubscribeByMail
+POST /Users/<Id>/JoinedGroups/<Id>/UnsubscribeByMail
 
 ```
 ### Request headers
@@ -29,7 +31,7 @@ Here is an example of the request.
   "name": "group_unsubscribebymail"
 }-->
 ```http
-POST https://graph.microsoft.com/beta/groups/<id>/unsubscribeByMail
+POST https://graph.microsoft.com/beta/Groups/<Id>/UnsubscribeByMail
 ```
 
 ##### Response
@@ -47,7 +49,7 @@ HTTP/1.1 200 OK
 2015-10-25 14:57:30 UTC -->
 <!-- {
   "type": "#page.annotation",
-  "description": "group: unsubscribeByMail",
+  "description": "Group: UnsubscribeByMail",
   "keywords": "",
   "section": "documentation",
   "tocPath": ""

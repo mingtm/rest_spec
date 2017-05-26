@@ -1,5 +1,5 @@
 {
-  "name": "drive",
+  "name": "Drive",
   "description": "",
   "collectionOf": null,
   "isComplexType": false,
@@ -25,105 +25,60 @@
   "updateDescription": "",
   "deleteDescription": "",
   "restPath": {
-    "/groups/<id>/drive": true,
-    "/users/<id>/drive": true,
-    "/drives/<id>": true,
-    "/me/drive": true,
-    "/drive": true
+    "/Users/<Id>/Drives/<Id>": true,
+    "/me/Drives/<Id>": true
   },
   "properties": [
     {
-      "name": "driveType",
-      "description": "",
-      "isKey": false,
-      "dataType": "string",
-      "isReadOnly": false,
-      "enumName": null,
-      "isCollection": false,
-      "isRelationship": false,
-      "supportFilter": false,
-      "allowPostToCollection": true,
-      "isNullable": null,
-      "isUnicode": false
-    },
-    {
-      "name": "owner",
-      "description": "",
-      "isKey": false,
-      "dataType": "identitySet",
-      "isReadOnly": false,
-      "enumName": null,
-      "isCollection": false,
-      "isRelationship": false,
-      "supportFilter": false,
-      "allowPostToCollection": true,
-      "isNullable": null,
-      "isUnicode": null
-    },
-    {
-      "name": "quota",
-      "description": "",
-      "isKey": false,
-      "dataType": "quota",
-      "isReadOnly": false,
-      "enumName": null,
-      "isCollection": false,
-      "isRelationship": false,
-      "supportFilter": false,
-      "allowPostToCollection": true,
-      "isNullable": null,
-      "isUnicode": null
-    },
-    {
-      "name": "id",
+      "name": "Id",
       "description": "",
       "isKey": true,
-      "dataType": "string",
+      "dataType": "String",
       "isReadOnly": true,
       "enumName": null,
       "isCollection": false,
       "isRelationship": false,
       "supportFilter": false,
       "allowPostToCollection": true,
-      "isNullable": false,
-      "isUnicode": false
-    },
-    {
-      "name": "items",
-      "description": "",
-      "isKey": false,
-      "dataType": "driveItem",
-      "isReadOnly": true,
-      "enumName": null,
-      "isCollection": true,
-      "isRelationship": true,
-      "supportFilter": false,
-      "allowPostToCollection": true,
-      "isNullable": true,
+      "isNullable": null,
       "isUnicode": null
     },
     {
-      "name": "special",
+      "name": "EntityACL",
       "description": "",
       "isKey": false,
-      "dataType": "driveItem",
-      "isReadOnly": true,
-      "enumName": null,
-      "isCollection": true,
-      "isRelationship": true,
-      "supportFilter": false,
-      "allowPostToCollection": true,
-      "isNullable": true,
-      "isUnicode": null
-    },
-    {
-      "name": "root",
-      "description": "",
-      "isKey": false,
-      "dataType": "driveItem",
-      "isReadOnly": true,
+      "dataType": "AccessControlList",
+      "isReadOnly": false,
       "enumName": null,
       "isCollection": false,
+      "isRelationship": false,
+      "supportFilter": false,
+      "allowPostToCollection": true,
+      "isNullable": null,
+      "isUnicode": null
+    },
+    {
+      "name": "Extensions",
+      "description": "",
+      "isKey": false,
+      "dataType": "Extension",
+      "isReadOnly": true,
+      "enumName": null,
+      "isCollection": true,
+      "isRelationship": true,
+      "supportFilter": false,
+      "allowPostToCollection": true,
+      "isNullable": true,
+      "isUnicode": null
+    },
+    {
+      "name": "Files",
+      "description": "",
+      "isKey": false,
+      "dataType": "File",
+      "isReadOnly": true,
+      "enumName": null,
+      "isCollection": true,
       "isRelationship": true,
       "supportFilter": false,
       "allowPostToCollection": true,
@@ -132,45 +87,6 @@
     }
   ],
   "methods": [
-    {
-      "name": "recent",
-      "displayName": "",
-      "description": "",
-      "prerequisites": "",
-      "returnType": "driveItem",
-      "isReturnNullable": false,
-      "isReturnTypeCollection": true,
-      "httpSuccessCode": "200",
-      "isFunction": true,
-      "scopes": [
 
-      ],
-      "errorCodes": [
-
-      ],
-      "parameters": [
-
-      ]
-    },
-    {
-      "name": "sharedWithMe",
-      "displayName": "",
-      "description": "",
-      "prerequisites": "",
-      "returnType": "driveItem",
-      "isReturnNullable": false,
-      "isReturnTypeCollection": true,
-      "httpSuccessCode": "200",
-      "isFunction": true,
-      "scopes": [
-
-      ],
-      "errorCodes": [
-
-      ],
-      "parameters": [
-
-      ]
-    }
   ]
 }

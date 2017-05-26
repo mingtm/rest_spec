@@ -1,14 +1,13 @@
-# Create mailFolder
+# Create MailFolder
 
-Use this API to create a new mailFolder.
+Use this API to create a new MailFolder.
 ### Prerequisites
 The following **scopes** are required to execute this API: 
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
-POST /me/mailFolders/<id>/childFolders
-POST /users/<id>/mailFolders/<id>/childFolders
-POST /drive/root/createdByUser/mailFolders/<id>/childFolders
+POST /me/MailFolders/<Id>/ChildFolders
+POST /Users/<Id>/MailFolders/<Id>/ChildFolders
 
 ```
 ### Request headers
@@ -18,11 +17,11 @@ POST /drive/root/createdByUser/mailFolders/<id>/childFolders
 | Workbook-Session-Id  | Workbook session Id that determines if changes are persisted or not. Optional.|
 
 ### Request body
-In the request body, supply a JSON representation of [mailFolder](../resources/mailfolder.md) object.
+In the request body, supply a JSON representation of [MailFolder](../resources/mailfolder.md) object.
 
 
 ### Response
-If successful, this method returns `201, Created` response code and [mailFolder](../resources/mailfolder.md) object in the response body.
+If successful, this method returns `201, Created` response code and [MailFolder](../resources/mailfolder.md) object in the response body.
 
 ### Example
 ##### Request
@@ -32,38 +31,39 @@ Here is an example of the request.
   "name": "create_mailfolder_from_mailfolder"
 }-->
 ```http
-POST https://graph.microsoft.com/beta/me/mailFolders/<id>/childFolders
+POST https://graph.microsoft.com/beta/me/MailFolders/<Id>/ChildFolders
 Content-type: application/json
-Content-length: 159
+Content-length: 201
 
 {
-  "displayName": "displayName-value",
-  "parentFolderId": "parentFolderId-value",
-  "childFolderCount": 99,
-  "unreadItemCount": 99,
-  "totalItemCount": 99
+  "DisplayName": "DisplayName-value",
+  "ParentFolderId": "ParentFolderId-value",
+  "ChildFolderCount": 99,
+  "UnreadItemCount": 99,
+  "TotalItemCount": 99,
+  "WellKnownName": "WellKnownName-value"
 }
 ```
-In the request body, supply a JSON representation of [mailFolder](../resources/mailfolder.md) object.
+In the request body, supply a JSON representation of [MailFolder](../resources/mailfolder.md) object.
 ##### Response
 Here is an example of the response. Note: The response object shown here may be truncated for brevity. All of the properties will be returned from an actual call.
 <!-- {
   "blockType": "response",
   "truncated": true,
-  "@odata.type": "microsoft.graph.mailFolder"
+  "@odata.type": "microsoft.graph.MailFolder"
 } -->
 ```http
 HTTP/1.1 201 Created
 Content-type: application/json
-Content-length: 179
+Content-length: 201
 
 {
-  "displayName": "displayName-value",
-  "parentFolderId": "parentFolderId-value",
-  "childFolderCount": 99,
-  "unreadItemCount": 99,
-  "totalItemCount": 99,
-  "id": "id-value"
+  "DisplayName": "DisplayName-value",
+  "ParentFolderId": "ParentFolderId-value",
+  "ChildFolderCount": 99,
+  "UnreadItemCount": 99,
+  "TotalItemCount": 99,
+  "WellKnownName": "WellKnownName-value"
 }
 ```
 
@@ -71,7 +71,7 @@ Content-length: 179
 2015-10-25 14:57:30 UTC -->
 <!-- {
   "type": "#page.annotation",
-  "description": "Create mailFolder",
+  "description": "Create MailFolder",
   "keywords": "",
   "section": "documentation",
   "tocPath": ""

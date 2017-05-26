@@ -1,5 +1,5 @@
 {
-  "name": "fileAttachment",
+  "name": "FileAttachment",
   "description": "",
   "collectionOf": null,
   "isComplexType": false,
@@ -28,38 +28,10 @@
   },
   "properties": [
     {
-      "name": "contentId",
+      "name": "ContentId",
       "description": "",
       "isKey": false,
-      "dataType": "string",
-      "isReadOnly": false,
-      "enumName": null,
-      "isCollection": false,
-      "isRelationship": false,
-      "supportFilter": false,
-      "allowPostToCollection": true,
-      "isNullable": null,
-      "isUnicode": false
-    },
-    {
-      "name": "contentLocation",
-      "description": "",
-      "isKey": false,
-      "dataType": "string",
-      "isReadOnly": false,
-      "enumName": null,
-      "isCollection": false,
-      "isRelationship": false,
-      "supportFilter": false,
-      "allowPostToCollection": true,
-      "isNullable": null,
-      "isUnicode": false
-    },
-    {
-      "name": "contentBytes",
-      "description": "",
-      "isKey": false,
-      "dataType": "binary",
+      "dataType": "String",
       "isReadOnly": false,
       "enumName": null,
       "isCollection": false,
@@ -70,10 +42,10 @@
       "isUnicode": null
     },
     {
-      "name": "lastModifiedDateTime",
+      "name": "ContentLocation",
       "description": "",
       "isKey": false,
-      "dataType": "dateTimeOffset",
+      "dataType": "String",
       "isReadOnly": false,
       "enumName": null,
       "isCollection": false,
@@ -84,10 +56,10 @@
       "isUnicode": null
     },
     {
-      "name": "name",
+      "name": "ContentBytes",
       "description": "",
       "isKey": false,
-      "dataType": "string",
+      "dataType": "Binary",
       "isReadOnly": false,
       "enumName": null,
       "isCollection": false,
@@ -95,13 +67,13 @@
       "supportFilter": false,
       "allowPostToCollection": true,
       "isNullable": null,
-      "isUnicode": false
+      "isUnicode": null
     },
     {
-      "name": "contentType",
+      "name": "LastModifiedDateTime",
       "description": "",
       "isKey": false,
-      "dataType": "string",
+      "dataType": "DateTimeOffset",
       "isReadOnly": false,
       "enumName": null,
       "isCollection": false,
@@ -109,13 +81,41 @@
       "supportFilter": false,
       "allowPostToCollection": true,
       "isNullable": null,
-      "isUnicode": false
+      "isUnicode": null
     },
     {
-      "name": "size",
+      "name": "Name",
       "description": "",
       "isKey": false,
-      "dataType": "int32",
+      "dataType": "String",
+      "isReadOnly": false,
+      "enumName": null,
+      "isCollection": false,
+      "isRelationship": false,
+      "supportFilter": false,
+      "allowPostToCollection": true,
+      "isNullable": null,
+      "isUnicode": null
+    },
+    {
+      "name": "ContentType",
+      "description": "",
+      "isKey": false,
+      "dataType": "String",
+      "isReadOnly": false,
+      "enumName": null,
+      "isCollection": false,
+      "isRelationship": false,
+      "supportFilter": false,
+      "allowPostToCollection": true,
+      "isNullable": null,
+      "isUnicode": null
+    },
+    {
+      "name": "Size",
+      "description": "",
+      "isKey": false,
+      "dataType": "Int32",
       "isReadOnly": false,
       "enumName": null,
       "isCollection": false,
@@ -126,10 +126,10 @@
       "isUnicode": null
     },
     {
-      "name": "isInline",
+      "name": "IsInline",
       "description": "",
       "isKey": false,
-      "dataType": "boolean",
+      "dataType": "Boolean",
       "isReadOnly": false,
       "enumName": null,
       "isCollection": false,
@@ -140,18 +140,18 @@
       "isUnicode": null
     },
     {
-      "name": "id",
+      "name": "Id",
       "description": "",
       "isKey": true,
-      "dataType": "string",
+      "dataType": "String",
       "isReadOnly": true,
       "enumName": null,
       "isCollection": false,
       "isRelationship": false,
       "supportFilter": false,
       "allowPostToCollection": true,
-      "isNullable": false,
-      "isUnicode": false
+      "isNullable": null,
+      "isUnicode": null
     }
   ],
   "methods": [

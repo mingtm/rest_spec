@@ -6,7 +6,9 @@ The following **scopes** are required to execute this API:
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
-PATCH /groups/<id>/conversations/<id>
+PATCH /Groups/<Id>/Conversations/<Id>
+PATCH /me/JoinedGroups/<Id>/Conversations/<Id>
+PATCH /Users/<Id>/JoinedGroups/<Id>/Conversations/<Id>
 ```
 ### Optional request headers
 | Name       | Description|
@@ -19,14 +21,14 @@ In the request body, supply the values for relevant fields that should be update
 
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|hasAttachments|boolean||
-|lastDeliveredDateTime|dateTimeOffset||
-|preview|string||
-|topic|string||
-|uniqueSenders|string||
+|HasAttachments|Boolean||
+|LastDeliveredDateTime|DateTimeOffset||
+|Preview|String||
+|Topic|String||
+|UniqueSenders|String||
 
 ### Response
-If successful, this method returns a `200 OK` response code and updated [conversation](../resources/conversation.md) object in the response body.
+If successful, this method returns a `200 OK` response code and updated [Conversation](../resources/conversation.md) object in the response body.
 ### Example
 ##### Request
 Here is an example of the request.
@@ -35,18 +37,18 @@ Here is an example of the request.
   "name": "update_conversation"
 }-->
 ```http
-PATCH https://graph.microsoft.com/beta/groups/<id>/conversations/<id>
+PATCH https://graph.microsoft.com/beta/Groups/<Id>/Conversations/<Id>
 Content-type: application/json
 Content-length: 181
 
 {
-  "topic": "topic-value",
-  "hasAttachments": true,
-  "lastDeliveredDateTime": "datetime-value",
-  "uniqueSenders": [
-    "uniqueSenders-value"
+  "Topic": "Topic-value",
+  "HasAttachments": true,
+  "LastDeliveredDateTime": "datetime-value",
+  "UniqueSenders": [
+    "UniqueSenders-value"
   ],
-  "preview": "preview-value"
+  "Preview": "Preview-value"
 }
 ```
 ##### Response
@@ -54,7 +56,7 @@ Here is an example of the response. Note: The response object shown here may be 
 <!-- {
   "blockType": "response",
   "truncated": true,
-  "@odata.type": "microsoft.graph.conversation"
+  "@odata.type": "microsoft.graph.Conversation"
 } -->
 ```http
 HTTP/1.1 200 OK
@@ -62,14 +64,14 @@ Content-type: application/json
 Content-length: 201
 
 {
-  "topic": "topic-value",
-  "hasAttachments": true,
-  "lastDeliveredDateTime": "datetime-value",
-  "uniqueSenders": [
-    "uniqueSenders-value"
+  "Topic": "Topic-value",
+  "HasAttachments": true,
+  "LastDeliveredDateTime": "datetime-value",
+  "UniqueSenders": [
+    "UniqueSenders-value"
   ],
-  "preview": "preview-value",
-  "id": "id-value"
+  "Preview": "Preview-value",
+  "Id": "Id-value"
 }
 ```
 

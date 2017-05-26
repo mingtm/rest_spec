@@ -1,5 +1,5 @@
 {
-  "name": "post",
+  "name": "Post",
   "description": "",
   "collectionOf": null,
   "isComplexType": false,
@@ -25,15 +25,19 @@
   "updateDescription": "",
   "deleteDescription": "",
   "restPath": {
-    "/groups/<id>/threads/<id>/posts/<id>": true,
-    "/groups/<id>/conversations/<id>/threads/<id>/posts/<id>": true
+    "/Users/<Id>/JoinedGroups/<Id>/Threads/<Id>/Posts/<Id>": true,
+    "/Users/<Id>/JoinedGroups/<Id>/Conversations/<Id>/Threads/<Id>/Posts/<Id>": true,
+    "/Groups/<Id>/Threads/<Id>/Posts/<Id>": true,
+    "/Groups/<Id>/Conversations/<Id>/Threads/<Id>/Posts/<Id>": true,
+    "/me/JoinedGroups/<Id>/Threads/<Id>/Posts/<Id>": true,
+    "/me/JoinedGroups/<Id>/Conversations/<Id>/Threads/<Id>/Posts/<Id>": true
   },
   "properties": [
     {
-      "name": "body",
+      "name": "Body",
       "description": "",
       "isKey": false,
-      "dataType": "itemBody",
+      "dataType": "ItemBody",
       "isReadOnly": false,
       "enumName": null,
       "isCollection": false,
@@ -44,10 +48,10 @@
       "isUnicode": null
     },
     {
-      "name": "receivedDateTime",
+      "name": "ReceivedDateTime",
       "description": "",
       "isKey": false,
-      "dataType": "dateTimeOffset",
+      "dataType": "DateTimeOffset",
       "isReadOnly": false,
       "enumName": null,
       "isCollection": false,
@@ -58,10 +62,10 @@
       "isUnicode": null
     },
     {
-      "name": "hasAttachments",
+      "name": "HasAttachments",
       "description": "",
       "isKey": false,
-      "dataType": "boolean",
+      "dataType": "Boolean",
       "isReadOnly": false,
       "enumName": null,
       "isCollection": false,
@@ -72,10 +76,10 @@
       "isUnicode": null
     },
     {
-      "name": "from",
+      "name": "From",
       "description": "",
       "isKey": false,
-      "dataType": "recipient",
+      "dataType": "Recipient",
       "isReadOnly": false,
       "enumName": null,
       "isCollection": false,
@@ -86,10 +90,10 @@
       "isUnicode": null
     },
     {
-      "name": "sender",
+      "name": "Sender",
       "description": "",
       "isKey": false,
-      "dataType": "recipient",
+      "dataType": "Recipient",
       "isReadOnly": false,
       "enumName": null,
       "isCollection": false,
@@ -100,10 +104,10 @@
       "isUnicode": null
     },
     {
-      "name": "conversationThreadId",
+      "name": "ConversationThreadId",
       "description": "",
       "isKey": false,
-      "dataType": "string",
+      "dataType": "String",
       "isReadOnly": false,
       "enumName": null,
       "isCollection": false,
@@ -111,13 +115,13 @@
       "supportFilter": false,
       "allowPostToCollection": true,
       "isNullable": null,
-      "isUnicode": false
+      "isUnicode": null
     },
     {
-      "name": "newParticipants",
+      "name": "NewParticipants",
       "description": "",
       "isKey": false,
-      "dataType": "recipient",
+      "dataType": "Recipient",
       "isReadOnly": false,
       "enumName": null,
       "isCollection": true,
@@ -128,24 +132,10 @@
       "isUnicode": null
     },
     {
-      "name": "conversationId",
+      "name": "ConversationId",
       "description": "",
       "isKey": false,
-      "dataType": "string",
-      "isReadOnly": false,
-      "enumName": null,
-      "isCollection": false,
-      "isRelationship": false,
-      "supportFilter": false,
-      "allowPostToCollection": true,
-      "isNullable": null,
-      "isUnicode": false
-    },
-    {
-      "name": "createdDateTime",
-      "description": "",
-      "isKey": false,
-      "dataType": "dateTimeOffset",
+      "dataType": "String",
       "isReadOnly": false,
       "enumName": null,
       "isCollection": false,
@@ -156,10 +146,10 @@
       "isUnicode": null
     },
     {
-      "name": "lastModifiedDateTime",
+      "name": "CreatedDateTime",
       "description": "",
       "isKey": false,
-      "dataType": "dateTimeOffset",
+      "dataType": "DateTimeOffset",
       "isReadOnly": false,
       "enumName": null,
       "isCollection": false,
@@ -170,10 +160,10 @@
       "isUnicode": null
     },
     {
-      "name": "changeKey",
+      "name": "LastModifiedDateTime",
       "description": "",
       "isKey": false,
-      "dataType": "string",
+      "dataType": "DateTimeOffset",
       "isReadOnly": false,
       "enumName": null,
       "isCollection": false,
@@ -181,13 +171,27 @@
       "supportFilter": false,
       "allowPostToCollection": true,
       "isNullable": null,
-      "isUnicode": false
+      "isUnicode": null
     },
     {
-      "name": "categories",
+      "name": "ChangeKey",
       "description": "",
       "isKey": false,
-      "dataType": "string",
+      "dataType": "String",
+      "isReadOnly": false,
+      "enumName": null,
+      "isCollection": false,
+      "isRelationship": false,
+      "supportFilter": false,
+      "allowPostToCollection": true,
+      "isNullable": null,
+      "isUnicode": null
+    },
+    {
+      "name": "Categories",
+      "description": "",
+      "isKey": false,
+      "dataType": "String",
       "isReadOnly": false,
       "enumName": null,
       "isCollection": true,
@@ -195,27 +199,41 @@
       "supportFilter": false,
       "allowPostToCollection": true,
       "isNullable": null,
-      "isUnicode": false
+      "isUnicode": null
     },
     {
-      "name": "id",
+      "name": "Id",
       "description": "",
       "isKey": true,
-      "dataType": "string",
+      "dataType": "String",
       "isReadOnly": true,
       "enumName": null,
       "isCollection": false,
       "isRelationship": false,
       "supportFilter": false,
       "allowPostToCollection": true,
-      "isNullable": false,
-      "isUnicode": false
+      "isNullable": null,
+      "isUnicode": null
     },
     {
-      "name": "inReplyTo",
+      "name": "Extensions",
       "description": "",
       "isKey": false,
-      "dataType": "post",
+      "dataType": "Extension",
+      "isReadOnly": true,
+      "enumName": null,
+      "isCollection": true,
+      "isRelationship": true,
+      "supportFilter": false,
+      "allowPostToCollection": true,
+      "isNullable": true,
+      "isUnicode": null
+    },
+    {
+      "name": "InReplyTo",
+      "description": "",
+      "isKey": false,
+      "dataType": "Post",
       "isReadOnly": true,
       "enumName": null,
       "isCollection": false,
@@ -226,10 +244,38 @@
       "isUnicode": null
     },
     {
-      "name": "attachments",
+      "name": "Attachments",
       "description": "",
       "isKey": false,
-      "dataType": "attachment",
+      "dataType": "Attachment",
+      "isReadOnly": true,
+      "enumName": null,
+      "isCollection": true,
+      "isRelationship": true,
+      "supportFilter": false,
+      "allowPostToCollection": true,
+      "isNullable": true,
+      "isUnicode": null
+    },
+    {
+      "name": "SingleValueExtendedProperties",
+      "description": "",
+      "isKey": false,
+      "dataType": "SingleValueLegacyExtendedProperty",
+      "isReadOnly": true,
+      "enumName": null,
+      "isCollection": true,
+      "isRelationship": true,
+      "supportFilter": false,
+      "allowPostToCollection": true,
+      "isNullable": true,
+      "isUnicode": null
+    },
+    {
+      "name": "MultiValueExtendedProperties",
+      "description": "",
+      "isKey": false,
+      "dataType": "MultiValueLegacyExtendedProperty",
       "isReadOnly": true,
       "enumName": null,
       "isCollection": true,
@@ -242,7 +288,7 @@
   ],
   "methods": [
     {
-      "name": "forward",
+      "name": "Forward",
       "displayName": "",
       "description": "",
       "prerequisites": "",
@@ -259,19 +305,19 @@
       ],
       "parameters": [
         {
-          "name": "comment",
+          "name": "Comment",
           "description": "",
-          "dataType": "string",
+          "dataType": "String",
           "isCollection": false,
           "isRequired": true,
           "enumName": null,
           "isNullable": null,
-          "isUnicode": false
+          "isUnicode": null
         },
         {
-          "name": "toRecipients",
+          "name": "ToRecipients",
           "description": "",
-          "dataType": "recipient",
+          "dataType": "Recipient",
           "isCollection": true,
           "isRequired": true,
           "enumName": null,
@@ -281,7 +327,7 @@
       ]
     },
     {
-      "name": "reply",
+      "name": "Reply",
       "displayName": "",
       "description": "",
       "prerequisites": "",
@@ -298,9 +344,9 @@
       ],
       "parameters": [
         {
-          "name": "post",
+          "name": "Post",
           "description": "",
-          "dataType": "post",
+          "dataType": "Post",
           "isCollection": false,
           "isRequired": true,
           "enumName": null,

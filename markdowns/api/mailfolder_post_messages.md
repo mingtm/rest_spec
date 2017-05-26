@@ -1,14 +1,13 @@
-# Create message
+# Create Message
 
-Use this API to create a new message.
+Use this API to create a new Message.
 ### Prerequisites
 The following **scopes** are required to execute this API: 
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
-POST /me/mailFolders/<id>/messages
-POST /users/<id>/mailFolders/<id>/messages
-POST /drive/root/createdByUser/mailFolders/<id>/messages
+POST /me/MailFolders/<Id>/Messages
+POST /Users/<Id>/MailFolders/<Id>/Messages
 
 ```
 ### Request headers
@@ -18,11 +17,11 @@ POST /drive/root/createdByUser/mailFolders/<id>/messages
 | Workbook-Session-Id  | Workbook session Id that determines if changes are persisted or not. Optional.|
 
 ### Request body
-In the request body, supply a JSON representation of [message](../resources/message.md) object.
+In the request body, supply a JSON representation of [Message](../resources/message.md) object.
 
 
 ### Response
-If successful, this method returns `201, Created` response code and [message](../resources/message.md) object in the response body.
+If successful, this method returns `201, Created` response code and [Message](../resources/message.md) object in the response body.
 
 ### Example
 ##### Request
@@ -32,29 +31,29 @@ Here is an example of the request.
   "name": "create_message_from_mailfolder"
 }-->
 ```http
-POST https://graph.microsoft.com/beta/me/mailFolders/<id>/messages
+POST https://graph.microsoft.com/beta/me/MailFolders/<Id>/Messages
 Content-type: application/json
 Content-length: 272
 
 {
-  "receivedDateTime": "datetime-value",
-  "sentDateTime": "datetime-value",
-  "hasAttachments": true,
-  "internetMessageId": "internetMessageId-value",
-  "subject": "subject-value",
-  "body": {
-    "contentType": "contentType-value",
-    "content": "content-value"
+  "ReceivedDateTime": "datetime-value",
+  "SentDateTime": "datetime-value",
+  "HasAttachments": true,
+  "InternetMessageId": "InternetMessageId-value",
+  "Subject": "Subject-value",
+  "Body": {
+    "ContentType": "ContentType-value",
+    "Content": "Content-value"
   }
 }
 ```
-In the request body, supply a JSON representation of [message](../resources/message.md) object.
+In the request body, supply a JSON representation of [Message](../resources/message.md) object.
 ##### Response
 Here is an example of the response. Note: The response object shown here may be truncated for brevity. All of the properties will be returned from an actual call.
 <!-- {
   "blockType": "response",
   "truncated": true,
-  "@odata.type": "microsoft.graph.message"
+  "@odata.type": "microsoft.graph.Message"
 } -->
 ```http
 HTTP/1.1 201 Created
@@ -62,14 +61,14 @@ Content-type: application/json
 Content-length: 272
 
 {
-  "receivedDateTime": "datetime-value",
-  "sentDateTime": "datetime-value",
-  "hasAttachments": true,
-  "internetMessageId": "internetMessageId-value",
-  "subject": "subject-value",
-  "body": {
-    "contentType": "contentType-value",
-    "content": "content-value"
+  "ReceivedDateTime": "datetime-value",
+  "SentDateTime": "datetime-value",
+  "HasAttachments": true,
+  "InternetMessageId": "InternetMessageId-value",
+  "Subject": "Subject-value",
+  "Body": {
+    "ContentType": "ContentType-value",
+    "Content": "Content-value"
   }
 }
 ```
@@ -78,7 +77,7 @@ Content-length: 272
 2015-10-25 14:57:30 UTC -->
 <!-- {
   "type": "#page.annotation",
-  "description": "Create message",
+  "description": "Create Message",
   "keywords": "",
   "section": "documentation",
   "tocPath": ""

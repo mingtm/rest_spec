@@ -1,4 +1,4 @@
-# message: reply
+# Message: Reply
 
 
 ### Prerequisites
@@ -6,9 +6,9 @@ The following **scopes** are required to execute this API:
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
-POST /me/messages/<id>/reply
-POST /users/<id>/messages/<id>/reply
-POST /me/mailFolders/<id>/messages/<id>/reply
+POST /me/Messages/<Id>/Reply
+POST /Users/<Id>/Messages/<Id>/Reply
+POST /me/MailFolders/<Id>/Messages/<Id>/Reply
 
 ```
 ### Request headers
@@ -22,7 +22,8 @@ In the request body, provide a JSON object with the following parameters.
 
 | Parameter	   | Type	|Description|
 |:---------------|:--------|:----------|
-|comment|string||
+|Message|Message||
+|Comment|String||
 
 ### Response
 If successful, this method returns `200, OK` response code. It does not return anything in the response body.
@@ -36,12 +37,135 @@ Here is an example of the request.
   "name": "message_reply"
 }-->
 ```http
-POST https://graph.microsoft.com/beta/me/messages/<id>/reply
+POST https://graph.microsoft.com/beta/me/Messages/<Id>/Reply
 Content-type: application/json
-Content-length: 32
+Content-length: 2905
 
 {
-  "comment": "comment-value"
+  "Message": {
+    "ReceivedDateTime": "datetime-value",
+    "SentDateTime": "datetime-value",
+    "HasAttachments": true,
+    "InternetMessageId": "InternetMessageId-value",
+    "Subject": "Subject-value",
+    "Body": {
+      "ContentType": "ContentType-value",
+      "Content": "Content-value"
+    },
+    "BodyPreview": "BodyPreview-value",
+    "Importance": "Importance-value",
+    "ParentFolderId": "ParentFolderId-value",
+    "Sender": {
+      "EmailAddress": {
+        "Name": "Name-value",
+        "Address": "Address-value"
+      }
+    },
+    "From": {
+      "EmailAddress": {
+        "Name": "Name-value",
+        "Address": "Address-value"
+      }
+    },
+    "ToRecipients": [
+      {
+        "EmailAddress": {
+          "Name": "Name-value",
+          "Address": "Address-value"
+        }
+      }
+    ],
+    "CcRecipients": [
+      {
+        "EmailAddress": {
+          "Name": "Name-value",
+          "Address": "Address-value"
+        }
+      }
+    ],
+    "BccRecipients": [
+      {
+        "EmailAddress": {
+          "Name": "Name-value",
+          "Address": "Address-value"
+        }
+      }
+    ],
+    "ReplyTo": [
+      {
+        "EmailAddress": {
+          "Name": "Name-value",
+          "Address": "Address-value"
+        }
+      }
+    ],
+    "ConversationId": "ConversationId-value",
+    "ConversationIndex": "ConversationIndex-value",
+    "UniqueBody": {
+      "ContentType": "ContentType-value",
+      "Content": "Content-value"
+    },
+    "IsDeliveryReceiptRequested": true,
+    "IsReadReceiptRequested": true,
+    "IsRead": true,
+    "IsDraft": true,
+    "WebLink": "WebLink-value",
+    "InferenceClassification": "InferenceClassification-value",
+    "UnsubscribeData": [
+      "UnsubscribeData-value"
+    ],
+    "UnsubscribeEnabled": true,
+    "Flag": {
+      "CompletedDateTime": {
+        "DateTime": {
+        },
+        "TimeZone": "TimeZone-value"
+      },
+      "DueDateTime": {
+        "DateTime": {
+        },
+        "TimeZone": "TimeZone-value"
+      },
+      "StartDateTime": {
+        "DateTime": {
+        },
+        "TimeZone": "TimeZone-value"
+      },
+      "FlagStatus": "FlagStatus-value"
+    },
+    "CreatedDateTime": "datetime-value",
+    "LastModifiedDateTime": "datetime-value",
+    "ChangeKey": "ChangeKey-value",
+    "Categories": [
+      "Categories-value"
+    ],
+    "Id": "Id-value",
+    "Attachments": [
+      {
+        "LastModifiedDateTime": "datetime-value",
+        "Name": "Name-value",
+        "ContentType": "ContentType-value",
+        "Size": 99,
+        "IsInline": true,
+        "Id": "Id-value"
+      }
+    ],
+    "SingleValueExtendedProperties": [
+      {
+        "Value": "Value-value",
+        "PropertyId": "PropertyId-value"
+      }
+    ],
+    "MultiValueExtendedProperties": [
+      {
+        "Value": [
+          "Value-value"
+        ],
+        "PropertyId": "PropertyId-value"
+      }
+    ]
+  },
+  "Comment": "Comment-value"
 }
 ```
 
@@ -60,7 +184,7 @@ HTTP/1.1 200 OK
 2015-10-25 14:57:30 UTC -->
 <!-- {
   "type": "#page.annotation",
-  "description": "message: reply",
+  "description": "Message: Reply",
   "keywords": "",
   "section": "documentation",
   "tocPath": ""

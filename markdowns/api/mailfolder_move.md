@@ -1,4 +1,4 @@
-# mailFolder: move
+# MailFolder: Move
 
 
 ### Prerequisites
@@ -6,9 +6,8 @@ The following **scopes** are required to execute this API:
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
-POST /me/mailFolders/<id>/move
-POST /users/<id>/mailFolders/<id>/move
-POST /drive/root/createdByUser/mailFolders/<id>/move
+POST /me/MailFolders/<Id>/Move
+POST /Users/<Id>/MailFolders/<Id>/Move
 
 ```
 ### Request headers
@@ -22,10 +21,10 @@ In the request body, provide a JSON object with the following parameters.
 
 | Parameter	   | Type	|Description|
 |:---------------|:--------|:----------|
-|destinationId|string||
+|DestinationId|String||
 
 ### Response
-If successful, this method returns `200, OK` response code and [mailFolder](../resources/mailfolder.md) object in the response body.
+If successful, this method returns `200, OK` response code and [MailFolder](../resources/mailfolder.md) object in the response body.
 
 ### Example
 Here is an example of how to call this API.
@@ -36,12 +35,12 @@ Here is an example of the request.
   "name": "mailfolder_move"
 }-->
 ```http
-POST https://graph.microsoft.com/beta/me/mailFolders/<id>/move
+POST https://graph.microsoft.com/beta/me/MailFolders/<Id>/Move
 Content-type: application/json
 Content-length: 44
 
 {
-  "destinationId": "destinationId-value"
+  "DestinationId": "DestinationId-value"
 }
 ```
 
@@ -50,20 +49,20 @@ Here is an example of the response. Note: The response object shown here may be 
 <!-- {
   "blockType": "response",
   "truncated": true,
-  "@odata.type": "microsoft.graph.mailFolder"
+  "@odata.type": "microsoft.graph.MailFolder"
 } -->
 ```http
 HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 179
+Content-length: 201
 
 {
-  "displayName": "displayName-value",
-  "parentFolderId": "parentFolderId-value",
-  "childFolderCount": 99,
-  "unreadItemCount": 99,
-  "totalItemCount": 99,
-  "id": "id-value"
+  "DisplayName": "DisplayName-value",
+  "ParentFolderId": "ParentFolderId-value",
+  "ChildFolderCount": 99,
+  "UnreadItemCount": 99,
+  "TotalItemCount": 99,
+  "WellKnownName": "WellKnownName-value"
 }
 ```
 
@@ -71,7 +70,7 @@ Content-length: 179
 2015-10-25 14:57:30 UTC -->
 <!-- {
   "type": "#page.annotation",
-  "description": "mailFolder: move",
+  "description": "MailFolder: Move",
   "keywords": "",
   "section": "documentation",
   "tocPath": ""

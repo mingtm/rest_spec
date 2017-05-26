@@ -6,9 +6,9 @@ The following **scopes** are required to execute this API:
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
-PATCH /me/contacts/<id>
-PATCH /users/<id>/contacts/<id>
-PATCH /me/contactFolders/<id>/contacts/<id>
+PATCH /me/Contacts/<Id>
+PATCH /Users/<Id>/Contacts/<Id>
+PATCH /me/ContactFolders/<Id>/Contacts/<Id>
 ```
 ### Optional request headers
 | Name       | Description|
@@ -21,46 +21,45 @@ In the request body, supply the values for relevant fields that should be update
 
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|assistantName|string||
-|birthday|dateTimeOffset||
-|businessAddress|physicalAddress||
-|businessHomePage|string||
-|businessPhones|string||
-|categories|string||
-|changeKey|string||
-|children|string||
-|companyName|string||
-|createdDateTime|dateTimeOffset||
-|department|string||
-|displayName|string||
-|emailAddresses|emailAddress||
-|fileAs|string||
-|generation|string||
-|givenName|string||
-|homeAddress|physicalAddress||
-|homePhones|string||
-|imAddresses|string||
-|initials|string||
-|jobTitle|string||
-|lastModifiedDateTime|dateTimeOffset||
-|manager|string||
-|middleName|string||
-|mobilePhone|string||
-|nickName|string||
-|officeLocation|string||
-|otherAddress|physicalAddress||
-|parentFolderId|string||
-|personalNotes|string||
-|profession|string||
-|spouseName|string||
-|surname|string||
-|title|string||
-|yomiCompanyName|string||
-|yomiGivenName|string||
-|yomiSurname|string||
+|AssistantName|String||
+|Birthday|DateTimeOffset||
+|Categories|String||
+|ChangeKey|String||
+|Children|String||
+|CompanyName|String||
+|CreatedDateTime|DateTimeOffset||
+|Department|String||
+|DisplayName|String||
+|EmailAddresses|EmailAddress||
+|FileAs|String||
+|Flag|FollowupFlag||
+|Gender|String||
+|Generation|String||
+|GivenName|String||
+|ImAddresses|String||
+|Initials|String||
+|JobTitle|String||
+|LastModifiedDateTime|DateTimeOffset||
+|Manager|String||
+|MiddleName|String||
+|NickName|String||
+|OfficeLocation|String||
+|ParentFolderId|String||
+|PersonalNotes|String||
+|Phones|Phone||
+|PostalAddresses|PhysicalAddress||
+|Profession|String||
+|SpouseName|String||
+|Surname|String||
+|Title|String||
+|Websites|Website||
+|WeddingAnniversary|Date||
+|YomiCompanyName|String||
+|YomiGivenName|String||
+|YomiSurname|String||
 
 ### Response
-If successful, this method returns a `200 OK` response code and updated [contact](../resources/contact.md) object in the response body.
+If successful, this method returns a `200 OK` response code and updated [Contact](../resources/contact.md) object in the response body.
 ### Example
 ##### Request
 Here is an example of the request.
@@ -69,17 +68,17 @@ Here is an example of the request.
   "name": "update_contact"
 }-->
 ```http
-PATCH https://graph.microsoft.com/beta/me/contacts/<id>
+PATCH https://graph.microsoft.com/beta/me/Contacts/<Id>
 Content-type: application/json
 Content-length: 210
 
 {
-  "parentFolderId": "parentFolderId-value",
-  "birthday": "datetime-value",
-  "fileAs": "fileAs-value",
-  "displayName": "displayName-value",
-  "givenName": "givenName-value",
-  "initials": "initials-value"
+  "ParentFolderId": "ParentFolderId-value",
+  "Birthday": "datetime-value",
+  "FileAs": "FileAs-value",
+  "DisplayName": "DisplayName-value",
+  "GivenName": "GivenName-value",
+  "Initials": "Initials-value"
 }
 ```
 ##### Response
@@ -87,7 +86,7 @@ Here is an example of the response. Note: The response object shown here may be 
 <!-- {
   "blockType": "response",
   "truncated": true,
-  "@odata.type": "microsoft.graph.contact"
+  "@odata.type": "microsoft.graph.Contact"
 } -->
 ```http
 HTTP/1.1 200 OK
@@ -95,12 +94,12 @@ Content-type: application/json
 Content-length: 210
 
 {
-  "parentFolderId": "parentFolderId-value",
-  "birthday": "datetime-value",
-  "fileAs": "fileAs-value",
-  "displayName": "displayName-value",
-  "givenName": "givenName-value",
-  "initials": "initials-value"
+  "ParentFolderId": "ParentFolderId-value",
+  "Birthday": "datetime-value",
+  "FileAs": "FileAs-value",
+  "DisplayName": "DisplayName-value",
+  "GivenName": "GivenName-value",
+  "Initials": "Initials-value"
 }
 ```
 

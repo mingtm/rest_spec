@@ -1,6 +1,6 @@
-# Delete entity
+# Delete Entity
 
-Delete entity.
+Delete Entity.
 ### Prerequisites
 The following **scopes** are required to execute this API: 
 ### HTTP request
@@ -46,7 +46,7 @@ HTTP/1.1 204 No Content
 2015-10-25 14:57:30 UTC -->
 <!-- {
   "type": "#page.annotation",
-  "description": "Delete entity",
+  "description": "Delete Entity",
   "keywords": "",
   "section": "documentation",
   "tocPath": ""

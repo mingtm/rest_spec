@@ -1,14 +1,14 @@
-# Delete message
+# Delete Message
 
-Delete message.
+Delete Message.
 ### Prerequisites
 The following **scopes** are required to execute this API: 
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
-DELETE /me/messages/<id>
-DELETE /users/<id>/messages/<id>
-DELETE /me/mailFolders/<id>/messages/<id>
+DELETE /me/Messages/<Id>
+DELETE /Users/<Id>/Messages/<Id>
+DELETE /me/MailFolders/<Id>/Messages/<Id>
 
 ```
 ### Request headers
@@ -32,7 +32,7 @@ Here is an example of the request.
   "name": "delete_message"
 }-->
 ```http
-DELETE https://graph.microsoft.com/beta/me/messages/<id>
+DELETE https://graph.microsoft.com/beta/me/Messages/<Id>
 ```
 ##### Response
 Here is an example of the response. Note: The response object shown here may be truncated for brevity. All of the properties will be returned from an actual call.
@@ -48,7 +48,7 @@ HTTP/1.1 204 No Content
 2015-10-25 14:57:30 UTC -->
 <!-- {
   "type": "#page.annotation",
-  "description": "Delete message",
+  "description": "Delete Message",
   "keywords": "",
   "section": "documentation",
   "tocPath": ""

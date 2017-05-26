@@ -1,4 +1,4 @@
-# mailFolder resource type
+# MailFolder resource type
 
 
 
@@ -7,31 +7,41 @@
 
 | Method		   | Return Type	|Description|
 |:---------------|:--------|:----------|
-|[Get mailFolder](../api/mailfolder_get.md) | [mailFolder](mailfolder.md) |Read properties and relationships of mailFolder object.|
-|[Create mailFolder](../api/mailfolder_post_childfolders.md) |[mailFolder](mailfolder.md)| Create a new mailFolder by posting to the childFolders collection.|
-|[List childFolders](../api/mailfolder_list_childfolders.md) |[mailFolder](mailfolder.md) collection| Get a mailFolder object collection.|
-|[Create message](../api/mailfolder_post_messages.md) |[message](message.md)| Create a new message by posting to the messages collection.|
-|[List messages](../api/mailfolder_list_messages.md) |[message](message.md) collection| Get a message object collection.|
-|[Update](../api/mailfolder_update.md) | [mailFolder](mailfolder.md)	|Update mailFolder object. |
-|[Delete](../api/mailfolder_delete.md) | None |Delete mailFolder object. |
-|[Copy](../api/mailfolder_copy.md)|[mailFolder](mailfolder.md)||
-|[Move](../api/mailfolder_move.md)|[mailFolder](mailfolder.md)||
+|[Get MailFolder](../api/mailfolder_get.md) | [MailFolder](mailfolder.md) |Read properties and relationships of mailFolder object.|
+|[Create MailFolder](../api/mailfolder_post_childfolders.md) |[MailFolder](mailfolder.md)| Create a new MailFolder by posting to the ChildFolders collection.|
+|[List ChildFolders](../api/mailfolder_list_childfolders.md) |[MailFolder](mailfolder.md) collection| Get a MailFolder object collection.|
+|[Create Message](../api/mailfolder_post_messages.md) |[Message](message.md)| Create a new Message by posting to the Messages collection.|
+|[List Messages](../api/mailfolder_list_messages.md) |[Message](message.md) collection| Get a Message object collection.|
+|[Create MultiValueLegacyExtendedProperty](../api/mailfolder_post_multivalueextendedproperties.md) |[MultiValueLegacyExtendedProperty](multivaluelegacyextendedproperty.md)| Create a new MultiValueLegacyExtendedProperty by posting to the MultiValueExtendedProperties collection.|
+|[List MultiValueExtendedProperties](../api/mailfolder_list_multivalueextendedproperties.md) |[MultiValueLegacyExtendedProperty](multivaluelegacyextendedproperty.md) collection| Get a MultiValueLegacyExtendedProperty object collection.|
+|[Create SingleValueLegacyExtendedProperty](../api/mailfolder_post_singlevalueextendedproperties.md) |[SingleValueLegacyExtendedProperty](singlevaluelegacyextendedproperty.md)| Create a new SingleValueLegacyExtendedProperty by posting to the SingleValueExtendedProperties collection.|
+|[List SingleValueExtendedProperties](../api/mailfolder_list_singlevalueextendedproperties.md) |[SingleValueLegacyExtendedProperty](singlevaluelegacyextendedproperty.md) collection| Get a SingleValueLegacyExtendedProperty object collection.|
+|[Create UserConfiguration](../api/mailfolder_post_userconfigurations.md) |[UserConfiguration](userconfiguration.md)| Create a new UserConfiguration by posting to the UserConfigurations collection.|
+|[List UserConfigurations](../api/mailfolder_list_userconfigurations.md) |[UserConfiguration](userconfiguration.md) collection| Get a UserConfiguration object collection.|
+|[Update](../api/mailfolder_update.md) | [MailFolder](mailfolder.md)	|Update MailFolder object. |
+|[Delete](../api/mailfolder_delete.md) | None |Delete MailFolder object. |
+|[Copy](../api/mailfolder_copy.md)|[MailFolder](mailfolder.md)||
+|[Move](../api/mailfolder_move.md)|[MailFolder](mailfolder.md)||
 
 ### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|childFolderCount|int32||
-|displayName|string||
-|id|string| Read-only.|
-|parentFolderId|string||
-|totalItemCount|int32||
-|unreadItemCount|int32||
+|ChildFolderCount|Int32||
+|DisplayName|String||
+|Id|String| Read-only.|
+|ParentFolderId|String||
+|TotalItemCount|Int32||
+|UnreadItemCount|Int32||
+|WellKnownName|String||
 
 ### Relationships
 | Relationship | Type	|Description|
 |:---------------|:--------|:----------|
-|childFolders|[mailFolder](mailfolder.md) collection| Read-only. Nullable.|
-|messages|[message](message.md) collection| Read-only. Nullable.|
+|ChildFolders|[MailFolder](mailfolder.md) collection| Read-only. Nullable.|
+|Messages|[Message](message.md) collection| Read-only. Nullable.|
+|MultiValueExtendedProperties|[MultiValueLegacyExtendedProperty](multivaluelegacyextendedproperty.md) collection| Read-only. Nullable.|
+|SingleValueExtendedProperties|[SingleValueLegacyExtendedProperty](singlevaluelegacyextendedproperty.md) collection| Read-only. Nullable.|
+|UserConfigurations|[UserConfiguration](userconfiguration.md) collection| Read-only. Nullable.|
 
 ### JSON representation
 
@@ -42,17 +52,18 @@ Here is a JSON representation of the resource.
   "optionalProperties": [
 
   ],
-  "@odata.type": "microsoft.graph.mailFolder"
+  "@odata.type": "microsoft.graph.MailFolder"
 }-->
 
 ```json
 {
-  "childFolderCount": 1024,
-  "displayName": "string",
-  "id": "string (identifier)",
-  "parentFolderId": "string",
-  "totalItemCount": 1024,
-  "unreadItemCount": 1024
+  "ChildFolderCount": 1024,
+  "DisplayName": "String",
+  "Id": "String (identifier)",
+  "ParentFolderId": "String",
+  "TotalItemCount": 1024,
+  "UnreadItemCount": 1024,
+  "WellKnownName": "String"
 }
 
 ```
@@ -61,7 +72,7 @@ Here is a JSON representation of the resource.
 2015-10-25 14:57:30 UTC -->
 <!-- {
   "type": "#page.annotation",
-  "description": "mailFolder resource",
+  "description": "MailFolder resource",
   "keywords": "",
   "section": "documentation",
   "tocPath": ""

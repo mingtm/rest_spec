@@ -1,4 +1,4 @@
-# conversationThread resource type
+# ConversationThread resource type
 
 
 
@@ -7,30 +7,30 @@
 
 | Method		   | Return Type	|Description|
 |:---------------|:--------|:----------|
-|[Get conversationThread](../api/conversationthread_get.md) | [conversationThread](conversationthread.md) |Read properties and relationships of conversationThread object.|
-|[Create post](../api/conversationthread_post_posts.md) |[post](post.md)| Create a new post by posting to the posts collection.|
-|[List posts](../api/conversationthread_list_posts.md) |[post](post.md) collection| Get a post object collection.|
-|[Update](../api/conversationthread_update.md) | [conversationThread](conversationthread.md)	|Update conversationThread object. |
-|[Delete](../api/conversationthread_delete.md) | None |Delete conversationThread object. |
+|[Get ConversationThread](../api/conversationthread_get.md) | [ConversationThread](conversationthread.md) |Read properties and relationships of conversationThread object.|
+|[Create Post](../api/conversationthread_post_posts.md) |[Post](post.md)| Create a new Post by posting to the Posts collection.|
+|[List Posts](../api/conversationthread_list_posts.md) |[Post](post.md) collection| Get a Post object collection.|
+|[Update](../api/conversationthread_update.md) | [ConversationThread](conversationthread.md)	|Update ConversationThread object. |
+|[Delete](../api/conversationthread_delete.md) | None |Delete ConversationThread object. |
 |[Reply](../api/conversationthread_reply.md)|None||
 
 ### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|ccRecipients|[recipient](recipient.md) collection||
-|hasAttachments|boolean||
-|id|string| Read-only.|
-|isLocked|boolean||
-|lastDeliveredDateTime|[dateTimeOffset](datetimeoffset.md)||
-|preview|string||
-|toRecipients|[recipient](recipient.md) collection||
-|topic|string||
-|uniqueSenders|string collection||
+|CcRecipients|[Recipient](recipient.md) collection||
+|HasAttachments|Boolean||
+|Id|String| Read-only.|
+|IsLocked|Boolean||
+|LastDeliveredDateTime|DateTimeOffset|The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
+|Preview|String||
+|ToRecipients|[Recipient](recipient.md) collection||
+|Topic|String||
+|UniqueSenders|String collection||
 
 ### Relationships
 | Relationship | Type	|Description|
 |:---------------|:--------|:----------|
-|posts|[post](post.md) collection| Read-only. Nullable.|
+|Posts|[Post](post.md) collection| Read-only. Nullable.|
 
 ### JSON representation
 
@@ -41,20 +41,20 @@ Here is a JSON representation of the resource.
   "optionalProperties": [
 
   ],
-  "@odata.type": "microsoft.graph.conversationThread"
+  "@odata.type": "microsoft.graph.ConversationThread"
 }-->
 
 ```json
 {
-  "ccRecipients": [{"@odata.type": "microsoft.graph.recipient"}],
-  "hasAttachments": true,
-  "id": "string (identifier)",
-  "isLocked": true,
-  "lastDeliveredDateTime": "String (timestamp)",
-  "preview": "string",
-  "toRecipients": [{"@odata.type": "microsoft.graph.recipient"}],
-  "topic": "string",
-  "uniqueSenders": ["string"]
+  "CcRecipients": [{"@odata.type": "microsoft.graph.Recipient"}],
+  "HasAttachments": true,
+  "Id": "String (identifier)",
+  "IsLocked": true,
+  "LastDeliveredDateTime": "String (timestamp)",
+  "Preview": "String",
+  "ToRecipients": [{"@odata.type": "microsoft.graph.Recipient"}],
+  "Topic": "String",
+  "UniqueSenders": ["String"]
 }
 
 ```
@@ -63,7 +63,7 @@ Here is a JSON representation of the resource.
 2015-10-25 14:57:30 UTC -->
 <!-- {
   "type": "#page.annotation",
-  "description": "conversationThread resource",
+  "description": "ConversationThread resource",
   "keywords": "",
   "section": "documentation",
   "tocPath": ""

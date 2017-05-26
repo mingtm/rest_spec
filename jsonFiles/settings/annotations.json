@@ -1,35 +1,383 @@
 {
-  "directoryobject": {
+  "User/Subscriptions": {
+    "changetracking/supported": false,
     "expandrestrictions/expandable": false,
-    "navigationrestrictions/referenceable": false,
-    "selectrestrictions/selectable": false,
-    "countrestrictions/countable": false,
-    "filterrestrictions/filterable": false,
-    "skipsupported": false
+    "searchrestrictions/searchable": false
   },
-  "directoryrole": {
-    "topsupported": false
-  },
-  "directoryroletemplate": {
-    "topsupported": false
-  },
-  "subscribedsku": {
+  "User/TaskGroups": {
+    "changetracking/supported": false,
     "expandrestrictions/expandable": false,
-    "navigationrestrictions/referenceable": false,
-    "selectrestrictions/selectable": false,
-    "countrestrictions/countable": false,
-    "filterrestrictions/filterable": false,
-    "topsupported": false,
-    "skipsupported": false
+    "searchrestrictions/searchable": false
   },
-  "subscription": {
+  "User/TaskFolders": {
     "expandrestrictions/expandable": false,
-    "navigationrestrictions/referenceable": false,
-    "selectrestrictions/selectable": false,
-    "countrestrictions/countable": false,
-    "filterrestrictions/filterable": false,
-    "sortrestrictions/sortable": false,
-    "skipsupported": false,
-    "topsupported": false
+    "searchrestrictions/searchable": false
+  },
+  "User/Tasks": {
+    "changetracking/supported": false,
+    "expandrestrictions/expandable": false,
+    "searchrestrictions/searchable": false
+  },
+  "User/Messages": {
+    "changetracking/supported": false,
+    "expandrestrictions/expandable": false
+  },
+  "User/JoinedGroups": {
+    "changetracking/supported": false,
+    "expandrestrictions/expandable": false,
+    "searchrestrictions/searchable": false,
+    "insertrestrictions/insertable": false,
+    "updaterestrictions/updatable": false,
+    "deleterestrictions/deletable": false
+  },
+  "User/MailFolders": {
+    "changetracking/supported": false,
+    "expandrestrictions/expandable": false,
+    "searchrestrictions/searchable": false
+  },
+  "User/Calendar": {
+    "changetracking/supported": false,
+    "expandrestrictions/expandable": false,
+    "searchrestrictions/searchable": false,
+    "insertrestrictions/insertable": false,
+    "updaterestrictions/updatable": false,
+    "deleterestrictions/deletable": false
+  },
+  "User/Calendars": {
+    "changetracking/supported": false,
+    "expandrestrictions/expandable": false,
+    "searchrestrictions/searchable": false
+  },
+  "User/CalendarGroups": {
+    "changetracking/supported": false,
+    "expandrestrictions/expandable": false,
+    "searchrestrictions/searchable": false
+  },
+  "User/CalendarView": {
+    "expandrestrictions/expandable": false,
+    "searchrestrictions/searchable": false,
+    "insertrestrictions/insertable": false,
+    "updaterestrictions/updatable": false,
+    "deleterestrictions/deletable": false
+  },
+  "User/Events": {
+    "changetracking/supported": false,
+    "expandrestrictions/expandable": false,
+    "searchrestrictions/searchable": false
+  },
+  "User/People": {
+    "changetracking/supported": false,
+    "expandrestrictions/expandable": false,
+    "insertrestrictions/insertable": false,
+    "updaterestrictions/updatable": false,
+    "deleterestrictions/deletable": false
+  },
+  "User/Contacts": {
+    "expandrestrictions/expandable": false
+  },
+  "User/ContactFolders": {
+    "changetracking/supported": false,
+    "expandrestrictions/expandable": false,
+    "searchrestrictions/searchable": false
+  },
+  "User/InferenceClassification": {
+    "changetracking/supported": false,
+    "expandrestrictions/expandable": false,
+    "searchrestrictions/searchable": false,
+    "insertrestrictions/insertable": false,
+    "deleterestrictions/deletable": false
+  },
+  "User/Photo": {
+    "changetracking/supported": false,
+    "expandrestrictions/expandable": false,
+    "searchrestrictions/searchable": false,
+    "insertrestrictions/insertable": false,
+    "deleterestrictions/deletable": false
+  },
+  "User/Photos": {
+    "changetracking/supported": false,
+    "expandrestrictions/expandable": false,
+    "searchrestrictions/searchable": false,
+    "insertrestrictions/insertable": false,
+    "updaterestrictions/updatable": false,
+    "deleterestrictions/deletable": false
+  },
+  "User/Drives": {
+    "changetracking/supported": false,
+    "expandrestrictions/expandable": false,
+    "searchrestrictions/searchable": false,
+    "updaterestrictions/updatable": false,
+    "deleterestrictions/deletable": false
+  },
+  "User/WorkingWithEntities": {
+    "changetracking/supported": false,
+    "expandrestrictions/expandable": false,
+    "searchrestrictions/searchable": false,
+    "updaterestrictions/updatable": false,
+    "deleterestrictions/deletable": false
+  },
+  "MailFolder/Messages": {
+  },
+  "MailFolder/ChildFolders": {
+    "changetracking/supported": false,
+    "searchrestrictions/searchable": false
+  },
+  "MailFolder/UserConfigurations": {
+    "changetracking/supported": false,
+    "expandrestrictions/expandable": false,
+    "searchrestrictions/searchable": false,
+    "insertrestrictions/insertable": false,
+    "updaterestrictions/updatable": false,
+    "deleterestrictions/deletable": false
+  },
+  "Message/Extensions": {
+    "changetracking/supported": false,
+    "searchrestrictions/searchable": false
+  },
+  "Message/Attachments": {
+    "changetracking/supported": false,
+    "searchrestrictions/searchable": false,
+    "updaterestrictions/updatable": false
+  },
+  "ItemAttachment/Item": {
+    "changetracking/supported": false,
+    "searchrestrictions/searchable": false,
+    "insertrestrictions/insertable": false,
+    "updaterestrictions/updatable": false,
+    "deleterestrictions/deletable": false
+  },
+  "Calendar/Events": {
+    "changetracking/supported": false,
+    "expandrestrictions/expandable": false,
+    "searchrestrictions/searchable": false
+  },
+  "Calendar/CalendarView": {
+    "expandrestrictions/expandable": false,
+    "searchrestrictions/searchable": false,
+    "insertrestrictions/insertable": false,
+    "updaterestrictions/updatable": false,
+    "deleterestrictions/deletable": false
+  },
+  "CalendarGroup/Calendars": {
+    "changetracking/supported": false,
+    "expandrestrictions/expandable": false,
+    "searchrestrictions/searchable": false
+  },
+  "Event/Calendar": {
+    "changetracking/supported": false,
+    "expandrestrictions/expandable": false,
+    "searchrestrictions/searchable": false,
+    "insertrestrictions/insertable": false,
+    "updaterestrictions/updatable": false,
+    "deleterestrictions/deletable": false
+  },
+  "Event/Instances": {
+    "changetracking/supported": false,
+    "expandrestrictions/expandable": false,
+    "searchrestrictions/searchable": false,
+    "insertrestrictions/insertable": false,
+    "updaterestrictions/updatable": false,
+    "deleterestrictions/deletable": false
+  },
+  "Event/Extensions": {
+    "changetracking/supported": false,
+    "searchrestrictions/searchable": false
+  },
+  "Event/Attachments": {
+    "changetracking/supported": false,
+    "searchrestrictions/searchable": false,
+    "updaterestrictions/updatable": false
+  },
+  "Contact/Extensions": {
+    "changetracking/supported": false,
+    "searchrestrictions/searchable": false
+  },
+  "Contact/Photo": {
+    "changetracking/supported": false,
+    "expandrestrictions/expandable": false,
+    "searchrestrictions/searchable": false,
+    "insertrestrictions/insertable": false,
+    "deleterestrictions/deletable": false
+  },
+  "ContactFolder/Contacts": {
+    "searchrestrictions/searchable": false
+  },
+  "ContactFolder/ChildFolders": {
+    "changetracking/supported": false,
+    "searchrestrictions/searchable": false
+  },
+  "EventMessage/Extensions": {
+    "changetracking/supported": false,
+    "searchrestrictions/searchable": false
+  },
+  "EventMessage/Attachments": {
+    "changetracking/supported": false,
+    "searchrestrictions/searchable": false,
+    "updaterestrictions/updatable": false
+  },
+  "EventMessage/Event": {
+    "changetracking/supported": false,
+    "searchrestrictions/searchable": false,
+    "insertrestrictions/insertable": false,
+    "updaterestrictions/updatable": false,
+    "deleterestrictions/deletable": false
+  },
+  "EventMessageRequest/Extensions": {
+    "changetracking/supported": false,
+    "searchrestrictions/searchable": false
+  },
+  "EventMessageRequest/Attachments": {
+    "changetracking/supported": false,
+    "searchrestrictions/searchable": false,
+    "updaterestrictions/updatable": false
+  },
+  "EventMessageRequest/Event": {
+    "changetracking/supported": false,
+    "searchrestrictions/searchable": false,
+    "insertrestrictions/insertable": false,
+    "updaterestrictions/updatable": false,
+    "deleterestrictions/deletable": false
+  },
+  "ReferenceAttachment/SourceUrl": {
+    "isurl": true
+  },
+  "ReferenceAttachment/ThumbnailUrl": {
+    "isurl": true
+  },
+  "ReferenceAttachment/PreviewUrl": {
+    "isurl": true
+  },
+  "Group/Threads": {
+    "changetracking/supported": false,
+    "expandrestrictions/expandable": false,
+    "searchrestrictions/searchable": false
+  },
+  "Group/Calendar": {
+    "changetracking/supported": false,
+    "expandrestrictions/expandable": false,
+    "searchrestrictions/searchable": false,
+    "insertrestrictions/insertable": false,
+    "updaterestrictions/updatable": false,
+    "deleterestrictions/deletable": false
+  },
+  "Group/CalendarView": {
+    "changetracking/supported": false,
+    "expandrestrictions/expandable": false,
+    "searchrestrictions/searchable": false,
+    "insertrestrictions/insertable": false,
+    "updaterestrictions/updatable": false,
+    "deleterestrictions/deletable": false
+  },
+  "Group/Events": {
+    "changetracking/supported": false,
+    "expandrestrictions/expandable": false,
+    "searchrestrictions/searchable": false
+  },
+  "Group/Conversations": {
+    "changetracking/supported": false,
+    "expandrestrictions/expandable": false,
+    "updaterestrictions/updatable": false
+  },
+  "Group/Subscriptions": {
+    "changetracking/supported": false,
+    "expandrestrictions/expandable": false,
+    "searchrestrictions/searchable": false
+  },
+  "Group/Photo": {
+    "changetracking/supported": false,
+    "expandrestrictions/expandable": false,
+    "searchrestrictions/searchable": false,
+    "insertrestrictions/insertable": false,
+    "deleterestrictions/deletable": false
+  },
+  "Group/Photos": {
+    "changetracking/supported": false,
+    "expandrestrictions/expandable": false,
+    "searchrestrictions/searchable": false,
+    "insertrestrictions/insertable": false,
+    "updaterestrictions/updatable": false,
+    "deleterestrictions/deletable": false
+  },
+  "Group/AcceptedSenders": {
+    "changetracking/supported": false,
+    "expandrestrictions/expandable": false,
+    "searchrestrictions/searchable": false,
+    "updaterestrictions/updatable": false
+  },
+  "Group/RejectedSenders": {
+    "changetracking/supported": false,
+    "expandrestrictions/expandable": false,
+    "searchrestrictions/searchable": false,
+    "updaterestrictions/updatable": false
+  },
+  "Drive/Extensions": {
+    "changetracking/supported": false,
+    "searchrestrictions/searchable": false
+  },
+  "Drive/Files": {
+    "changetracking/supported": false,
+    "expandrestrictions/expandable": false,
+    "searchrestrictions/searchable": false,
+    "updaterestrictions/updatable": false,
+    "deleterestrictions/deletable": false
+  },
+  "File/Extensions": {
+    "changetracking/supported": false,
+    "searchrestrictions/searchable": false
+  },
+  "WorkingWithEntity/Extensions": {
+    "changetracking/supported": false,
+    "searchrestrictions/searchable": false
+  },
+  "Notification/ResourceData": {
+    "changetracking/supported": false,
+    "expandrestrictions/expandable": false,
+    "searchrestrictions/searchable": false,
+    "insertrestrictions/insertable": false,
+    "updaterestrictions/updatable": false,
+    "deleterestrictions/deletable": false
+  },
+  "Conversation/Threads": {
+    "changetracking/supported": false,
+    "searchrestrictions/searchable": false
+  },
+  "ConversationThread/Posts": {
+    "changetracking/supported": false,
+    "expandrestrictions/expandable": false,
+    "searchrestrictions/searchable": false,
+    "insertrestrictions/insertable": false,
+    "updaterestrictions/updatable": false,
+    "deleterestrictions/deletable": false
+  },
+  "Post/Extensions": {
+    "changetracking/supported": false,
+    "searchrestrictions/searchable": false
+  },
+  "Post/InReplyTo": {
+    "changetracking/supported": false,
+    "searchrestrictions/searchable": false,
+    "insertrestrictions/insertable": false,
+    "updaterestrictions/updatable": false,
+    "deleterestrictions/deletable": false
+  },
+  "Post/Attachments": {
+    "changetracking/supported": false,
+    "searchrestrictions/searchable": false,
+    "updaterestrictions/updatable": false
+  },
+  "InferenceClassification/Overrides": {
+    "changetracking/supported": false,
+    "expandrestrictions/expandable": false,
+    "searchrestrictions/searchable": false,
+    "updaterestrictions/updatable": false
+  },
+  "TaskGroup/TaskFolders": {
+    "changetracking/supported": false,
+    "expandrestrictions/expandable": false,
+    "searchrestrictions/searchable": false
+  },
+  "TaskFolder/Tasks": {
+    "expandrestrictions/expandable": false,
+    "searchrestrictions/searchable": false
   }
 }

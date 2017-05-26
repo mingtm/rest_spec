@@ -7,8 +7,7 @@ The following **scopes** are required to execute this API:
 <!-- { "blockType": "ignored" } -->
 ```http
 PATCH /me
-PATCH /users/<id>
-PATCH /drive/root/createdByUser
+PATCH /Users/<Id>
 ```
 ### Optional request headers
 | Name       | Description|
@@ -21,50 +20,13 @@ In the request body, supply the values for relevant fields that should be update
 
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|aboutMe|string||
-|accountEnabled|boolean||
-|assignedLicenses|assignedLicense||
-|assignedPlans|assignedPlan||
-|birthday|dateTimeOffset||
-|businessPhones|string||
-|city|string||
-|companyName|string||
-|country|string||
-|department|string||
-|displayName|string||
-|givenName|string||
-|hireDate|dateTimeOffset||
-|interests|string||
-|jobTitle|string||
-|mail|string||
-|mailNickname|string||
-|mobilePhone|string||
-|mySite|string||
-|officeLocation|string||
-|onPremisesImmutableId|string||
-|onPremisesLastSyncDateTime|dateTimeOffset||
-|onPremisesSecurityIdentifier|string||
-|onPremisesSyncEnabled|boolean||
-|passwordPolicies|string||
-|passwordProfile|passwordProfile||
-|pastProjects|string||
-|postalCode|string||
-|preferredLanguage|string||
-|preferredName|string||
-|provisionedPlans|provisionedPlan||
-|proxyAddresses|string||
-|responsibilities|string||
-|schools|string||
-|skills|string||
-|state|string||
-|streetAddress|string||
-|surname|string||
-|usageLocation|string||
-|userPrincipalName|string||
-|userType|string||
+|Alias|String||
+|DisplayName|String||
+|EmailAddress|String||
+|MailboxSettings|MailboxSettings||
 
 ### Response
-If successful, this method returns a `200 OK` response code and updated [user](../resources/user.md) object in the response body.
+If successful, this method returns a `200 OK` response code and updated [User](../resources/user.md) object in the response body.
 ### Example
 ##### Request
 Here is an example of the request.
@@ -75,31 +37,35 @@ Here is an example of the request.
 ```http
 PATCH https://graph.microsoft.com/beta/me
 Content-type: application/json
-Content-length: 491
+Content-length: 732
 
 {
-  "accountEnabled": true,
-  "assignedLicenses": [
-    {
-      "disabledPlans": [
-        "disabledPlans-value"
-      ],
-      "skuId": "skuId-value"
+  "EmailAddress": "EmailAddress-value",
+  "DisplayName": "DisplayName-value",
+  "Alias": "Alias-value",
+  "MailboxSettings": {
+    "AutomaticRepliesSetting": {
+      "Status": "Status-value",
+      "ExternalAudience": "ExternalAudience-value",
+      "ScheduledStartDateTime": {
+        "DateTime": {
+        },
+        "TimeZone": "TimeZone-value"
+      },
+      "ScheduledEndDateTime": {
+        "DateTime": {
+        },
+        "TimeZone": "TimeZone-value"
+      },
+      "InternalReplyMessage": "InternalReplyMessage-value",
+      "ExternalReplyMessage": "ExternalReplyMessage-value"
+    },
+    "TimeZone": "TimeZone-value",
+    "Language": {
+      "Locale": "Locale-value",
+      "DisplayName": "DisplayName-value"
     }
-  ],
-  "assignedPlans": [
-    {
-      "assignedDateTime": "datetime-value",
-      "capabilityStatus": "capabilityStatus-value",
-      "service": "service-value",
-      "servicePlanId": "servicePlanId-value"
-    }
-  ],
-  "businessPhones": [
-    "businessPhones-value"
-  ],
-  "city": "city-value",
-  "companyName": "companyName-value"
+  }
 }
 ```
 ##### Response
@@ -107,36 +73,41 @@ Here is an example of the response. Note: The response object shown here may be 
 <!-- {
   "blockType": "response",
   "truncated": true,
-  "@odata.type": "microsoft.graph.user"
+  "@odata.type": "microsoft.graph.User"
 } -->
 ```http
 HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 491
+Content-length: 752
 
 {
-  "accountEnabled": true,
-  "assignedLicenses": [
-    {
-      "disabledPlans": [
-        "disabledPlans-value"
-      ],
-      "skuId": "skuId-value"
+  "EmailAddress": "EmailAddress-value",
+  "DisplayName": "DisplayName-value",
+  "Alias": "Alias-value",
+  "MailboxSettings": {
+    "AutomaticRepliesSetting": {
+      "Status": "Status-value",
+      "ExternalAudience": "ExternalAudience-value",
+      "ScheduledStartDateTime": {
+        "DateTime": {
+        },
+        "TimeZone": "TimeZone-value"
+      },
+      "ScheduledEndDateTime": {
+        "DateTime": {
+        },
+        "TimeZone": "TimeZone-value"
+      },
+      "InternalReplyMessage": "InternalReplyMessage-value",
+      "ExternalReplyMessage": "ExternalReplyMessage-value"
+    },
+    "TimeZone": "TimeZone-value",
+    "Language": {
+      "Locale": "Locale-value",
+      "DisplayName": "DisplayName-value"
     }
-  ],
-  "assignedPlans": [
-    {
-      "assignedDateTime": "datetime-value",
-      "capabilityStatus": "capabilityStatus-value",
-      "service": "service-value",
-      "servicePlanId": "servicePlanId-value"
-    }
-  ],
-  "businessPhones": [
-    "businessPhones-value"
-  ],
-  "city": "city-value",
-  "companyName": "companyName-value"
+  },
+  "Id": "Id-value"
 }
 ```
 

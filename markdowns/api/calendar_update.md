@@ -6,9 +6,9 @@ The following **scopes** are required to execute this API:
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
-PATCH /me/calendar
-PATCH /users/<id>/calendar
-PATCH /groups/<id>/calendar
+PATCH /me/Calendar
+PATCH /Users/<Id>/Calendar
+PATCH /Groups/<Id>/Calendar
 ```
 ### Optional request headers
 | Name       | Description|
@@ -21,12 +21,13 @@ In the request body, supply the values for relevant fields that should be update
 
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|changeKey|string||
-|color|string| Possible values are: `lightBlue`, `lightGreen`, `lightOrange`, `lightGray`, `lightYellow`, `lightTeal`, `lightPink`, `lightBrown`, `lightRed`, `maxColor`, `auto`.|
-|name|string||
+|ChangeKey|String||
+|Color|string| Possible values are: `LightBlue`, `LightGreen`, `LightOrange`, `LightGray`, `LightYellow`, `LightTeal`, `LightPink`, `LightBrown`, `LightRed`, `MaxColor`, `Auto`.|
+|IsDefaultCalendar|Boolean||
+|Name|String||
 
 ### Response
-If successful, this method returns a `200 OK` response code and updated [calendar](../resources/calendar.md) object in the response body.
+If successful, this method returns a `200 OK` response code and updated [Calendar](../resources/calendar.md) object in the response body.
 ### Example
 ##### Request
 Here is an example of the request.
@@ -35,14 +36,15 @@ Here is an example of the request.
   "name": "update_calendar"
 }-->
 ```http
-PATCH https://graph.microsoft.com/beta/me/calendar
+PATCH https://graph.microsoft.com/beta/me/Calendar
 Content-type: application/json
-Content-length: 86
+Content-length: 115
 
 {
-  "name": "name-value",
-  "color": "color-value",
-  "changeKey": "changeKey-value"
+  "Name": "Name-value",
+  "Color": "Color-value",
+  "IsDefaultCalendar": true,
+  "ChangeKey": "ChangeKey-value"
 }
 ```
 ##### Response
@@ -50,18 +52,19 @@ Here is an example of the response. Note: The response object shown here may be 
 <!-- {
   "blockType": "response",
   "truncated": true,
-  "@odata.type": "microsoft.graph.calendar"
+  "@odata.type": "microsoft.graph.Calendar"
 } -->
 ```http
 HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 106
+Content-length: 135
 
 {
-  "name": "name-value",
-  "color": "color-value",
-  "changeKey": "changeKey-value",
-  "id": "id-value"
+  "Name": "Name-value",
+  "Color": "Color-value",
+  "IsDefaultCalendar": true,
+  "ChangeKey": "ChangeKey-value",
+  "Id": "Id-value"
 }
 ```
 

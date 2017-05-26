@@ -1,4 +1,4 @@
-# recurrencePattern resource type
+# RecurrencePattern resource type
 
 
 
@@ -6,13 +6,13 @@
 ### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|dayOfMonth|int32||
-|daysOfWeek|String collection| Possible values are: `sunday`, `monday`, `tuesday`, `wednesday`, `thursday`, `friday`, `saturday`.|
-|firstDayOfWeek|String| Possible values are: `sunday`, `monday`, `tuesday`, `wednesday`, `thursday`, `friday`, `saturday`.|
-|index|String| Possible values are: `first`, `second`, `third`, `fourth`, `last`.|
-|interval|int32||
-|month|int32||
-|type|String| Possible values are: `daily`, `weekly`, `absoluteMonthly`, `relativeMonthly`, `absoluteYearly`, `relativeYearly`.|
+|DayOfMonth|Int32||
+|DaysOfWeek|String collection| Possible values are: `Sunday`, `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`.|
+|FirstDayOfWeek|String| Possible values are: `Sunday`, `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`.|
+|Index|String| Possible values are: `First`, `Second`, `Third`, `Fourth`, `Last`.|
+|Interval|Int32||
+|Month|Int32||
+|Type|String| Possible values are: `Daily`, `Weekly`, `AbsoluteMonthly`, `RelativeMonthly`, `AbsoluteYearly`, `RelativeYearly`.|
 
 ### JSON representation
 
@@ -23,18 +23,18 @@ Here is a JSON representation of the resource.
   "optionalProperties": [
 
   ],
-  "@odata.type": "microsoft.graph.recurrencePattern"
+  "@odata.type": "microsoft.graph.RecurrencePattern"
 }-->
 
 ```json
 {
-  "dayOfMonth": 1024,
-  "daysOfWeek": ["String"],
-  "firstDayOfWeek": "String",
-  "index": "String",
-  "interval": 1024,
-  "month": 1024,
-  "type": "String"
+  "DayOfMonth": 1024,
+  "DaysOfWeek": ["String"],
+  "FirstDayOfWeek": "String",
+  "Index": "String",
+  "Interval": 1024,
+  "Month": 1024,
+  "Type": "String"
 }
 
 ```
@@ -43,7 +43,7 @@ Here is a JSON representation of the resource.
 2015-10-25 14:57:30 UTC -->
 <!-- {
   "type": "#page.annotation",
-  "description": "recurrencePattern resource",
+  "description": "RecurrencePattern resource",
   "keywords": "",
   "section": "documentation",
   "tocPath": ""

@@ -1,4 +1,4 @@
-# conversationThread: reply
+# ConversationThread: Reply
 
 
 ### Prerequisites
@@ -6,8 +6,9 @@ The following **scopes** are required to execute this API:
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
-POST /groups/<id>/threads/<id>/reply
-POST /groups/<id>/conversations/<id>/threads/<id>/reply
+POST /Groups/<Id>/Threads/<Id>/Reply
+POST /me/JoinedGroups/<Id>/Threads/<Id>/Reply
+POST /Users/<Id>/JoinedGroups/<Id>/Threads/<Id>/Reply
 
 ```
 ### Request headers
@@ -21,7 +22,7 @@ In the request body, provide a JSON object with the following parameters.
 
 | Parameter	   | Type	|Description|
 |:---------------|:--------|:----------|
-|post|post||
+|Post|Post||
 
 ### Response
 If successful, this method returns `200, OK` response code. It does not return anything in the response body.
@@ -35,57 +36,71 @@ Here is an example of the request.
   "name": "conversationthread_reply"
 }-->
 ```http
-POST https://graph.microsoft.com/beta/groups/<id>/threads/<id>/reply
+POST https://graph.microsoft.com/beta/Groups/<Id>/Threads/<Id>/Reply
 Content-type: application/json
-Content-length: 1141
+Content-length: 1432
 
 {
-  "post": {
-    "body": {
-      "contentType": "contentType-value",
-      "content": "content-value"
+  "Post": {
+    "Body": {
+      "ContentType": "ContentType-value",
+      "Content": "Content-value"
     },
-    "receivedDateTime": "datetime-value",
-    "hasAttachments": true,
-    "from": {
-      "emailAddress": {
-        "name": "name-value",
-        "address": "address-value"
+    "ReceivedDateTime": "datetime-value",
+    "HasAttachments": true,
+    "From": {
+      "EmailAddress": {
+        "Name": "Name-value",
+        "Address": "Address-value"
       }
     },
-    "sender": {
-      "emailAddress": {
-        "name": "name-value",
-        "address": "address-value"
+    "Sender": {
+      "EmailAddress": {
+        "Name": "Name-value",
+        "Address": "Address-value"
       }
     },
-    "conversationThreadId": "conversationThreadId-value",
-    "newParticipants": [
+    "ConversationThreadId": "ConversationThreadId-value",
+    "NewParticipants": [
       {
-        "emailAddress": {
-          "name": "name-value",
-          "address": "address-value"
+        "EmailAddress": {
+          "Name": "Name-value",
+          "Address": "Address-value"
         }
       }
     ],
-    "conversationId": "conversationId-value",
-    "createdDateTime": "datetime-value",
-    "lastModifiedDateTime": "datetime-value",
-    "changeKey": "changeKey-value",
-    "categories": [
-      "categories-value"
+    "ConversationId": "ConversationId-value",
+    "CreatedDateTime": "datetime-value",
+    "LastModifiedDateTime": "datetime-value",
+    "ChangeKey": "ChangeKey-value",
+    "Categories": [
+      "Categories-value"
     ],
-    "id": "id-value",
-    "inReplyTo": {
+    "Id": "Id-value",
+    "InReplyTo": {
     },
-    "attachments": [
+    "Attachments": [
       {
-        "lastModifiedDateTime": "datetime-value",
-        "name": "name-value",
-        "contentType": "contentType-value",
-        "size": 99,
-        "isInline": true,
-        "id": "id-value"
+        "LastModifiedDateTime": "datetime-value",
+        "Name": "Name-value",
+        "ContentType": "ContentType-value",
+        "Size": 99,
+        "IsInline": true,
+        "Id": "Id-value"
+      }
+    ],
+    "SingleValueExtendedProperties": [
+      {
+        "Value": "Value-value",
+        "PropertyId": "PropertyId-value"
+      }
+    ],
+    "MultiValueExtendedProperties": [
+      {
+        "Value": [
+          "Value-value"
+        ],
+        "PropertyId": "PropertyId-value"
       }
     ]
   }
@@ -107,7 +122,7 @@ HTTP/1.1 200 OK
 2015-10-25 14:57:30 UTC -->
 <!-- {
   "type": "#page.annotation",
-  "description": "conversationThread: reply",
+  "description": "ConversationThread: Reply",
   "keywords": "",
   "section": "documentation",
   "tocPath": ""

@@ -1,5 +1,5 @@
 {
-  "name": "conversation",
+  "name": "Conversation",
   "description": "",
   "collectionOf": null,
   "isComplexType": false,
@@ -25,28 +25,16 @@
   "updateDescription": "",
   "deleteDescription": "",
   "restPath": {
-    "/groups/<id>/conversations/<id>": true
+    "/Users/<Id>/JoinedGroups/<Id>/Conversations/<Id>": true,
+    "/Groups/<Id>/Conversations/<Id>": true,
+    "/me/JoinedGroups/<Id>/Conversations/<Id>": true
   },
   "properties": [
     {
-      "name": "topic",
+      "name": "Topic",
       "description": "",
       "isKey": false,
-      "dataType": "string",
-      "isReadOnly": false,
-      "enumName": null,
-      "isCollection": false,
-      "isRelationship": false,
-      "supportFilter": false,
-      "allowPostToCollection": true,
-      "isNullable": false,
-      "isUnicode": false
-    },
-    {
-      "name": "hasAttachments",
-      "description": "",
-      "isKey": false,
-      "dataType": "boolean",
+      "dataType": "String",
       "isReadOnly": false,
       "enumName": null,
       "isCollection": false,
@@ -57,10 +45,10 @@
       "isUnicode": null
     },
     {
-      "name": "lastDeliveredDateTime",
+      "name": "HasAttachments",
       "description": "",
       "isKey": false,
-      "dataType": "dateTimeOffset",
+      "dataType": "Boolean",
       "isReadOnly": false,
       "enumName": null,
       "isCollection": false,
@@ -71,10 +59,24 @@
       "isUnicode": null
     },
     {
-      "name": "uniqueSenders",
+      "name": "LastDeliveredDateTime",
       "description": "",
       "isKey": false,
-      "dataType": "string",
+      "dataType": "DateTimeOffset",
+      "isReadOnly": false,
+      "enumName": null,
+      "isCollection": false,
+      "isRelationship": false,
+      "supportFilter": false,
+      "allowPostToCollection": true,
+      "isNullable": false,
+      "isUnicode": null
+    },
+    {
+      "name": "UniqueSenders",
+      "description": "",
+      "isKey": false,
+      "dataType": "String",
       "isReadOnly": false,
       "enumName": null,
       "isCollection": true,
@@ -82,13 +84,13 @@
       "supportFilter": false,
       "allowPostToCollection": true,
       "isNullable": false,
-      "isUnicode": false
+      "isUnicode": null
     },
     {
-      "name": "preview",
+      "name": "Preview",
       "description": "",
       "isKey": false,
-      "dataType": "string",
+      "dataType": "String",
       "isReadOnly": false,
       "enumName": null,
       "isCollection": false,
@@ -96,27 +98,27 @@
       "supportFilter": false,
       "allowPostToCollection": true,
       "isNullable": false,
-      "isUnicode": false
+      "isUnicode": null
     },
     {
-      "name": "id",
+      "name": "Id",
       "description": "",
       "isKey": true,
-      "dataType": "string",
+      "dataType": "String",
       "isReadOnly": true,
       "enumName": null,
       "isCollection": false,
       "isRelationship": false,
       "supportFilter": false,
       "allowPostToCollection": true,
-      "isNullable": false,
-      "isUnicode": false
+      "isNullable": null,
+      "isUnicode": null
     },
     {
-      "name": "threads",
+      "name": "Threads",
       "description": "",
       "isKey": false,
-      "dataType": "conversationThread",
+      "dataType": "ConversationThread",
       "isReadOnly": true,
       "enumName": null,
       "isCollection": true,

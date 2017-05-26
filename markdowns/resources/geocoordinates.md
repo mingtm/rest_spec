@@ -1,4 +1,4 @@
-# geoCoordinates resource type
+# GeoCoordinates resource type
 
 
 
@@ -6,9 +6,11 @@
 ### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|altitude|double||
-|latitude|double||
-|longitude|double||
+|Accuracy|Double||
+|Altitude|Double||
+|AltitudeAccuracy|Double||
+|Latitude|Double||
+|Longitude|Double||
 
 ### JSON representation
 
@@ -19,14 +21,16 @@ Here is a JSON representation of the resource.
   "optionalProperties": [
 
   ],
-  "@odata.type": "microsoft.graph.geoCoordinates"
+  "@odata.type": "microsoft.graph.GeoCoordinates"
 }-->
 
 ```json
 {
-  "altitude": 1024,
-  "latitude": 1024,
-  "longitude": 1024
+  "Accuracy": 1024,
+  "Altitude": 1024,
+  "AltitudeAccuracy": 1024,
+  "Latitude": 1024,
+  "Longitude": 1024
 }
 
 ```
@@ -35,7 +39,7 @@ Here is a JSON representation of the resource.
 2015-10-25 14:57:30 UTC -->
 <!-- {
   "type": "#page.annotation",
-  "description": "geoCoordinates resource",
+  "description": "GeoCoordinates resource",
   "keywords": "",
   "section": "documentation",
   "tocPath": ""

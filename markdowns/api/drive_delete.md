@@ -1,14 +1,13 @@
-# Delete drive
+# Delete Drive
 
-Delete drive.
+Delete Drive.
 ### Prerequisites
 The following **scopes** are required to execute this API: 
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
-DELETE /drive
-DELETE /me/drive
-DELETE /drives/<id>
+DELETE /me/Drives/<Id>
+DELETE /Users/<Id>/Drives/<Id>
 
 ```
 ### Request headers
@@ -32,7 +31,7 @@ Here is an example of the request.
   "name": "delete_drive"
 }-->
 ```http
-DELETE https://graph.microsoft.com/beta/drive
+DELETE https://graph.microsoft.com/beta/me/Drives/<Id>
 ```
 ##### Response
 Here is an example of the response. Note: The response object shown here may be truncated for brevity. All of the properties will be returned from an actual call.
@@ -48,7 +47,7 @@ HTTP/1.1 204 No Content
 2015-10-25 14:57:30 UTC -->
 <!-- {
   "type": "#page.annotation",
-  "description": "Delete drive",
+  "description": "Delete Drive",
   "keywords": "",
   "section": "documentation",
   "tocPath": ""

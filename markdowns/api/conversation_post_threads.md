@@ -1,12 +1,14 @@
-# Create thread
+# Create Thread
 
-Use this API to create a new thread.
+Use this API to create a new Thread.
 ### Prerequisites
 The following **scopes** are required to execute this API: 
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
-POST /groups/<id>/conversations/<id>/threads
+POST /Groups/<Id>/Conversations/<Id>/Threads
+POST /me/JoinedGroups/<Id>/Conversations/<Id>/Threads
+POST /Users/<Id>/JoinedGroups/<Id>/Conversations/<Id>/Threads
 
 ```
 ### Request headers
@@ -16,11 +18,11 @@ POST /groups/<id>/conversations/<id>/threads
 | Workbook-Session-Id  | Workbook session Id that determines if changes are persisted or not. Optional.|
 
 ### Request body
-In the request body, supply a JSON representation of [conversationThread](../resources/conversationthread.md) object.
+In the request body, supply a JSON representation of [ConversationThread](../resources/conversationthread.md) object.
 
 
 ### Response
-If successful, this method returns `201, Created` response code and [conversationThread](../resources/conversationthread.md) object in the response body.
+If successful, this method returns `201, Created` response code and [ConversationThread](../resources/conversationthread.md) object in the response body.
 
 ### Example
 ##### Request
@@ -30,42 +32,42 @@ Here is an example of the request.
   "name": "create_conversationthread_from_conversation"
 }-->
 ```http
-POST https://graph.microsoft.com/beta/groups/<id>/conversations/<id>/threads
+POST https://graph.microsoft.com/beta/Groups/<Id>/Conversations/<Id>/Threads
 Content-type: application/json
 Content-length: 419
 
 {
-  "toRecipients": [
+  "ToRecipients": [
     {
-      "emailAddress": {
-        "name": "name-value",
-        "address": "address-value"
+      "EmailAddress": {
+        "Name": "Name-value",
+        "Address": "Address-value"
       }
     }
   ],
-  "topic": "topic-value",
-  "hasAttachments": true,
-  "lastDeliveredDateTime": "datetime-value",
-  "uniqueSenders": [
-    "uniqueSenders-value"
+  "Topic": "Topic-value",
+  "HasAttachments": true,
+  "LastDeliveredDateTime": "datetime-value",
+  "UniqueSenders": [
+    "UniqueSenders-value"
   ],
-  "ccRecipients": [
+  "CcRecipients": [
     {
-      "emailAddress": {
-        "name": "name-value",
-        "address": "address-value"
+      "EmailAddress": {
+        "Name": "Name-value",
+        "Address": "Address-value"
       }
     }
   ]
 }
 ```
-In the request body, supply a JSON representation of [conversationThread](../resources/conversationthread.md) object.
+In the request body, supply a JSON representation of [ConversationThread](../resources/conversationthread.md) object.
 ##### Response
 Here is an example of the response. Note: The response object shown here may be truncated for brevity. All of the properties will be returned from an actual call.
 <!-- {
   "blockType": "response",
   "truncated": true,
-  "@odata.type": "microsoft.graph.conversationThread"
+  "@odata.type": "microsoft.graph.ConversationThread"
 } -->
 ```http
 HTTP/1.1 201 Created
@@ -73,25 +75,25 @@ Content-type: application/json
 Content-length: 419
 
 {
-  "toRecipients": [
+  "ToRecipients": [
     {
-      "emailAddress": {
-        "name": "name-value",
-        "address": "address-value"
+      "EmailAddress": {
+        "Name": "Name-value",
+        "Address": "Address-value"
       }
     }
   ],
-  "topic": "topic-value",
-  "hasAttachments": true,
-  "lastDeliveredDateTime": "datetime-value",
-  "uniqueSenders": [
-    "uniqueSenders-value"
+  "Topic": "Topic-value",
+  "HasAttachments": true,
+  "LastDeliveredDateTime": "datetime-value",
+  "UniqueSenders": [
+    "UniqueSenders-value"
   ],
-  "ccRecipients": [
+  "CcRecipients": [
     {
-      "emailAddress": {
-        "name": "name-value",
-        "address": "address-value"
+      "EmailAddress": {
+        "Name": "Name-value",
+        "Address": "Address-value"
       }
     }
   ]
@@ -102,7 +104,7 @@ Content-length: 419
 2015-10-25 14:57:30 UTC -->
 <!-- {
   "type": "#page.annotation",
-  "description": "Create thread",
+  "description": "Create Thread",
   "keywords": "",
   "section": "documentation",
   "tocPath": ""

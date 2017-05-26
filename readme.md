@@ -78,31 +78,48 @@ In an effort to keep our documentation uniform with the same look and feel acros
 * To add code snippets, use fences (```) and specify a coding language.
 * Don't use newlines in tables. It just doesn't work.
 
-## Run Markdown Scanner tool if you edit/add code or samples.
+## Submit a pull request
 
-If you make any edits or additions to JSON structure, HTTP request/response sections, do run the [markdown scanner](https://github.com/OneDrive/markdown-scanner) tool to ensure accurancy. 
+All changes need to eventually needs to end up in `master` branch of the repositiry. However, we don't update the master directly. The correct sequence is to update the `beta` and/or `v1.0` (depending on where the change needs to occur) and then update the `master` branch using a separate pull-request. 
 
-At the time of creation of these markdown templates, all the files have been checked using the same tool. The known issues at this point are: 
+So, you'd need multiple pull request to ensure that changes get reflected to master branch. 
+
+Update Sequence:  
+
+1. Fork and clone https://github.com/OfficeDev/microsoft-graph-docs  
+2. Switch to `staging` branch first
+3. Perform edits under your account. Make the relevant changes under `/beta` and/or `v1.0` folder of the reference content
+4. Send pull requests to merge your changes  
+5. Check the appVeyor status after you create Pull Request. If there is an error, cancel the pull request and fix the underlying issue before submitting the next pull request  
+
+Note
+* Do not push changes under /officedev account directly. 
+* Do not push changes to master directly before updating `staging` branch.
+
+### AppVeyor errors: 
+
+When you submit PR, you may get validation errors. Some of known issues with the templates files are: 
 
 * Many APIs return string/boolean values (scalars). Looks like the scaler return types are not supported in markdown scanner tool yet. Ignore errors that say `Unable to locate a definition for resource type: <type such as string or boolean>` for the time being. 
-* Following resources don't have a URL path to reach them as per the EDMX/CSDL definitions: _directorylinkchange, entity, eventmessage, fileattachment, itemattachment, opentypeextension, outlookitem, referenceattachment_. APIs associated with these resources contains blank path (until they are manually corrected by the owner team). 
+* The casing of object types are case-sensitive. `"@odata.type": "microsoft.graph.audiotrack"` and `"@odata.type": "microsoft.graph.audioTrack"` are treated differently. If you find resource not found errors, check the casing of the @odata.type in the resource file to make sure the casing is right (should be camel case). 
+
+There may be others... Go through each of the error and fix them prior to proceeding. Any PR with errors can't be merged. 
+
+## TOC (Table of Content on graph.microwsoft.io website) 
+Contact us if you need updates to update TOC changes. 
+
+## ADVANCED: Run Markdown Scanner tool locally for large set of changes
+
+If you make a LOT of changes, it is worth considering running markdown scanner locally to avoid having to understand issues through the Github PR. the tool [markdown scanner](https://github.com/OneDrive/markdown-scanner) can be downloaded and setup locally. 
 
 If you face any issues in running the tool, let us know.
 
-## Submit a pull request
-
-1. Fork and clone https://github.com/OfficeDev/microsoft-graph-docs
-1. Switch to "v1.0" branch for v1.0 changes
-1. Switch to "beta" branch for beta changes 
-1. Perform edits under your account and send pull requests to merge your changes. 
-1. Do not push changes under /officedev account directly. 
-
-
-## to run the scanner 
+### to run the scanner 
 
 C:\Windows\Microsoft.NET\Framework64\v4.0.30319\msbuild MarkdownScanner.sln 
 
 \markdown-scanner\ApiDocs.Console\bin\Debug>apidocs check-docs --path ..\..\rest_spec\markdowns
+
 
 ## Questions or concerns
 

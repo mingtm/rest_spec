@@ -1,5 +1,5 @@
 {
-  "name": "eventMessage",
+  "name": "EventMessage",
   "description": "",
   "collectionOf": null,
   "isComplexType": false,
@@ -28,80 +28,24 @@
   },
   "properties": [
     {
-      "name": "receivedDateTime",
-      "description": "",
-      "isKey": false,
-      "dataType": "dateTimeOffset",
-      "isReadOnly": false,
-      "enumName": null,
-      "isCollection": false,
-      "isRelationship": false,
-      "supportFilter": false,
-      "allowPostToCollection": true,
-      "isNullable": null,
-      "isUnicode": null
-    },
-    {
-      "name": "sentDateTime",
-      "description": "",
-      "isKey": false,
-      "dataType": "dateTimeOffset",
-      "isReadOnly": false,
-      "enumName": null,
-      "isCollection": false,
-      "isRelationship": false,
-      "supportFilter": false,
-      "allowPostToCollection": true,
-      "isNullable": null,
-      "isUnicode": null
-    },
-    {
-      "name": "hasAttachments",
-      "description": "",
-      "isKey": false,
-      "dataType": "boolean",
-      "isReadOnly": false,
-      "enumName": null,
-      "isCollection": false,
-      "isRelationship": false,
-      "supportFilter": false,
-      "allowPostToCollection": true,
-      "isNullable": null,
-      "isUnicode": null
-    },
-    {
-      "name": "internetMessageId",
+      "name": "MeetingMessageType",
       "description": "",
       "isKey": false,
       "dataType": "string",
       "isReadOnly": false,
-      "enumName": null,
+      "enumName": "MeetingMessageType",
       "isCollection": false,
       "isRelationship": false,
       "supportFilter": false,
       "allowPostToCollection": true,
       "isNullable": null,
-      "isUnicode": false
+      "isUnicode": null
     },
     {
-      "name": "subject",
+      "name": "StartDateTime",
       "description": "",
       "isKey": false,
-      "dataType": "string",
-      "isReadOnly": false,
-      "enumName": null,
-      "isCollection": false,
-      "isRelationship": false,
-      "supportFilter": false,
-      "allowPostToCollection": true,
-      "isNullable": null,
-      "isUnicode": false
-    },
-    {
-      "name": "body",
-      "description": "",
-      "isKey": false,
-      "dataType": "itemBody",
+      "dataType": "DateTimeTimeZone",
       "isReadOnly": false,
       "enumName": null,
       "isCollection": false,
@@ -112,52 +56,10 @@
       "isUnicode": null
     },
     {
-      "name": "bodyPreview",
+      "name": "EndDateTime",
       "description": "",
       "isKey": false,
-      "dataType": "string",
-      "isReadOnly": false,
-      "enumName": null,
-      "isCollection": false,
-      "isRelationship": false,
-      "supportFilter": false,
-      "allowPostToCollection": true,
-      "isNullable": null,
-      "isUnicode": false
-    },
-    {
-      "name": "importance",
-      "description": "",
-      "isKey": false,
-      "dataType": "string",
-      "isReadOnly": false,
-      "enumName": "importance",
-      "isCollection": false,
-      "isRelationship": false,
-      "supportFilter": false,
-      "allowPostToCollection": true,
-      "isNullable": null,
-      "isUnicode": null
-    },
-    {
-      "name": "parentFolderId",
-      "description": "",
-      "isKey": false,
-      "dataType": "string",
-      "isReadOnly": false,
-      "enumName": null,
-      "isCollection": false,
-      "isRelationship": false,
-      "supportFilter": false,
-      "allowPostToCollection": true,
-      "isNullable": null,
-      "isUnicode": false
-    },
-    {
-      "name": "sender",
-      "description": "",
-      "isKey": false,
-      "dataType": "recipient",
+      "dataType": "DateTimeTimeZone",
       "isReadOnly": false,
       "enumName": null,
       "isCollection": false,
@@ -168,10 +70,10 @@
       "isUnicode": null
     },
     {
-      "name": "from",
+      "name": "Location",
       "description": "",
       "isKey": false,
-      "dataType": "recipient",
+      "dataType": "Location",
       "isReadOnly": false,
       "enumName": null,
       "isCollection": false,
@@ -182,10 +84,220 @@
       "isUnicode": null
     },
     {
-      "name": "toRecipients",
+      "name": "Type",
       "description": "",
       "isKey": false,
-      "dataType": "recipient",
+      "dataType": "string",
+      "isReadOnly": false,
+      "enumName": "EventType",
+      "isCollection": false,
+      "isRelationship": false,
+      "supportFilter": false,
+      "allowPostToCollection": true,
+      "isNullable": null,
+      "isUnicode": null
+    },
+    {
+      "name": "Recurrence",
+      "description": "",
+      "isKey": false,
+      "dataType": "PatternedRecurrence",
+      "isReadOnly": false,
+      "enumName": null,
+      "isCollection": false,
+      "isRelationship": false,
+      "supportFilter": false,
+      "allowPostToCollection": true,
+      "isNullable": null,
+      "isUnicode": null
+    },
+    {
+      "name": "IsOutOfDate",
+      "description": "",
+      "isKey": false,
+      "dataType": "Boolean",
+      "isReadOnly": false,
+      "enumName": null,
+      "isCollection": false,
+      "isRelationship": false,
+      "supportFilter": false,
+      "allowPostToCollection": true,
+      "isNullable": null,
+      "isUnicode": null
+    },
+    {
+      "name": "IsAllDay",
+      "description": "",
+      "isKey": false,
+      "dataType": "Boolean",
+      "isReadOnly": false,
+      "enumName": null,
+      "isCollection": false,
+      "isRelationship": false,
+      "supportFilter": false,
+      "allowPostToCollection": true,
+      "isNullable": null,
+      "isUnicode": null
+    },
+    {
+      "name": "ReceivedDateTime",
+      "description": "",
+      "isKey": false,
+      "dataType": "DateTimeOffset",
+      "isReadOnly": false,
+      "enumName": null,
+      "isCollection": false,
+      "isRelationship": false,
+      "supportFilter": false,
+      "allowPostToCollection": true,
+      "isNullable": null,
+      "isUnicode": null
+    },
+    {
+      "name": "SentDateTime",
+      "description": "",
+      "isKey": false,
+      "dataType": "DateTimeOffset",
+      "isReadOnly": false,
+      "enumName": null,
+      "isCollection": false,
+      "isRelationship": false,
+      "supportFilter": false,
+      "allowPostToCollection": true,
+      "isNullable": null,
+      "isUnicode": null
+    },
+    {
+      "name": "HasAttachments",
+      "description": "",
+      "isKey": false,
+      "dataType": "Boolean",
+      "isReadOnly": false,
+      "enumName": null,
+      "isCollection": false,
+      "isRelationship": false,
+      "supportFilter": false,
+      "allowPostToCollection": true,
+      "isNullable": null,
+      "isUnicode": null
+    },
+    {
+      "name": "InternetMessageId",
+      "description": "",
+      "isKey": false,
+      "dataType": "String",
+      "isReadOnly": false,
+      "enumName": null,
+      "isCollection": false,
+      "isRelationship": false,
+      "supportFilter": false,
+      "allowPostToCollection": true,
+      "isNullable": null,
+      "isUnicode": null
+    },
+    {
+      "name": "Subject",
+      "description": "",
+      "isKey": false,
+      "dataType": "String",
+      "isReadOnly": false,
+      "enumName": null,
+      "isCollection": false,
+      "isRelationship": false,
+      "supportFilter": false,
+      "allowPostToCollection": true,
+      "isNullable": null,
+      "isUnicode": null
+    },
+    {
+      "name": "Body",
+      "description": "",
+      "isKey": false,
+      "dataType": "ItemBody",
+      "isReadOnly": false,
+      "enumName": null,
+      "isCollection": false,
+      "isRelationship": false,
+      "supportFilter": false,
+      "allowPostToCollection": true,
+      "isNullable": null,
+      "isUnicode": null
+    },
+    {
+      "name": "BodyPreview",
+      "description": "",
+      "isKey": false,
+      "dataType": "String",
+      "isReadOnly": false,
+      "enumName": null,
+      "isCollection": false,
+      "isRelationship": false,
+      "supportFilter": false,
+      "allowPostToCollection": true,
+      "isNullable": null,
+      "isUnicode": null
+    },
+    {
+      "name": "Importance",
+      "description": "",
+      "isKey": false,
+      "dataType": "string",
+      "isReadOnly": false,
+      "enumName": "Importance",
+      "isCollection": false,
+      "isRelationship": false,
+      "supportFilter": false,
+      "allowPostToCollection": true,
+      "isNullable": null,
+      "isUnicode": null
+    },
+    {
+      "name": "ParentFolderId",
+      "description": "",
+      "isKey": false,
+      "dataType": "String",
+      "isReadOnly": false,
+      "enumName": null,
+      "isCollection": false,
+      "isRelationship": false,
+      "supportFilter": false,
+      "allowPostToCollection": true,
+      "isNullable": null,
+      "isUnicode": null
+    },
+    {
+      "name": "Sender",
+      "description": "",
+      "isKey": false,
+      "dataType": "Recipient",
+      "isReadOnly": false,
+      "enumName": null,
+      "isCollection": false,
+      "isRelationship": false,
+      "supportFilter": false,
+      "allowPostToCollection": true,
+      "isNullable": null,
+      "isUnicode": null
+    },
+    {
+      "name": "From",
+      "description": "",
+      "isKey": false,
+      "dataType": "Recipient",
+      "isReadOnly": false,
+      "enumName": null,
+      "isCollection": false,
+      "isRelationship": false,
+      "supportFilter": false,
+      "allowPostToCollection": true,
+      "isNullable": null,
+      "isUnicode": null
+    },
+    {
+      "name": "ToRecipients",
+      "description": "",
+      "isKey": false,
+      "dataType": "Recipient",
       "isReadOnly": false,
       "enumName": null,
       "isCollection": true,
@@ -196,10 +308,10 @@
       "isUnicode": null
     },
     {
-      "name": "ccRecipients",
+      "name": "CcRecipients",
       "description": "",
       "isKey": false,
-      "dataType": "recipient",
+      "dataType": "Recipient",
       "isReadOnly": false,
       "enumName": null,
       "isCollection": true,
@@ -210,10 +322,10 @@
       "isUnicode": null
     },
     {
-      "name": "bccRecipients",
+      "name": "BccRecipients",
       "description": "",
       "isKey": false,
-      "dataType": "recipient",
+      "dataType": "Recipient",
       "isReadOnly": false,
       "enumName": null,
       "isCollection": true,
@@ -224,10 +336,10 @@
       "isUnicode": null
     },
     {
-      "name": "replyTo",
+      "name": "ReplyTo",
       "description": "",
       "isKey": false,
-      "dataType": "recipient",
+      "dataType": "Recipient",
       "isReadOnly": false,
       "enumName": null,
       "isCollection": true,
@@ -238,26 +350,124 @@
       "isUnicode": null
     },
     {
-      "name": "conversationId",
+      "name": "ConversationId",
+      "description": "",
+      "isKey": false,
+      "dataType": "String",
+      "isReadOnly": false,
+      "enumName": null,
+      "isCollection": false,
+      "isRelationship": false,
+      "supportFilter": false,
+      "allowPostToCollection": true,
+      "isNullable": null,
+      "isUnicode": null
+    },
+    {
+      "name": "ConversationIndex",
+      "description": "",
+      "isKey": false,
+      "dataType": "Binary",
+      "isReadOnly": false,
+      "enumName": null,
+      "isCollection": false,
+      "isRelationship": false,
+      "supportFilter": false,
+      "allowPostToCollection": true,
+      "isNullable": null,
+      "isUnicode": null
+    },
+    {
+      "name": "UniqueBody",
+      "description": "",
+      "isKey": false,
+      "dataType": "ItemBody",
+      "isReadOnly": false,
+      "enumName": null,
+      "isCollection": false,
+      "isRelationship": false,
+      "supportFilter": false,
+      "allowPostToCollection": true,
+      "isNullable": null,
+      "isUnicode": null
+    },
+    {
+      "name": "IsDeliveryReceiptRequested",
+      "description": "",
+      "isKey": false,
+      "dataType": "Boolean",
+      "isReadOnly": false,
+      "enumName": null,
+      "isCollection": false,
+      "isRelationship": false,
+      "supportFilter": false,
+      "allowPostToCollection": true,
+      "isNullable": null,
+      "isUnicode": null
+    },
+    {
+      "name": "IsReadReceiptRequested",
+      "description": "",
+      "isKey": false,
+      "dataType": "Boolean",
+      "isReadOnly": false,
+      "enumName": null,
+      "isCollection": false,
+      "isRelationship": false,
+      "supportFilter": false,
+      "allowPostToCollection": true,
+      "isNullable": null,
+      "isUnicode": null
+    },
+    {
+      "name": "IsRead",
+      "description": "",
+      "isKey": false,
+      "dataType": "Boolean",
+      "isReadOnly": false,
+      "enumName": null,
+      "isCollection": false,
+      "isRelationship": false,
+      "supportFilter": false,
+      "allowPostToCollection": true,
+      "isNullable": null,
+      "isUnicode": null
+    },
+    {
+      "name": "IsDraft",
+      "description": "",
+      "isKey": false,
+      "dataType": "Boolean",
+      "isReadOnly": false,
+      "enumName": null,
+      "isCollection": false,
+      "isRelationship": false,
+      "supportFilter": false,
+      "allowPostToCollection": true,
+      "isNullable": null,
+      "isUnicode": null
+    },
+    {
+      "name": "WebLink",
+      "description": "",
+      "isKey": false,
+      "dataType": "String",
+      "isReadOnly": false,
+      "enumName": null,
+      "isCollection": false,
+      "isRelationship": false,
+      "supportFilter": false,
+      "allowPostToCollection": true,
+      "isNullable": null,
+      "isUnicode": null
+    },
+    {
+      "name": "InferenceClassification",
       "description": "",
       "isKey": false,
       "dataType": "string",
       "isReadOnly": false,
-      "enumName": null,
-      "isCollection": false,
-      "isRelationship": false,
-      "supportFilter": false,
-      "allowPostToCollection": true,
-      "isNullable": null,
-      "isUnicode": false
-    },
-    {
-      "name": "uniqueBody",
-      "description": "",
-      "isKey": false,
-      "dataType": "itemBody",
-      "isReadOnly": false,
-      "enumName": null,
+      "enumName": "InferenceClassificationType",
       "isCollection": false,
       "isRelationship": false,
       "supportFilter": false,
@@ -266,122 +476,10 @@
       "isUnicode": null
     },
     {
-      "name": "isDeliveryReceiptRequested",
+      "name": "UnsubscribeData",
       "description": "",
       "isKey": false,
-      "dataType": "boolean",
-      "isReadOnly": false,
-      "enumName": null,
-      "isCollection": false,
-      "isRelationship": false,
-      "supportFilter": false,
-      "allowPostToCollection": true,
-      "isNullable": null,
-      "isUnicode": null
-    },
-    {
-      "name": "isReadReceiptRequested",
-      "description": "",
-      "isKey": false,
-      "dataType": "boolean",
-      "isReadOnly": false,
-      "enumName": null,
-      "isCollection": false,
-      "isRelationship": false,
-      "supportFilter": false,
-      "allowPostToCollection": true,
-      "isNullable": null,
-      "isUnicode": null
-    },
-    {
-      "name": "isRead",
-      "description": "",
-      "isKey": false,
-      "dataType": "boolean",
-      "isReadOnly": false,
-      "enumName": null,
-      "isCollection": false,
-      "isRelationship": false,
-      "supportFilter": false,
-      "allowPostToCollection": true,
-      "isNullable": null,
-      "isUnicode": null
-    },
-    {
-      "name": "isDraft",
-      "description": "",
-      "isKey": false,
-      "dataType": "boolean",
-      "isReadOnly": false,
-      "enumName": null,
-      "isCollection": false,
-      "isRelationship": false,
-      "supportFilter": false,
-      "allowPostToCollection": true,
-      "isNullable": null,
-      "isUnicode": null
-    },
-    {
-      "name": "webLink",
-      "description": "",
-      "isKey": false,
-      "dataType": "string",
-      "isReadOnly": false,
-      "enumName": null,
-      "isCollection": false,
-      "isRelationship": false,
-      "supportFilter": false,
-      "allowPostToCollection": true,
-      "isNullable": null,
-      "isUnicode": false
-    },
-    {
-      "name": "createdDateTime",
-      "description": "",
-      "isKey": false,
-      "dataType": "dateTimeOffset",
-      "isReadOnly": false,
-      "enumName": null,
-      "isCollection": false,
-      "isRelationship": false,
-      "supportFilter": false,
-      "allowPostToCollection": true,
-      "isNullable": null,
-      "isUnicode": null
-    },
-    {
-      "name": "lastModifiedDateTime",
-      "description": "",
-      "isKey": false,
-      "dataType": "dateTimeOffset",
-      "isReadOnly": false,
-      "enumName": null,
-      "isCollection": false,
-      "isRelationship": false,
-      "supportFilter": false,
-      "allowPostToCollection": true,
-      "isNullable": null,
-      "isUnicode": null
-    },
-    {
-      "name": "changeKey",
-      "description": "",
-      "isKey": false,
-      "dataType": "string",
-      "isReadOnly": false,
-      "enumName": null,
-      "isCollection": false,
-      "isRelationship": false,
-      "supportFilter": false,
-      "allowPostToCollection": true,
-      "isNullable": null,
-      "isUnicode": false
-    },
-    {
-      "name": "categories",
-      "description": "",
-      "isKey": false,
-      "dataType": "string",
+      "dataType": "String",
       "isReadOnly": false,
       "enumName": null,
       "isCollection": true,
@@ -389,41 +487,111 @@
       "supportFilter": false,
       "allowPostToCollection": true,
       "isNullable": null,
-      "isUnicode": false
+      "isUnicode": null
     },
     {
-      "name": "id",
+      "name": "UnsubscribeEnabled",
+      "description": "",
+      "isKey": false,
+      "dataType": "Boolean",
+      "isReadOnly": false,
+      "enumName": null,
+      "isCollection": false,
+      "isRelationship": false,
+      "supportFilter": false,
+      "allowPostToCollection": true,
+      "isNullable": null,
+      "isUnicode": null
+    },
+    {
+      "name": "Flag",
+      "description": "",
+      "isKey": false,
+      "dataType": "FollowupFlag",
+      "isReadOnly": false,
+      "enumName": null,
+      "isCollection": false,
+      "isRelationship": false,
+      "supportFilter": false,
+      "allowPostToCollection": true,
+      "isNullable": null,
+      "isUnicode": null
+    },
+    {
+      "name": "CreatedDateTime",
+      "description": "",
+      "isKey": false,
+      "dataType": "DateTimeOffset",
+      "isReadOnly": false,
+      "enumName": null,
+      "isCollection": false,
+      "isRelationship": false,
+      "supportFilter": false,
+      "allowPostToCollection": true,
+      "isNullable": null,
+      "isUnicode": null
+    },
+    {
+      "name": "LastModifiedDateTime",
+      "description": "",
+      "isKey": false,
+      "dataType": "DateTimeOffset",
+      "isReadOnly": false,
+      "enumName": null,
+      "isCollection": false,
+      "isRelationship": false,
+      "supportFilter": false,
+      "allowPostToCollection": true,
+      "isNullable": null,
+      "isUnicode": null
+    },
+    {
+      "name": "ChangeKey",
+      "description": "",
+      "isKey": false,
+      "dataType": "String",
+      "isReadOnly": false,
+      "enumName": null,
+      "isCollection": false,
+      "isRelationship": false,
+      "supportFilter": false,
+      "allowPostToCollection": true,
+      "isNullable": null,
+      "isUnicode": null
+    },
+    {
+      "name": "Categories",
+      "description": "",
+      "isKey": false,
+      "dataType": "String",
+      "isReadOnly": false,
+      "enumName": null,
+      "isCollection": true,
+      "isRelationship": false,
+      "supportFilter": false,
+      "allowPostToCollection": true,
+      "isNullable": null,
+      "isUnicode": null
+    },
+    {
+      "name": "Id",
       "description": "",
       "isKey": true,
-      "dataType": "string",
+      "dataType": "String",
       "isReadOnly": true,
       "enumName": null,
       "isCollection": false,
       "isRelationship": false,
       "supportFilter": false,
       "allowPostToCollection": true,
-      "isNullable": false,
-      "isUnicode": false
-    },
-    {
-      "name": "meetingMessageType",
-      "description": "",
-      "isKey": false,
-      "dataType": "string",
-      "isReadOnly": false,
-      "enumName": "meetingMessageType",
-      "isCollection": false,
-      "isRelationship": false,
-      "supportFilter": false,
-      "allowPostToCollection": true,
       "isNullable": null,
       "isUnicode": null
     },
     {
-      "name": "attachments",
+      "name": "Extensions",
       "description": "",
       "isKey": false,
-      "dataType": "attachment",
+      "dataType": "Extension",
       "isReadOnly": true,
       "enumName": null,
       "isCollection": true,
@@ -434,10 +602,52 @@
       "isUnicode": null
     },
     {
-      "name": "event",
+      "name": "Attachments",
       "description": "",
       "isKey": false,
-      "dataType": "event",
+      "dataType": "Attachment",
+      "isReadOnly": true,
+      "enumName": null,
+      "isCollection": true,
+      "isRelationship": true,
+      "supportFilter": false,
+      "allowPostToCollection": true,
+      "isNullable": true,
+      "isUnicode": null
+    },
+    {
+      "name": "SingleValueExtendedProperties",
+      "description": "",
+      "isKey": false,
+      "dataType": "SingleValueLegacyExtendedProperty",
+      "isReadOnly": true,
+      "enumName": null,
+      "isCollection": true,
+      "isRelationship": true,
+      "supportFilter": false,
+      "allowPostToCollection": true,
+      "isNullable": true,
+      "isUnicode": null
+    },
+    {
+      "name": "MultiValueExtendedProperties",
+      "description": "",
+      "isKey": false,
+      "dataType": "MultiValueLegacyExtendedProperty",
+      "isReadOnly": true,
+      "enumName": null,
+      "isCollection": true,
+      "isRelationship": true,
+      "supportFilter": false,
+      "allowPostToCollection": true,
+      "isNullable": true,
+      "isUnicode": null
+    },
+    {
+      "name": "Event",
+      "description": "",
+      "isKey": false,
+      "dataType": "Event",
       "isReadOnly": true,
       "enumName": null,
       "isCollection": false,
@@ -450,11 +660,11 @@
   ],
   "methods": [
     {
-      "name": "copy",
+      "name": "Copy",
       "displayName": "",
       "description": "",
       "prerequisites": "",
-      "returnType": "message",
+      "returnType": "Message",
       "isReturnNullable": null,
       "isReturnTypeCollection": false,
       "httpSuccessCode": "200",
@@ -467,23 +677,23 @@
       ],
       "parameters": [
         {
-          "name": "destinationId",
+          "name": "DestinationId",
           "description": "",
-          "dataType": "string",
+          "dataType": "String",
           "isCollection": false,
           "isRequired": true,
           "enumName": null,
           "isNullable": null,
-          "isUnicode": false
+          "isUnicode": null
         }
       ]
     },
     {
-      "name": "move",
+      "name": "Move",
       "displayName": "",
       "description": "",
       "prerequisites": "",
-      "returnType": "message",
+      "returnType": "Message",
       "isReturnNullable": null,
       "isReturnTypeCollection": false,
       "httpSuccessCode": "200",
@@ -496,83 +706,23 @@
       ],
       "parameters": [
         {
-          "name": "destinationId",
+          "name": "DestinationId",
           "description": "",
-          "dataType": "string",
+          "dataType": "String",
           "isCollection": false,
           "isRequired": true,
           "enumName": null,
           "isNullable": null,
-          "isUnicode": false
+          "isUnicode": null
         }
       ]
     },
     {
-      "name": "createReply",
+      "name": "CreateReply",
       "displayName": "",
       "description": "",
       "prerequisites": "",
-      "returnType": "message",
-      "isReturnNullable": null,
-      "isReturnTypeCollection": false,
-      "httpSuccessCode": "200",
-      "isFunction": false,
-      "scopes": [
-
-      ],
-      "errorCodes": [
-
-      ],
-      "parameters": [
-
-      ]
-    },
-    {
-      "name": "createReplyAll",
-      "displayName": "",
-      "description": "",
-      "prerequisites": "",
-      "returnType": "message",
-      "isReturnNullable": null,
-      "isReturnTypeCollection": false,
-      "httpSuccessCode": "200",
-      "isFunction": false,
-      "scopes": [
-
-      ],
-      "errorCodes": [
-
-      ],
-      "parameters": [
-
-      ]
-    },
-    {
-      "name": "createForward",
-      "displayName": "",
-      "description": "",
-      "prerequisites": "",
-      "returnType": "message",
-      "isReturnNullable": null,
-      "isReturnTypeCollection": false,
-      "httpSuccessCode": "200",
-      "isFunction": false,
-      "scopes": [
-
-      ],
-      "errorCodes": [
-
-      ],
-      "parameters": [
-
-      ]
-    },
-    {
-      "name": "reply",
-      "displayName": "",
-      "description": "",
-      "prerequisites": "",
-      "returnType": null,
+      "returnType": "Message",
       "isReturnNullable": null,
       "isReturnTypeCollection": false,
       "httpSuccessCode": "200",
@@ -585,77 +735,107 @@
       ],
       "parameters": [
         {
-          "name": "comment",
+          "name": "Message",
           "description": "",
-          "dataType": "string",
+          "dataType": "Message",
           "isCollection": false,
           "isRequired": true,
           "enumName": null,
           "isNullable": null,
-          "isUnicode": false
-        }
-      ]
-    },
-    {
-      "name": "replyAll",
-      "displayName": "",
-      "description": "",
-      "prerequisites": "",
-      "returnType": null,
-      "isReturnNullable": null,
-      "isReturnTypeCollection": false,
-      "httpSuccessCode": "200",
-      "isFunction": false,
-      "scopes": [
-
-      ],
-      "errorCodes": [
-
-      ],
-      "parameters": [
-        {
-          "name": "comment",
-          "description": "",
-          "dataType": "string",
-          "isCollection": false,
-          "isRequired": true,
-          "enumName": null,
-          "isNullable": null,
-          "isUnicode": false
-        }
-      ]
-    },
-    {
-      "name": "forward",
-      "displayName": "",
-      "description": "",
-      "prerequisites": "",
-      "returnType": null,
-      "isReturnNullable": null,
-      "isReturnTypeCollection": false,
-      "httpSuccessCode": "200",
-      "isFunction": false,
-      "scopes": [
-
-      ],
-      "errorCodes": [
-
-      ],
-      "parameters": [
-        {
-          "name": "comment",
-          "description": "",
-          "dataType": "string",
-          "isCollection": false,
-          "isRequired": true,
-          "enumName": null,
-          "isNullable": null,
-          "isUnicode": false
+          "isUnicode": null
         },
         {
-          "name": "toRecipients",
+          "name": "Comment",
           "description": "",
-          "dataType": "recipient",
+          "dataType": "String",
+          "isCollection": false,
+          "isRequired": true,
+          "enumName": null,
+          "isNullable": null,
+          "isUnicode": null
+        }
+      ]
+    },
+    {
+      "name": "CreateReplyAll",
+      "displayName": "",
+      "description": "",
+      "prerequisites": "",
+      "returnType": "Message",
+      "isReturnNullable": null,
+      "isReturnTypeCollection": false,
+      "httpSuccessCode": "200",
+      "isFunction": false,
+      "scopes": [
+
+      ],
+      "errorCodes": [
+
+      ],
+      "parameters": [
+        {
+          "name": "Message",
+          "description": "",
+          "dataType": "Message",
+          "isCollection": false,
+          "isRequired": true,
+          "enumName": null,
+          "isNullable": null,
+          "isUnicode": null
+        },
+        {
+          "name": "Comment",
+          "description": "",
+          "dataType": "String",
+          "isCollection": false,
+          "isRequired": true,
+          "enumName": null,
+          "isNullable": null,
+          "isUnicode": null
+        }
+      ]
+    },
+    {
+      "name": "CreateForward",
+      "displayName": "",
+      "description": "",
+      "prerequisites": "",
+      "returnType": "Message",
+      "isReturnNullable": null,
+      "isReturnTypeCollection": false,
+      "httpSuccessCode": "200",
+      "isFunction": false,
+      "scopes": [
+
+      ],
+      "errorCodes": [
+
+      ],
+      "parameters": [
+        {
+          "name": "Message",
+          "description": "",
+          "dataType": "Message",
+          "isCollection": false,
+          "isRequired": true,
+          "enumName": null,
+          "isNullable": null,
+          "isUnicode": null
+        },
+        {
+          "name": "Comment",
+          "description": "",
+          "dataType": "String",
+          "isCollection": false,
+          "isRequired": true,
+          "enumName": null,
+          "isNullable": null,
+          "isUnicode": null
+        },
+        {
+          "name": "ToRecipients",
+          "description": "",
+          "dataType": "Recipient",
           "isCollection": true,
           "isRequired": true,
           "enumName": null,
@@ -665,7 +845,154 @@
       ]
     },
     {
-      "name": "send",
+      "name": "Reply",
+      "displayName": "",
+      "description": "",
+      "prerequisites": "",
+      "returnType": null,
+      "isReturnNullable": null,
+      "isReturnTypeCollection": false,
+      "httpSuccessCode": "200",
+      "isFunction": false,
+      "scopes": [
+
+      ],
+      "errorCodes": [
+
+      ],
+      "parameters": [
+        {
+          "name": "Message",
+          "description": "",
+          "dataType": "Message",
+          "isCollection": false,
+          "isRequired": true,
+          "enumName": null,
+          "isNullable": null,
+          "isUnicode": null
+        },
+        {
+          "name": "Comment",
+          "description": "",
+          "dataType": "String",
+          "isCollection": false,
+          "isRequired": true,
+          "enumName": null,
+          "isNullable": null,
+          "isUnicode": null
+        }
+      ]
+    },
+    {
+      "name": "ReplyAll",
+      "displayName": "",
+      "description": "",
+      "prerequisites": "",
+      "returnType": null,
+      "isReturnNullable": null,
+      "isReturnTypeCollection": false,
+      "httpSuccessCode": "200",
+      "isFunction": false,
+      "scopes": [
+
+      ],
+      "errorCodes": [
+
+      ],
+      "parameters": [
+        {
+          "name": "Message",
+          "description": "",
+          "dataType": "Message",
+          "isCollection": false,
+          "isRequired": true,
+          "enumName": null,
+          "isNullable": null,
+          "isUnicode": null
+        },
+        {
+          "name": "Comment",
+          "description": "",
+          "dataType": "String",
+          "isCollection": false,
+          "isRequired": true,
+          "enumName": null,
+          "isNullable": null,
+          "isUnicode": null
+        }
+      ]
+    },
+    {
+      "name": "Forward",
+      "displayName": "",
+      "description": "",
+      "prerequisites": "",
+      "returnType": null,
+      "isReturnNullable": null,
+      "isReturnTypeCollection": false,
+      "httpSuccessCode": "200",
+      "isFunction": false,
+      "scopes": [
+
+      ],
+      "errorCodes": [
+
+      ],
+      "parameters": [
+        {
+          "name": "Message",
+          "description": "",
+          "dataType": "Message",
+          "isCollection": false,
+          "isRequired": true,
+          "enumName": null,
+          "isNullable": null,
+          "isUnicode": null
+        },
+        {
+          "name": "Comment",
+          "description": "",
+          "dataType": "String",
+          "isCollection": false,
+          "isRequired": true,
+          "enumName": null,
+          "isNullable": null,
+          "isUnicode": null
+        },
+        {
+          "name": "ToRecipients",
+          "description": "",
+          "dataType": "Recipient",
+          "isCollection": true,
+          "isRequired": true,
+          "enumName": null,
+          "isNullable": null,
+          "isUnicode": null
+        }
+      ]
+    },
+    {
+      "name": "Send",
+      "displayName": "",
+      "description": "",
+      "prerequisites": "",
+      "returnType": null,
+      "isReturnNullable": null,
+      "isReturnTypeCollection": false,
+      "httpSuccessCode": "200",
+      "isFunction": false,
+      "scopes": [
+
+      ],
+      "errorCodes": [
+
+      ],
+      "parameters": [
+
+      ]
+    },
+    {
+      "name": "Unsubscribe",
       "displayName": "",
       "description": "",
       "prerequisites": "",

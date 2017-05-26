@@ -1,4 +1,4 @@
-# itemBody resource type
+# ItemBody resource type
 
 
 
@@ -6,8 +6,8 @@
 ### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|content|string||
-|contentType|String| Possible values are: `text`, `html`.|
+|Content|String||
+|ContentType|String| Possible values are: `Text`, `HTML`.|
 
 ### JSON representation
 
@@ -18,13 +18,13 @@ Here is a JSON representation of the resource.
   "optionalProperties": [
 
   ],
-  "@odata.type": "microsoft.graph.itemBody"
+  "@odata.type": "microsoft.graph.ItemBody"
 }-->
 
 ```json
 {
-  "content": "string",
-  "contentType": "String"
+  "Content": "String",
+  "ContentType": "String"
 }
 
 ```
@@ -33,7 +33,7 @@ Here is a JSON representation of the resource.
 2015-10-25 14:57:30 UTC -->
 <!-- {
   "type": "#page.annotation",
-  "description": "itemBody resource",
+  "description": "ItemBody resource",
   "keywords": "",
   "section": "documentation",
   "tocPath": ""

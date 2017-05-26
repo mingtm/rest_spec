@@ -1,14 +1,13 @@
-# Delete mailFolder
+# Delete MailFolder
 
-Delete mailFolder.
+Delete MailFolder.
 ### Prerequisites
 The following **scopes** are required to execute this API: 
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
-DELETE /me/mailFolders/<id>
-DELETE /users/<id>/mailFolders/<id>
-DELETE /drive/root/createdByUser/mailFolders/<id>
+DELETE /me/MailFolders/<Id>
+DELETE /Users/<Id>/MailFolders/<Id>
 
 ```
 ### Request headers
@@ -32,7 +31,7 @@ Here is an example of the request.
   "name": "delete_mailfolder"
 }-->
 ```http
-DELETE https://graph.microsoft.com/beta/me/mailFolders/<id>
+DELETE https://graph.microsoft.com/beta/me/MailFolders/<Id>
 ```
 ##### Response
 Here is an example of the response. Note: The response object shown here may be truncated for brevity. All of the properties will be returned from an actual call.
@@ -48,7 +47,7 @@ HTTP/1.1 204 No Content
 2015-10-25 14:57:30 UTC -->
 <!-- {
   "type": "#page.annotation",
-  "description": "Delete mailFolder",
+  "description": "Delete MailFolder",
   "keywords": "",
   "section": "documentation",
   "tocPath": ""

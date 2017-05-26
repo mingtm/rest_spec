@@ -1,4 +1,4 @@
-# calendarGroup resource type
+# CalendarGroup resource type
 
 
 
@@ -7,24 +7,24 @@
 
 | Method		   | Return Type	|Description|
 |:---------------|:--------|:----------|
-|[Get calendarGroup](../api/calendargroup_get.md) | [calendarGroup](calendargroup.md) |Read properties and relationships of calendarGroup object.|
-|[Create calendar](../api/calendargroup_post_calendars.md) |[calendar](calendar.md)| Create a new calendar by posting to the calendars collection.|
-|[List calendars](../api/calendargroup_list_calendars.md) |[calendar](calendar.md) collection| Get a calendar object collection.|
-|[Update](../api/calendargroup_update.md) | [calendarGroup](calendargroup.md)	|Update calendarGroup object. |
-|[Delete](../api/calendargroup_delete.md) | None |Delete calendarGroup object. |
+|[Get CalendarGroup](../api/calendargroup_get.md) | [CalendarGroup](calendargroup.md) |Read properties and relationships of calendarGroup object.|
+|[Create Calendar](../api/calendargroup_post_calendars.md) |[Calendar](calendar.md)| Create a new Calendar by posting to the Calendars collection.|
+|[List Calendars](../api/calendargroup_list_calendars.md) |[Calendar](calendar.md) collection| Get a Calendar object collection.|
+|[Update](../api/calendargroup_update.md) | [CalendarGroup](calendargroup.md)	|Update CalendarGroup object. |
+|[Delete](../api/calendargroup_delete.md) | None |Delete CalendarGroup object. |
 
 ### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|changeKey|string||
-|classId|guid||
-|id|string| Read-only.|
-|name|string||
+|ChangeKey|String||
+|ClassId|Guid||
+|Id|String| Read-only.|
+|Name|String||
 
 ### Relationships
 | Relationship | Type	|Description|
 |:---------------|:--------|:----------|
-|calendars|[calendar](calendar.md) collection| Read-only. Nullable.|
+|Calendars|[Calendar](calendar.md) collection| Read-only. Nullable.|
 
 ### JSON representation
 
@@ -35,15 +35,15 @@ Here is a JSON representation of the resource.
   "optionalProperties": [
 
   ],
-  "@odata.type": "microsoft.graph.calendarGroup"
+  "@odata.type": "microsoft.graph.CalendarGroup"
 }-->
 
 ```json
 {
-  "changeKey": "string",
-  "classId": "guid",
-  "id": "string (identifier)",
-  "name": "string"
+  "ChangeKey": "String",
+  "ClassId": "Guid",
+  "Id": "String (identifier)",
+  "Name": "String"
 }
 
 ```
@@ -52,7 +52,7 @@ Here is a JSON representation of the resource.
 2015-10-25 14:57:30 UTC -->
 <!-- {
   "type": "#page.annotation",
-  "description": "calendarGroup resource",
+  "description": "CalendarGroup resource",
   "keywords": "",
   "section": "documentation",
   "tocPath": ""

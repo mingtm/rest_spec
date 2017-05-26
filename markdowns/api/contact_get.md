@@ -1,4 +1,4 @@
-# Get contact
+# Get Contact
 
 Retrieve the properties and relationships of contact object.
 ### Prerequisites
@@ -6,16 +6,12 @@ The following **scopes** are required to execute this API:
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
-GET /me/contacts/<id>
-GET /users/<id>/contacts/<id>
-GET /me/contactFolders/<id>/contacts/<id>
+GET /me/Contacts/<Id>
+GET /Users/<Id>/Contacts/<Id>
+GET /me/ContactFolders/<Id>/Contacts/<Id>
 ```
 ### Optional query parameters
-|Name|Value|Description|
-|:---------------|:--------|:-------|
-|$count|none|The count of related entities can be requested by specifying the $count query option.|
-|$expand|string|Comma-separated list of relationships to expand and include in the response. See relationships table of [contact](../resources/contact.md) object for supported names. |
-|$select|string|Comma-separated list of properties to include in the response.|
+This method supports the [OData Query Parameters](http://graph.microsoft.io/docs/overview/query_parameters) to help customize the response.
 
 ### Request headers
 | Name      |Description|
@@ -26,7 +22,7 @@ GET /me/contactFolders/<id>/contacts/<id>
 ### Request body
 Do not supply a request body for this method.
 ### Response
-If successful, this method returns a `200 OK` response code and [contact](../resources/contact.md) object in the response body.
+If successful, this method returns a `200 OK` response code and [Contact](../resources/contact.md) object in the response body.
 ### Example
 ##### Request
 Here is an example of the request.
@@ -35,14 +31,14 @@ Here is an example of the request.
   "name": "get_contact"
 }-->
 ```http
-GET https://graph.microsoft.com/beta/me/contacts/<id>
+GET https://graph.microsoft.com/beta/me/Contacts/<Id>
 ```
 ##### Response
 Here is an example of the response. Note: The response object shown here may be truncated for brevity. All of the properties will be returned from an actual call.
 <!-- {
   "blockType": "response",
   "truncated": true,
-  "@odata.type": "microsoft.graph.contact"
+  "@odata.type": "microsoft.graph.Contact"
 } -->
 ```http
 HTTP/1.1 200 OK
@@ -50,12 +46,12 @@ Content-type: application/json
 Content-length: 210
 
 {
-  "parentFolderId": "parentFolderId-value",
-  "birthday": "datetime-value",
-  "fileAs": "fileAs-value",
-  "displayName": "displayName-value",
-  "givenName": "givenName-value",
-  "initials": "initials-value"
+  "ParentFolderId": "ParentFolderId-value",
+  "Birthday": "datetime-value",
+  "FileAs": "FileAs-value",
+  "DisplayName": "DisplayName-value",
+  "GivenName": "GivenName-value",
+  "Initials": "Initials-value"
 }
 ```
 
@@ -63,7 +59,7 @@ Content-length: 210
 2015-10-25 14:57:30 UTC -->
 <!-- {
   "type": "#page.annotation",
-  "description": "Get contact",
+  "description": "Get Contact",
   "keywords": "",
   "section": "documentation",
   "tocPath": ""

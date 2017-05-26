@@ -19,17 +19,17 @@ In the request body, supply the values for relevant fields that should be update
 
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|contentBytes|binary||
-|contentId|string||
-|contentLocation|string||
-|contentType|string||
-|isInline|boolean||
-|lastModifiedDateTime|dateTimeOffset||
-|name|string||
-|size|int32||
+|ContentBytes|Binary||
+|ContentId|String||
+|ContentLocation|String||
+|ContentType|String||
+|IsInline|Boolean||
+|LastModifiedDateTime|DateTimeOffset||
+|Name|String||
+|Size|Int32||
 
 ### Response
-If successful, this method returns a `200 OK` response code and updated [fileAttachment](../resources/fileattachment.md) object in the response body.
+If successful, this method returns a `200 OK` response code and updated [FileAttachment](../resources/fileattachment.md) object in the response body.
 ### Example
 ##### Request
 Here is an example of the request.
@@ -43,12 +43,12 @@ Content-type: application/json
 Content-length: 228
 
 {
-  "contentId": "contentId-value",
-  "contentLocation": "contentLocation-value",
-  "contentBytes": "contentBytes-value",
-  "lastModifiedDateTime": "datetime-value",
-  "name": "name-value",
-  "contentType": "contentType-value"
+  "ContentId": "ContentId-value",
+  "ContentLocation": "ContentLocation-value",
+  "ContentBytes": "ContentBytes-value",
+  "LastModifiedDateTime": "datetime-value",
+  "Name": "Name-value",
+  "ContentType": "ContentType-value"
 }
 ```
 ##### Response
@@ -56,7 +56,7 @@ Here is an example of the response. Note: The response object shown here may be 
 <!-- {
   "blockType": "response",
   "truncated": true,
-  "@odata.type": "microsoft.graph.fileAttachment"
+  "@odata.type": "microsoft.graph.FileAttachment"
 } -->
 ```http
 HTTP/1.1 200 OK
@@ -64,12 +64,12 @@ Content-type: application/json
 Content-length: 228
 
 {
-  "contentId": "contentId-value",
-  "contentLocation": "contentLocation-value",
-  "contentBytes": "contentBytes-value",
-  "lastModifiedDateTime": "datetime-value",
-  "name": "name-value",
-  "contentType": "contentType-value"
+  "ContentId": "ContentId-value",
+  "ContentLocation": "ContentLocation-value",
+  "ContentBytes": "ContentBytes-value",
+  "LastModifiedDateTime": "datetime-value",
+  "Name": "Name-value",
+  "ContentType": "ContentType-value"
 }
 ```
 

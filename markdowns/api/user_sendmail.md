@@ -1,4 +1,4 @@
-# user: sendMail
+# User: SendMail
 
 
 ### Prerequisites
@@ -6,9 +6,8 @@ The following **scopes** are required to execute this API:
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
-POST /me/sendMail
-POST /users/<id>/sendMail
-POST /drive/root/createdByUser/sendMail
+POST /me/SendMail
+POST /Users/<Id>/SendMail
 
 ```
 ### Request headers
@@ -22,8 +21,8 @@ In the request body, provide a JSON object with the following parameters.
 
 | Parameter	   | Type	|Description|
 |:---------------|:--------|:----------|
-|message|message||
-|saveToSentItems|boolean||
+|Message|Message||
+|SaveToSentItems|Boolean||
 
 ### Response
 If successful, this method returns `200, OK` response code. It does not return anything in the response body.
@@ -37,97 +36,135 @@ Here is an example of the request.
   "name": "user_sendmail"
 }-->
 ```http
-POST https://graph.microsoft.com/beta/me/sendMail
+POST https://graph.microsoft.com/beta/me/SendMail
 Content-type: application/json
-Content-length: 2027
+Content-length: 2902
 
 {
-  "message": {
-    "receivedDateTime": "datetime-value",
-    "sentDateTime": "datetime-value",
-    "hasAttachments": true,
-    "internetMessageId": "internetMessageId-value",
-    "subject": "subject-value",
-    "body": {
-      "contentType": "contentType-value",
-      "content": "content-value"
+  "Message": {
+    "ReceivedDateTime": "datetime-value",
+    "SentDateTime": "datetime-value",
+    "HasAttachments": true,
+    "InternetMessageId": "InternetMessageId-value",
+    "Subject": "Subject-value",
+    "Body": {
+      "ContentType": "ContentType-value",
+      "Content": "Content-value"
     },
-    "bodyPreview": "bodyPreview-value",
-    "importance": "importance-value",
-    "parentFolderId": "parentFolderId-value",
-    "sender": {
-      "emailAddress": {
-        "name": "name-value",
-        "address": "address-value"
+    "BodyPreview": "BodyPreview-value",
+    "Importance": "Importance-value",
+    "ParentFolderId": "ParentFolderId-value",
+    "Sender": {
+      "EmailAddress": {
+        "Name": "Name-value",
+        "Address": "Address-value"
       }
     },
-    "from": {
-      "emailAddress": {
-        "name": "name-value",
-        "address": "address-value"
+    "From": {
+      "EmailAddress": {
+        "Name": "Name-value",
+        "Address": "Address-value"
       }
     },
-    "toRecipients": [
+    "ToRecipients": [
       {
-        "emailAddress": {
-          "name": "name-value",
-          "address": "address-value"
+        "EmailAddress": {
+          "Name": "Name-value",
+          "Address": "Address-value"
         }
       }
     ],
-    "ccRecipients": [
+    "CcRecipients": [
       {
-        "emailAddress": {
-          "name": "name-value",
-          "address": "address-value"
+        "EmailAddress": {
+          "Name": "Name-value",
+          "Address": "Address-value"
         }
       }
     ],
-    "bccRecipients": [
+    "BccRecipients": [
       {
-        "emailAddress": {
-          "name": "name-value",
-          "address": "address-value"
+        "EmailAddress": {
+          "Name": "Name-value",
+          "Address": "Address-value"
         }
       }
     ],
-    "replyTo": [
+    "ReplyTo": [
       {
-        "emailAddress": {
-          "name": "name-value",
-          "address": "address-value"
+        "EmailAddress": {
+          "Name": "Name-value",
+          "Address": "Address-value"
         }
       }
     ],
-    "conversationId": "conversationId-value",
-    "uniqueBody": {
-      "contentType": "contentType-value",
-      "content": "content-value"
+    "ConversationId": "ConversationId-value",
+    "ConversationIndex": "ConversationIndex-value",
+    "UniqueBody": {
+      "ContentType": "ContentType-value",
+      "Content": "Content-value"
     },
-    "isDeliveryReceiptRequested": true,
-    "isReadReceiptRequested": true,
-    "isRead": true,
-    "isDraft": true,
-    "webLink": "webLink-value",
-    "createdDateTime": "datetime-value",
-    "lastModifiedDateTime": "datetime-value",
-    "changeKey": "changeKey-value",
-    "categories": [
-      "categories-value"
+    "IsDeliveryReceiptRequested": true,
+    "IsReadReceiptRequested": true,
+    "IsRead": true,
+    "IsDraft": true,
+    "WebLink": "WebLink-value",
+    "InferenceClassification": "InferenceClassification-value",
+    "UnsubscribeData": [
+      "UnsubscribeData-value"
     ],
-    "id": "id-value",
-    "attachments": [
+    "UnsubscribeEnabled": true,
+    "Flag": {
+      "CompletedDateTime": {
+        "DateTime": {
+        },
+        "TimeZone": "TimeZone-value"
+      },
+      "DueDateTime": {
+        "DateTime": {
+        },
+        "TimeZone": "TimeZone-value"
+      },
+      "StartDateTime": {
+        "DateTime": {
+        },
+        "TimeZone": "TimeZone-value"
+      },
+      "FlagStatus": "FlagStatus-value"
+    },
+    "CreatedDateTime": "datetime-value",
+    "LastModifiedDateTime": "datetime-value",
+    "ChangeKey": "ChangeKey-value",
+    "Categories": [
+      "Categories-value"
+    ],
+    "Id": "Id-value",
+    "Attachments": [
       {
-        "lastModifiedDateTime": "datetime-value",
-        "name": "name-value",
-        "contentType": "contentType-value",
-        "size": 99,
-        "isInline": true,
-        "id": "id-value"
+        "LastModifiedDateTime": "datetime-value",
+        "Name": "Name-value",
+        "ContentType": "ContentType-value",
+        "Size": 99,
+        "IsInline": true,
+        "Id": "Id-value"
+      }
+    ],
+    "SingleValueExtendedProperties": [
+      {
+        "Value": "Value-value",
+        "PropertyId": "PropertyId-value"
+      }
+    ],
+    "MultiValueExtendedProperties": [
+      {
+        "Value": [
+          "Value-value"
+        ],
+        "PropertyId": "PropertyId-value"
       }
     ]
   },
-  "saveToSentItems": true
+  "SaveToSentItems": true
 }
 ```
 
@@ -146,7 +183,7 @@ HTTP/1.1 200 OK
 2015-10-25 14:57:30 UTC -->
 <!-- {
   "type": "#page.annotation",
-  "description": "user: sendMail",
+  "description": "User: SendMail",
   "keywords": "",
   "section": "documentation",
   "tocPath": ""

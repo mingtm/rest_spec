@@ -1,4 +1,4 @@
-# group: resetUnseenCount
+# Group: ResetUnseenCount
 
 
 ### Prerequisites
@@ -6,7 +6,9 @@ The following **scopes** are required to execute this API:
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
-POST /groups/<id>/resetUnseenCount
+POST /Groups/<Id>/ResetUnseenCount
+POST /me/JoinedGroups/<Id>/ResetUnseenCount
+POST /Users/<Id>/JoinedGroups/<Id>/ResetUnseenCount
 
 ```
 ### Request headers
@@ -29,7 +31,7 @@ Here is an example of the request.
   "name": "group_resetunseencount"
 }-->
 ```http
-POST https://graph.microsoft.com/beta/groups/<id>/resetUnseenCount
+POST https://graph.microsoft.com/beta/Groups/<Id>/ResetUnseenCount
 ```
 
 ##### Response
@@ -47,7 +49,7 @@ HTTP/1.1 200 OK
 2015-10-25 14:57:30 UTC -->
 <!-- {
   "type": "#page.annotation",
-  "description": "group: resetUnseenCount",
+  "description": "Group: ResetUnseenCount",
   "keywords": "",
   "section": "documentation",
   "tocPath": ""

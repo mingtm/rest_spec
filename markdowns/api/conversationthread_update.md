@@ -6,8 +6,9 @@ The following **scopes** are required to execute this API:
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
-PATCH /groups/<id>/threads/<id>
-PATCH /groups/<id>/conversations/<id>/threads/<id>
+PATCH /Groups/<Id>/Threads/<Id>
+PATCH /me/JoinedGroups/<Id>/Threads/<Id>
+PATCH /Users/<Id>/JoinedGroups/<Id>/Threads/<Id>
 ```
 ### Optional request headers
 | Name       | Description|
@@ -20,17 +21,17 @@ In the request body, supply the values for relevant fields that should be update
 
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|ccRecipients|recipient||
-|hasAttachments|boolean||
-|isLocked|boolean||
-|lastDeliveredDateTime|dateTimeOffset||
-|preview|string||
-|toRecipients|recipient||
-|topic|string||
-|uniqueSenders|string||
+|CcRecipients|Recipient||
+|HasAttachments|Boolean||
+|IsLocked|Boolean||
+|LastDeliveredDateTime|DateTimeOffset||
+|Preview|String||
+|ToRecipients|Recipient||
+|Topic|String||
+|UniqueSenders|String||
 
 ### Response
-If successful, this method returns a `200 OK` response code and updated [conversationThread](../resources/conversationthread.md) object in the response body.
+If successful, this method returns a `200 OK` response code and updated [ConversationThread](../resources/conversationthread.md) object in the response body.
 ### Example
 ##### Request
 Here is an example of the request.
@@ -39,30 +40,30 @@ Here is an example of the request.
   "name": "update_conversationthread"
 }-->
 ```http
-PATCH https://graph.microsoft.com/beta/groups/<id>/threads/<id>
+PATCH https://graph.microsoft.com/beta/Groups/<Id>/Threads/<Id>
 Content-type: application/json
 Content-length: 419
 
 {
-  "toRecipients": [
+  "ToRecipients": [
     {
-      "emailAddress": {
-        "name": "name-value",
-        "address": "address-value"
+      "EmailAddress": {
+        "Name": "Name-value",
+        "Address": "Address-value"
       }
     }
   ],
-  "topic": "topic-value",
-  "hasAttachments": true,
-  "lastDeliveredDateTime": "datetime-value",
-  "uniqueSenders": [
-    "uniqueSenders-value"
+  "Topic": "Topic-value",
+  "HasAttachments": true,
+  "LastDeliveredDateTime": "datetime-value",
+  "UniqueSenders": [
+    "UniqueSenders-value"
   ],
-  "ccRecipients": [
+  "CcRecipients": [
     {
-      "emailAddress": {
-        "name": "name-value",
-        "address": "address-value"
+      "EmailAddress": {
+        "Name": "Name-value",
+        "Address": "Address-value"
       }
     }
   ]
@@ -73,7 +74,7 @@ Here is an example of the response. Note: The response object shown here may be 
 <!-- {
   "blockType": "response",
   "truncated": true,
-  "@odata.type": "microsoft.graph.conversationThread"
+  "@odata.type": "microsoft.graph.ConversationThread"
 } -->
 ```http
 HTTP/1.1 200 OK
@@ -81,25 +82,25 @@ Content-type: application/json
 Content-length: 419
 
 {
-  "toRecipients": [
+  "ToRecipients": [
     {
-      "emailAddress": {
-        "name": "name-value",
-        "address": "address-value"
+      "EmailAddress": {
+        "Name": "Name-value",
+        "Address": "Address-value"
       }
     }
   ],
-  "topic": "topic-value",
-  "hasAttachments": true,
-  "lastDeliveredDateTime": "datetime-value",
-  "uniqueSenders": [
-    "uniqueSenders-value"
+  "Topic": "Topic-value",
+  "HasAttachments": true,
+  "LastDeliveredDateTime": "datetime-value",
+  "UniqueSenders": [
+    "UniqueSenders-value"
   ],
-  "ccRecipients": [
+  "CcRecipients": [
     {
-      "emailAddress": {
-        "name": "name-value",
-        "address": "address-value"
+      "EmailAddress": {
+        "Name": "Name-value",
+        "Address": "Address-value"
       }
     }
   ]
